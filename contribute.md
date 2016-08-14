@@ -25,9 +25,8 @@ underscores.** Keep file and folder names short when possible.
 ## Subdirectories
 
 Each top level directory is roughly a large chapter of the document. These
-chapters can
-have subsections which either are individual markdown files or its own
-subdirectory, depending on the size of the subsection.
+chapters can have subsections which either are individual markdown files or
+its own subdirectory, depending on the size of the subsection.
 
 Images should be included in a separate directory named images/
 at the same level as the markdown page they are contained in.
@@ -43,3 +42,8 @@ GitHub](https://github.com/Spartronics4915/developers_handbook).
 
 ## Markdown Syntax
 @TODO include examples of markdown syntax
+### Embed to images
+<pre><code>![some_image_title](images/some_image_title.png)</code></pre>
+### Link to a heading on the same page
+Note: header name is in lower case
+<pre><code>[Link_Name](#header_name)</code></pre>
