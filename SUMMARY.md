@@ -1,11 +1,12 @@
 # SUMMARY
 
 * [Introduction](README.md)
-* [Basics](basics/index.md)
+* [Basics](basics/README.md)
   * [Networking Setup](basics/networking.md)
   * [Development Environment](basics/dev_environment.md)
   * [Java Highlights](basics/java_basics.md)
-* [Development Guidelines](dev_guide/index.md)
+  * [Resources](basics/resources.md)
+* [Development Guidelines](dev_guide/README.md)
 * [Command Based Programming](commands_subsystems/index.md)
     * [Commands](commands_subsystems/commands/index.md)
         * [Methods](commands_subsystems/commands/methods.md)
