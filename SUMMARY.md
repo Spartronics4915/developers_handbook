@@ -13,3 +13,4 @@
     * [Scheduler](commands_subsystems/scheduler/index.md)
 * [Actuators](actuators/introduction.md)
     * [Talon SRX](actuators/talon/introduction.md)
+* [Contribute!](contribute.md)
