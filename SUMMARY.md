@@ -5,7 +5,7 @@
   * [Networking Setup](basics/networking.md)
   * [Development Environment](basics/dev_environment.md)
   * [Java Highlights](basics/java_basics.md)
-  * [Resources](basics/index.md#resources)
+  * [Resources](basics/index.md/#resources)
 * [Development Guidelines](dev_guide/index.md)
 * [Command Based Programming](commands_subsystems/index.md)
     * [Commands](commands_subsystems/commands/index.md)
