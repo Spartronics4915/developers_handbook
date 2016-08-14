@@ -1,14 +1,14 @@
 # Development Guidelines
 This section covers topics relating to Spartronics 4915 development guidelines.
 
-## [Spartronics Git Workflow](./git_flow.md)
+* [Spartronics Git Workflow](./git_flow.md)
 
-## [Spartronics Development Process](./dev_process.md)
+* [Spartronics Development Process](./dev_process.md)
 
-## [Spartronics Programming Style Guide](./style_guide.md)
+* [Spartronics Programming Style Guide](./style_guide.md)
 
-## [Eclipse and Development Environment](./dev_setup.md)
+* [Eclipse and Development Environment](./dev_setup.md)
 
-## [Enabling Collaborative Development](./collaboration.md)
+* [Enabling Collaborative Development](./collaboration.md)
 
-## [Competition Readiness](./competitions.md)
+* [Competition Readiness](./competitions.md)
