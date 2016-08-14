@@ -4,7 +4,7 @@ The Talon SRX speed controller is a CAN-enabled "smart motor controller" from Cr
 - Onboard closed-loop PID control algorithm
 - Breakout board for wiring a quadrature encoder or limit switch
 
-![Talon SRX](talon_srx.png)
+![Talon SRX](images/talon_srx.png)
 
 ## What is CAN?
 CAN, Controller Area Network, provides a network that helps multiple CAN devices communicate with one another without a host computer. Each of the devices on the network has a CAN controller chip and is therefore intelligent. All devices on the network see all transmitted messages. Each device can decide if a message is relevant or if it should be filtered.
@@ -54,7 +54,7 @@ See [Talon Users Guide](http://www.ctr-electronics.com/Talon%20SRX%20User's%20Gu
 ### Blink Codes
 See [Talon Users Guide](http://www.ctr-electronics.com/Talon%20SRX%20User's%20Guide.pdf) Blink Codes, section 2.3
 
-![Talon SRX Blink Codes](blink_codes.png)
+![Talon SRX Blink Codes](images/blink_codes.png)
 
 ## Firmware Update
 Firmware updates are done using the FRC roboRIO Web-based Configuration. Check [Talon SRX Home](http://www.ctr-electronics.com/talon-srx.html#product_tabs_technical_resources) for latest firmware.
