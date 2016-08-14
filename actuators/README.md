@@ -4,4 +4,4 @@ An actuator is a device that actuates or moves something. An actuator uses some 
 Actuators include motors, gears, valves, and switches.
 
 * [Talon SRX](./talon/README.md)
-* [Servos](./servos/servos.md)
+* [Servos](./servos/README.md)

@@ -24,5 +24,6 @@
 
 * [Actuators](actuators/README.md)
     * [Talon SRX](actuators/talon/README.md)
+    * [Servos](actuators/servos/README.md)
 
 * [Contribute!](contribute.md)
