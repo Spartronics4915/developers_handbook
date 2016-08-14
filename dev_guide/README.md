@@ -7,7 +7,7 @@ This section covers topics relating to Spartronics 4915 development guidelines.
 
 * [Spartronics Programming Style Guide](./style_guide.md)
 
-* [Eclipse and Development Environment](./dev_setup.md)
+* [Eclipse and Build System](./build_system.md)
 
 * [Enabling Collaborative Development](./collaboration.md)
 
