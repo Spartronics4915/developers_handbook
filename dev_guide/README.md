@@ -1,19 +1,14 @@
-## Development Guidelines
-- Git and Github workflow
-- Development process
-    - design -> PoA -> design review -> coding -> QA -> code review -> merge
-- Code organization
-- Naming
-- Musts for collaborative development
-    - RobotMap
-    - try/except blocks
-- Logging and Debugging
-    - Test Mode
+# Development Guidelines
+This section covers topics relating to Spartronics 4915 development guidelines.
 
-# Recommended Configurations
-##Talon SRX Drive Motors
-10, 11, 12, 13
+## [Spartronics Git Workflow](./git_flow.md)
 
-# Wiring diagram
+## [Spartronics Development Process](./dev_process.md)
 
-# Competition
+## [Spartronics Programming Style Guide](./style_guide.md)
+
+## [Eclipse and Development Environment](./dev_setup.md)
+
+## [Enabling Collaborative Development](./collaboration.md)
+
+## [Competition Readiness](./competitions.md)

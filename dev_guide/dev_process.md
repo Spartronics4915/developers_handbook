@@ -1,0 +1,3 @@
+# Spartronics Development Process
+
+@TODO section on design/design reviews, code reviews, ...
