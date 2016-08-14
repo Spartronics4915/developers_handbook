@@ -16,11 +16,11 @@
   * [Collaborative Development](dev_guide/collaboration.md)
   * [Competition Readiness](dev_guide/competitions.md)
 
-* [Command Based Programming](commands_subsystems/index.md)
-    * [Commands](commands_subsystems/commands/index.md)
+* [Command Based Programming](commands_subsystems/README.md)
+    * [Commands](commands_subsystems/commands/README.md)
         * [Methods](commands_subsystems/commands/methods.md)
-    * [Subsystems](commands_subsystems/subsystems/index.md)
-    * [Scheduler](commands_subsystems/scheduler/index.md)
+    * [Subsystems](commands_subsystems/subsystems/README.md)
+    * [Scheduler](commands_subsystems/scheduler/README.md)
 
 * [Actuators](actuators/README.md)
     * [Talon SRX](actuators/talon/README.md)
