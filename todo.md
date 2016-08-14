@@ -1,5 +1,6 @@
 # TODOs
 Place holder for things to add to the guide
+@TODO add a directory for unused/unprocessed assets
 
 ## Basics Section @TODO Basics Section in todo.md
 - SmartDashboard & Network Tables

@@ -20,18 +20,21 @@ For content to be included in the GitBook, it must be in a markdown file
 ## Naming Conventions
 
 **File and folder names will be lowercase only, and will separate words using
-underscores.** Keep file and folder names short when possible.
+underscores.** Keep file and folder names short when possible. The only
+exception to lowercase file names is in the case of README.md and SUMMARY.md.
 
 ## Subdirectories
 
 Each top level directory is roughly a large chapter of the document. These
 chapters can have subsections which either are individual markdown files or
-its own subdirectory, depending on the size of the subsection.
+its own subdirectory, depending on the size of the subsection. The file that
+is intended as the first file read in each directory and subdirectory
+should be named README.md so that GitHub will automatically display it.
 
 Images should be included in a separate directory named images/
 at the same level as the markdown page they are contained in.
 If multiple markdown files
-reference the same image, the image file should be contained in the highest
+reference the same image, the image file should be contained in each
 appropriate images/ directory.
 
 Code examples should be included in a separate subdirectory for
@@ -41,9 +44,84 @@ should be directed at their location on [Spartronics4915's repository on
 GitHub](https://github.com/Spartronics4915/developers_handbook).
 
 ## Markdown Syntax
-@TODO include examples of markdown syntax
-### Embed to images
-<pre><code>![some_image_title](images/some_image_title.png)</code></pre>
-### Link to a heading on the same page
-Note: header name is in lower case
-<pre><code>[Link_Name](#header_name)</code></pre>
+
+Markdown is a basic word syntax system commonly used for web development.
+It's simple syntax makes it ideal for writing for a variety of different
+browsers and interpreters.
+
+[Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+is an excellent guide to the basics of markdown syntax and is highly
+recommended for anyone who is interested in contributing to this document.
+
+You can use any plain text editor to read and edit .md files. One powerful
+editor for this purpose is [Atom](atom.io), made by GitHub. It has a robust
+plugin system, allowing for a fully customizable and hackable text editor.
+It also features a built in Markdown preview feature to view the resulting
+markdown live.
+
+### Markdown Basics
+
+**Excluding links, raw line length should be no longer than 80 characters.**
+Insert newlines in paragraphs to remove line wrapping and improve the ability
+to read and contribute to this document from a variety of editors. Link
+syntax that is longer than 80 characters can be left unbroken.
+
+#### Text
+
+```
+Italics: *word* or _word_
+Bold: **word** or __word__
+Bold and Italic: ***word** or ___word___
+```
+
+#### Headers
+
+```
+# Header 1
+## Header 2
+### Header 3
+etc.
+```
+
+#### Lists
+
+Unordered - use either * or -.
+
+```
+* Entry
+- Entry
+    * Subentry
+- Another entry
+* A final entry
+```
+
+Ordered - use numbers. Markdown will automatically present it in increasing
+order beginning at 1.
+```
+1. First entry
+1. Second entry
+    4. First subentry
+5. Third entry
+2. Fourth and final entry
+```
+
+#### Links
+
+```
+[Text for link](link_address)
+```
+
+You can use this link system for a lot of different things.
+- To link to an external website, replace link_address
+with the desired web address.
+- To link to another markdown file in the document, replace link_address
+with the relative path of the file.
+- To link to a header in the same document, replace link_address
+with #header-name, where header-name is the text of the header in lowercase
+and with all spaces replaced with '-'. Use only one '#' regardless of the
+level of header.
+
+#### Code Blocks
+
+Surround code snippets with "\`\`\`java" and ""\`\`\`" to disable markdown
+syntax and enable java color highlighting.
