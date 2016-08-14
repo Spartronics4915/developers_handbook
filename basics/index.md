@@ -7,7 +7,7 @@ Wondering how to setup development environment, where to go next? Start here!
   * Objects and classes
   * Methods and member variables
   * Static methods and variables
-* Resources
+* [Other Resources](./resources.md)
   * WPI Documentation and Resources
     * [WPI FRC Control System](http://wpilib.screenstepslive.com)
   * Resources for Learning Git
