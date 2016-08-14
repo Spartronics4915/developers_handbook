@@ -1,7 +1,7 @@
 # TODOs
 Place holder for things to add to the guide
 
-## Basics Section
+## Basics Section @TODO Basics Section in todo.md
 - SmartDashboard & Network Tables
 - Driver Station Logs
 - Camera Setup
@@ -19,11 +19,11 @@ Place holder for things to add to the guide
   - radio programming
   - wireless access port
 
-## Robot code
+## Robot code @TODO Robot Code in todo.md
 - Initialization sequencing
 - Autonomous Vs. Teleop
 
-## Development Guidelines
+## Development Guidelines @TODO Development Guidelines in todo.md
 - Git and Github workflow
 - Development process
   - design -> PoA -> design review -> coding -> QA -> code review -> merge
@@ -35,10 +35,10 @@ Place holder for things to add to the guide
   - Logging and Debugging
     - Test Mode
 
-## Competition Readiness
+## Competition Readiness @TODO Competition Readiness in todo.md
 - Competition Checklist
 
-## Command-based programming: subsystem vs. commands
+## Command-based programming: subsystem vs. commands @TODO Commands and Subsystems in todo.md
 - Scheduler: Know your master...
 - Commands
 - Subsystems
