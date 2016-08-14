@@ -34,17 +34,20 @@ AWG 22 or similar gauge wiring can be used. An electric drill can be used to twi
 
 ## roboRIO Web Configuration and Monitoring
 Silverlight is required to access the web-based configuration tool (no Chrome support!). Note, manual refresh of the page is required after configuration changes.
-<pre><code>http://roborio-XXXX-frc.local</code></pre>
+```
+http://roborio-XXXX-frc.local
+```
 Checking the “Light Device LED” and pressing “Save” can be used to identify which physical Talon SRX is selected.
 
 ## Device IDs and Names
 A Talon SRX can have a device ID from 0 to 62. 63 is reserved for broadcast.
 > Regardless of the programming language, device ID is programmatically used for specifying which Talon SRX you are  controlling.
-<pre><code>
+
+```java
 // Example: drive train left motor is on device ID 10
  private static final int DRIVE_TRAIN_LEFT_MASTER_10 = 10;
  public static CANTalon leftMaster10 = new CANTalon(DRIVE_TRAIN_LEFT_MASTER_10);
-</code></pre>
+```
 
 Using the roboRIO web configuration utility, also give a custom name for the Talons, such as 'Drive Motor 10' for easy debugging.
 
