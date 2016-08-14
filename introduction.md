@@ -1,3 +1,5 @@
+@TODO deprecated, move information elsewhere - to README?
+
 # TOC  
 * What is embedded development about?  
 
