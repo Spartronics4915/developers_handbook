@@ -1,1 +1,55 @@
-# This is the Subsystems section
+# Subsystems
+
+@TODO Explain what a subsystem is
+
+A subsystem is a isolated set of components of your robot. They are required
+for the robot's Scheduler to manage which commands are operating and which
+should be stopped to prevent instruction conflicts. In addition, they enable
+better code development by using an object oriented approach to designing a
+custom robot.
+
+For example, the most common subsystem that is present on every robot is
+a drivetrain subsystem. While it only consists of a few motor controllers
+(usually), making it a subsystem allows you to add a variety of methods
+to add specialized functionality, resulting in easier command creation.
+In addition, since the drivetrain code is contained in a single file,
+recycling code from year to year is easier.
+
+Another common subsystem is some form of a manipulator subsystem. Every
+robot game requires interaction with a game element, and that requires
+a grabber, roller, puncher, or who knows what. This manipulator can be
+controlled by one or more subsystems, depending on how many separate
+control systems are required. For a simple pneumatic puncher that controls
+a single solenoid, one subsystem suffices. An elevator that also grabs onto
+crates to lift up an down can be better divided into two separate subsystems,
+one to handle the motion up and down with a motor, another to handle the
+grabbing action. It is important to break up this functionality into
+multiple subsystems because commands will interrupt other commands that
+require the same subsystem, which will lead to unintended processes being
+interrupted.
+
+## How to make a Subsystem
+
+All subsystems extend the [abstract Subsystem
+class](http://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/command/Subsystem.html),
+meaning they must override the method **initDefaultCommand()**.
+
+```java
+public void initDefaultCommand() {
+    setDefaultCommand(new ArcadeDriveCommand());
+}
+```
+
+This method does not need functionality, you must simply include it in your
+class. In it you can call **setDefaultCommand(Command)** to give
+the Scheduler a command that should be constantly ran by this subsystem.
+However, the command must require this subsystem. Passing ***null*** to
+**setDefaultCommand(Command)** will remove any default commands from
+the subsystem.
+
+Besides overriding **initDefaultCommand()**, your subsystem is fully
+custom. You can make your own constructors, methods, instance variables,
+or subclasses for your subsystem. 
+
+@TODO Include documentation from WPI Screenstep live
+[WPI Simple Subsytems Doc](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599735-simple-subsystems)
