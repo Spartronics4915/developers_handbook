@@ -1,7 +1,5 @@
 # Subsystems
 
-@TODO Explain what a subsystem is
-
 A subsystem is a isolated set of components of your robot. They are required
 for the robot's Scheduler to manage which commands are operating and which
 should be stopped to prevent instruction conflicts. In addition, they enable
@@ -49,7 +47,10 @@ the subsystem.
 
 Besides overriding **initDefaultCommand()**, your subsystem is fully
 custom. You can make your own constructors, methods, instance variables,
-or subclasses for your subsystem. 
+or subclasses for your subsystem. Ideally, your subsystem should be properly
+designed so that the commands that use the subsystem are as simple as possible.
+This means your commands should call a single method from your subsystem in
+each stage of it's execution.
 
-@TODO Include documentation from WPI Screenstep live
-[WPI Simple Subsytems Doc](http://wpilib.screenstepslive.com/s/4485/m/13809/l/599735-simple-subsystems)
+See the next page for detailed discussion of some of the example files
+provided in this repository.
