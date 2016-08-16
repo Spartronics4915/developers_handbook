@@ -9,6 +9,9 @@ import org.usfirst.frc4915.MecanumDrive.RobotMap;
 import org.usfirst.frc4915.MecanumDrive.commands.elevator.ElevatorFineTuneCommand;
 import org.usfirst.frc4915.debuggersystem.CustomDebugger.LoggerNames;
 
+//@TODO Improve code: Make code fit coding style requirements, add documentation
+// and generally make it presentable
+
 public class Elevator extends Subsystem {
 
     // These positions describe the number of totes you stacking on top of.
@@ -71,7 +74,7 @@ public class Elevator extends Subsystem {
 
 	/**
 	 * Moves the elevator at a speed given by the joystick (y axis).
-	 * 
+	 *
 	 * @param joystick Forward on joystick is up, backward is down
 	 */
 	public void moveWithJoystick(Joystick joystick) {
@@ -89,7 +92,7 @@ public class Elevator extends Subsystem {
 		}
 		previousJoystickY = joystickY;
 	}
-	
+
 	/**
 	 * If you push or pull the joystick from positive to negative/0, it will stop the elevator.
 	 * Probably won't work because it is hard to move the joystick in the span of 20 ms.
@@ -120,14 +123,14 @@ public class Elevator extends Subsystem {
 	 * @return the position of the elevator in inches (between 0 and 54)
 	 */
 	public double getPositionInches() {
-		double position = (getPosition() - minimumPotentiometerValue) 
+		double position = (getPosition() - minimumPotentiometerValue)
 						* (RANGE_OF_MOTION / (maximumPotentiometerValue - minimumPotentiometerValue));
 		//Robot.debugger.logError(LoggerNames.ELEVATOR, "The elevator is at position " + position + " (inches)");
 		return position;
 	}
-	
+
 	/**
-	 * @return the position number of the elevator -- how many totes 
+	 * @return the position number of the elevator -- how many totes
 	 * could be below it. Between 0 and 5.
 	 */
 	public double getPositionNumber() {
@@ -160,7 +163,7 @@ public class Elevator extends Subsystem {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return if the elevator is at it's max height, return
 	 */
 	public boolean isAtTopOfElevator() {
@@ -225,7 +228,7 @@ public class Elevator extends Subsystem {
 			setPoint = maximumPotentiometerValue - 1;
 		}
 		if ((setPoint < minimumPotentiometerValue)) {
-			setPoint = minimumPotentiometerValue; // I'd like to use the +1 to re-fix the winch cable, 
+			setPoint = minimumPotentiometerValue; // I'd like to use the +1 to re-fix the winch cable,
 			// but I'm worried that the cable would automatically get tangled
 		}
 		//Robot.debugger.logError(LoggerNames.ELEVATOR, "Elevator's height is " + setPoint);

@@ -4,6 +4,9 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc4915.MecanumDrive.RobotMap;
 
+//@TODO Improve code: Make code fit coding style requirements, add documentation
+// and generally make it presentable
+
 public class Grabber extends Subsystem {
 
     // Put methods for controlling this subsystem

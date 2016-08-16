@@ -11,6 +11,9 @@ import org.usfirst.frc4915.debuggersystem.CustomDebugger.LoggerNames;
 import java.util.Arrays;
 import java.util.List;
 
+//@TODO Improve code: Make code fit coding style requirements, add documentation
+// and generally make it presentable
+
 /**
  * This is Spartronics team 4915's DriveTrain subsystem class for 2015's
  * competition Recycle Rush. The drivetrain featured four mecanum wheels

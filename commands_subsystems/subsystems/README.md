@@ -52,5 +52,28 @@ designed so that the commands that use the subsystem are as simple as possible.
 This means your commands should call a single method from your subsystem in
 each stage of it's execution.
 
+## Subsystem Internals
+
+The best way to design the true functionality of a subsystem is to identify
+what it does by determining the commands you will need to make. These
+will come in two categories - autonomous commands and tele-operated commands.
+The autonomous commands must be controlled by some discrete input, best
+represented as an integer, while the tele-operated commands are controlled
+by joystick input or triggered with a button in most cases. As such, creating
+multiple methods for the same function can be beneficial if they take
+different inputs.
+
+Once the functionality of your subsystem is decided, you must make sure
+that you create *private* instance variables for any important actuators
+or sensors in your subsystem. The most important thing to include in every
+subsystem is any motors that the subsystem controls, especially for the
+drivetrain. Safety protocols *will* kick in if you are not sending instructions
+to your motors (RobotDrive Output Not Updated Often Enough). In addition,
+having easy access to critical sensors makes your code more concise and
+easy to read.
+
+You can initialize these variables in the subsystem's constructor, or you can
+initialize them when they are declared.
+
 See the next page for detailed discussion of some of the example files
 provided in this repository.
