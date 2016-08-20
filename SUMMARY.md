@@ -24,9 +24,9 @@
 
 * [Actuators](actuators/README.md)
     * [Talon SRX](actuators/talon/README.md)
-      - [Capabilities of Talon SRX](./capabilities.md)
-      - [Programming Talon SRX](./programming.md)
-      - [Troubleshooting Talon SRX](./troubleshooting.md)
+      - [Capabilities of Talon SRX](actuators/talon/capabilities.md)
+      - [Programming Talon SRX](actuators/talon/programming.md)
+      - [Troubleshooting Talon SRX](actuators/talon/troubleshooting.md)
     * [Servos](actuators/servos/README.md)
 
 * [Contribute!](contribute.md)
