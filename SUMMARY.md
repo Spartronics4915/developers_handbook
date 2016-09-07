@@ -18,13 +18,16 @@
 
 * [Command Based Programming](commands_subsystems/README.md)
     * [Commands](commands_subsystems/commands/README.md)
-        * [Methods](commands_subsystems/commands/methods.md)
+      * [Methods](commands_subsystems/commands/methods.md)
     * [Subsystems](commands_subsystems/subsystems/README.md)
         * [Subsystem Examples](commands_subsystems/subsystems/examples.md)
     * [Scheduler](commands_subsystems/scheduler/README.md)
 
 * [Actuators](actuators/README.md)
     * [Talon SRX](actuators/talon/README.md)
+      - [Capabilities of Talon SRX](actuators/talon/capabilities.md)
+      - [Programming Talon SRX](actuators/talon/programming.md)
+      - [Troubleshooting Talon SRX](actuators/talon/troubleshooting.md)
     * [Servos](actuators/servos/README.md)
 
 * [Contribute!](contribute.md)
