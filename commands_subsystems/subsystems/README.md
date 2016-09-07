@@ -67,13 +67,14 @@ Once the functionality of your subsystem is decided, you must make sure
 that you create *private* instance variables for any important actuators
 or sensors in your subsystem. The most important thing to include in every
 subsystem is any motors that the subsystem controls, especially for the
-drivetrain. Safety protocols *will* kick in if you are not sending instructions
-to your motors (RobotDrive Output Not Updated Often Enough). In addition,
+drivetrain. Safety protocols *will* kick in if you are not sending
+instructions to your motors
+(RobotDrive Output Not Updated Often Enough). In addition,
 having easy access to critical sensors makes your code more concise and
 easy to read.
 
 You can initialize these variables in the subsystem's constructor, or you can
-initialize them when they are declared.
+initialize them where they are declared.
 
 See the next page for detailed discussion of some of the example files
 provided in this repository.
