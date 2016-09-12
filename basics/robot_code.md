@@ -14,11 +14,13 @@ from its environment, and is not controlled by a human.
 - _Teleoperated_ robot are externally controlled by humans, from afar.
 
 ## Sensors
-Just as people do, robots can sense their environment via sensors. Sensors, such as proximity, camera, encoders, location, provide means of perceiving surroundings, in order to get information from the world.
+Just as people do, robots can sense their environment via sensors. Sensors, such as proximity, camera,
+encoders, location, provide means of perceiving surroundings, in order to get information from the world.
 
 ## Control Systems and Control Theory
 Control systems are what makes a machine function as intended, based on the input from sensors.
-Control theory is the study of this dynamic system -- how to manipulate inputs of a system to obtain the desired effect on the output of the system.
+Control theory is the study of this dynamic system -- how to manipulate inputs of a system to obtain the desired
+effect on the output of the system.
 
 The design of a control system generally involves the following steps:
 1. Given the desired system behavior, such as moving an arm to a specific position, decide what types of sensors and actuators are needed, and where they need to be placed
@@ -56,13 +58,15 @@ try to guess the following:
   - the heading of the robot
   - the speed of the robot
 
-A robot is a dynamic system. The state of the robot, the readings of its sensors, and the effects of its control signals, are in constant flux. With that, the control process is a three-step loop:
+A robot is a dynamic system. The state of the robot, the readings of its sensors, and the effects of its
+control signals, are in constant flux. With that, the control process is a three-step loop:
 
   1. Measure the "error" between where you are and where you want to be
   2. Apply control signals proportional on the difference measured
   3. If the goal has not been reached, go back to step 1 and repeat
 
-These steps are repeated over and over until we have achieved our goal. The more times we can do this per second, the finer control we will have over the system.
+These steps are repeated over and over until we have achieved our goal. The more times we can do this per second,
+the finer control we will have over the system.
 
 ## Robot Components
 Robot's main components are:
@@ -110,6 +114,18 @@ To move the arm to a desired position:
   - Read the current angle (voltage) and compute the error from the desired position
   - Run the motor in the direction that reduces error, with a voltage proportional to how fast arm should move
   - Keep adjusting until the set point is reached and error is near zero
+
+With a properly tuned PID loop, high position and speed accuracy, and quick response to changes are possible.
+The system will self-correct when external forces affect the actuator, automatically returning to the set-point
+after being pushed by another robot.
+Since the PID loop can run all the time, it can also hold a position without the need for braking or other mechanical
+controls.
+
+It is important to realize that the PID control loop will always use power while it is active, and that power will
+be dissipated in the motor (or other actuator), resulting in excess heat, along with battery voltage drop.
+It is wise to disable the PID control loop when it is not needed, such as when an actuator is parked or locked by
+a mechanical brake.
+
 
 WPILibrary simplifies many of these steps for FIRST FRC programmer.
 
