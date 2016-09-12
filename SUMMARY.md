@@ -6,6 +6,8 @@
   * [Networking Setup](basics/networking.md)
   * [Development Environment](basics/dev_environment.md)
   * [Java Highlights](basics/java_basics.md)
+  * [Robot Programming](basics/robot_code.md)
+  * [WPILib Overview](./wpilib_overview.md)
   * [Resources](basics/resources.md)
   *
 * [Development Guidelines](dev_guide/README.md)
