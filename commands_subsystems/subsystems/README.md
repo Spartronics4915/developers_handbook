@@ -19,7 +19,7 @@ a grabber, roller, puncher, or who knows what. This manipulator can be
 controlled by one or more subsystems, depending on how many separate
 control systems are required. For a simple pneumatic puncher that controls
 a single solenoid, one subsystem suffices. An elevator that also grabs onto
-crates to lift up an down can be better divided into two separate subsystems,
+crates to lift up and down can be better divided into two separate subsystems,
 one to handle the motion up and down with a motor, another to handle the
 grabbing action. It is important to break up this functionality into
 multiple subsystems because commands will interrupt other commands that
