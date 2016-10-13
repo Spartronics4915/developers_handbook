@@ -183,4 +183,4 @@ an actuator is parked or locked by a mechanical brake.
 WPILibrary simplifies many of these steps for FIRST FRC programmer.
 
 # References
-- The Robotics Primer by Maja J Mataric
+- [The Robotics Primer](https://mitpress.mit.edu/books/robotics-primer) by Maja J Mataric
