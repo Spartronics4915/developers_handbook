@@ -31,7 +31,7 @@ For subsystems with PID, you can use ```edu.wpi.first.wpilibj.command.Subsystem`
 
 ## Commands
 Commands enable us to operate our robot as a system. Commands are small chunks of tasks from different subsystems that we can chain together to perform more complex operations. As such, Commands can be tested individually. Each subsystem can also have a default command, which will run when no other running commands require that subsystem.
-- Move foreward 15 ft while lowering the arm and shoot
+- Move forward 15 ft while lowering the arm and shoot
 - Grab the garbage can and move to 4th elevator position while driving
 - Lower arms, put intake to neutral and drive forward
 
@@ -45,7 +45,7 @@ public class IntakeLauncher extends Subsystem {
 }
 ```
 
-Commands are executed sequentially, and needs to be scheduled. They can be tied to autonomous modes, operator interface buttons, or SmartDashboard virtual buttons for scheduling.
+Commands are executed sequentially, and need to be scheduled. They can be tied to autonomous modes, operator interface buttons, or SmartDashboard virtual buttons for scheduling.
 
 Commands can also be grouped together allowing the ability to run commands concurrently. Once the group is created, similar to Commands, it can be tied to a single entry to executing all the commands in this group. A command group finishes when all the commands started in that group finish.
 
@@ -53,10 +53,10 @@ Commands can also be grouped together allowing the ability to run commands concu
 
 
 ## Scheduler
-Scheduler is responsible for scheduling Commands. Although many commands maybe running virtually at the same time, robot code is single threaded, i.e. there is only a single main robot thread. As a note, PID loops are self-contained threads that does not require scheduler.
+The scheduler is responsible for scheduling Commands. Although many commands maybe running virtually at the same time, robot code is single threaded, i.e. there is only a single main robot thread. As a note, PID loops on CANTalons are separate threads of execution.
 
-Every 20ms (when driver station update takes place), Scheduler walks through its table of Commands to determine what commands need to be scheduled or marked as completed. For this, Scheduler calls each command's _execute()_ followed by _isFinished()_ methods. If _isFinished()_ is true, command is removed from the scheduling queue.
+Every 20ms (when driver station update takes place), the scheduler walks through its table of Commands to determine what commands need to be scheduled or marked as completed. For this, the scheduler calls each command's _execute()_ followed by _isFinished()_ methods. If _isFinished()_ is true, command is removed from the scheduling queue.
 
-![Inside Scheduler's run method](images/scheduler-run.png)
+![Inside the scheduler's run method](images/scheduler-run.png)
 
-If a command is interruptable, scheduler will interrupt the running command to schedule the new one: pushing elevator down button will interrupt the elevator move up command.
+If a command is interruptable, the scheduler will interrupt the running command to schedule the new one: pushing elevator down button will interrupt the elevator move up command.
