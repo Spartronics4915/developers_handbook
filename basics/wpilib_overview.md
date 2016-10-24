@@ -351,7 +351,7 @@ running and continue to have those values in their tables. When the robot
 restarts, those old values will be replicated to the robot.
 
 To ensure that the SmartDashboard and OutlineViewer are showing exactly the
-same values, it is necessary to restart all of them at the same time. That way,
+same values, it is necessary to restart them on every single computer. That way,
 old values that one is holding won't get replicated to the others.
 
 This usually isn't a problem if the program isn't constantly changing, but if
