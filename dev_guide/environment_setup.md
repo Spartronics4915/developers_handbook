@@ -6,6 +6,7 @@
 1. Download "CTRE Toolsuite Installer" from http://www.ctr-electronics.com/control-system/hro.html#product_tabs_technical_resources.
 2. Extract "CTRE Toolsuite.exe".
 3. Start Eclipse.
+
 ### Non-Windows
 1. Download "CTRE Toolset No Installer" from http://www.ctr-electronics.com/hro.html#product_tabs_technical_resources
 2. Copy the `java` folder inside the .zip to the `$HOME/wpilib/user/` folder, NOT the `$HOME/wpilib/java` folder.
