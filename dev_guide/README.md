@@ -1,6 +1,8 @@
 # Development Guidelines
 This section covers topics relating to Spartronics 4915 development guidelines.
 
+* [Flashing Components](./flashing.md)
+
 * [Spartronics Git Workflow](./git_flow.md)
 
 * [Spartronics Development Process](./dev_process.md)
