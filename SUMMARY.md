@@ -11,6 +11,7 @@
   * [Resources](basics/resources.md)
   *
 * [Development Guidelines](dev_guide/README.md)
+  * [Flashing Components](dev_guide/flashing.md)
   * [Spartronics Git Workflow](dev_guide/git_flow.md)
   * [Spartronics Development Process](dev_guide/dev_process.md)
   * [Spartronics Programming Style Guide](dev_guide/style_guide.md)
