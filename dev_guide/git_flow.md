@@ -60,6 +60,30 @@ Source: [https://jk.gs/git/bot/trigger.php](https://jk.gs/git/bot/trigger.php)
     - Most often used like `git push origin master` -- "push the `master` branch to `origin`"
     - Do this after you make a couple commits
 
-## Our Workflow
+## Setting up Git
 
-@TODO our workflow
+Use your package manager, or install GitHub's program here: https://desktop.github.com/
+
+Open the "Git Shell" app (or a plain shell that knows about `git`.)
+
+Run these commands, without the dollar sign at the front, though quotes are important:
+
+```bash
+$ git config --global user.name "Your Name"
+$ git config --global user.email "the email you used to sign up for github"
+$ cd
+$ mkdir workspace
+$ cd workspace
+$ git clone https://github.com/Spartronics4915/2017-STEAMworks.git
+$ cd 2017-STEAMworks.git
+```
+
+Now that everything is set up, you can just use this command to get back there in the future.  You'll have to do this every time you open the shell.
+
+```bash
+$ cd ~/workspace/2017-STEAMworks.git
+```
+
+Now use the rest of the git commands to save your work.
+
+@TODO the rest of the workflow
