@@ -62,6 +62,8 @@ Source: [https://jk.gs/git/bot/trigger.php](https://jk.gs/git/bot/trigger.php)
 
 ## Setting up Git
 
+Fork the repository here: https://github.com/Spartronics4915/2017-STEAMworks/fork
+
 Use your package manager, or install GitHub's program here: https://desktop.github.com/
 
 Open the "Git Shell" app (or a plain shell that knows about `git`.)
@@ -74,14 +76,14 @@ $ git config --global user.email "the email you used to sign up for github"
 $ cd
 $ mkdir workspace
 $ cd workspace
-$ git clone https://github.com/Spartronics4915/2017-STEAMworks.git
-$ cd 2017-STEAMworks.git
+$ git clone https://github.com/<your username>/2017-STEAMworks
+$ cd 2017-STEAMworks
 ```
 
 Now that everything is set up, you can just use this command to get back there in the future.  You'll have to do this every time you open the shell.
 
 ```bash
-$ cd ~/workspace/2017-STEAMworks.git
+$ cd ~/workspace/2017-STEAMworks
 ```
 
 Now use the rest of the git commands to save your work.
