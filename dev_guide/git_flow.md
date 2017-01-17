@@ -78,6 +78,7 @@ $ mkdir workspace
 $ cd workspace
 $ git clone https://github.com/<your username>/2017-STEAMworks
 $ cd 2017-STEAMworks
+$ git remote add upstream https://github.com/Spartronics4915/2017-STEAMworks
 ```
 
 Now that everything is set up, you can just use this command to get back there in the future.  You'll have to do this every time you open the shell.
@@ -88,4 +89,14 @@ $ cd ~/workspace/2017-STEAMworks
 
 Now use the rest of the git commands to save your work.
 
-@TODO the rest of the workflow
+## Rest of the workflow
+
+Before starting work on something: `$ git pull upstream master`
+
+1. Make changes
+2. Test changes
+3. `git add` the changes
+4. `git commit` the changes
+5. `git push origin master` the commits
+6. Make a pull request at your fork's web page
+7. `git pull upstream master` once pull request is accepted
