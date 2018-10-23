@@ -15,7 +15,7 @@
   * [Spartronics Git Workflow](dev_guide/git_flow.md)
   * [Spartronics Development Process](dev_guide/dev_process.md)
   * [Spartronics Programming Style Guide](dev_guide/style_guide.md)
-  * [Eclipse and Build System](dev_guide/build_system.md)
+  * [Visual Studio Code and Build System](dev_guide/build_system.md)
   * [Collaborative Development](dev_guide/collaboration.md)
   * [Competition Readiness](dev_guide/competitions.md)
 

@@ -1,7 +1,9 @@
 # TODOs
+
 Place holder for things to add to the guide
 
 ## Basics Section
+
 - SmartDashboard & Network Tables
 - Driver Station Logs
 - Camera Setup
@@ -20,10 +22,12 @@ Place holder for things to add to the guide
   - wireless access port
 
 ## Robot code
+
 - Initialization sequencing
 - Autonomous Vs. Teleop
 
 ## Development Guidelines
+
 - Git and Github workflow
 - Development process
   - design -> PoA -> design review -> coding -> QA -> code review -> merge
@@ -36,9 +40,11 @@ Place holder for things to add to the guide
     - Test Mode
 
 ## Competition Readiness
+
 - Competition Checklist
 
 ## Command-based programming: subsystem vs. commands
+
 - Scheduler: Know your master...
 - Commands
 - Subsystems
