@@ -11,7 +11,7 @@
   * [Resources](basics/resources.md)
 
 * [Robot Lessons](robot_lessons/README.md)
-  * [Lesson 1: Motors](./Lesson%201:%20Motors.md)
+  * [Lesson 1: Motors](robot_lessons/Lesson%201:%20Motors.md)
 
 * [Development Guidelines](dev_guide/README.md)
   * [Flashing Components](dev_guide/flashing.md)
