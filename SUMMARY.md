@@ -9,7 +9,10 @@
   * [Robot Programming](basics/robot_code.md)
   * [WPILib Overview](basics/wpilib_overview.md)
   * [Resources](basics/resources.md)
-  *
+
+* [Robot Lessons](robot_lessons/README.md)
+  * [Lesson 1: Motors](robot_lessons/Lesson%201:%20Motors.md)
+
 * [Development Guidelines](dev_guide/README.md)
   * [Flashing Components](dev_guide/flashing.md)
   * [Spartronics Git Workflow](dev_guide/git_flow.md)
