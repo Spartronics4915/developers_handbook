@@ -67,8 +67,8 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
-	public static OI oi;
+    public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+    public static OI oi;
 
     Command autonomousCommand;
     SendableChooser chooser;
@@ -78,16 +78,16 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-		oi = new OI();
+        oi = new OI();
         chooser = new SendableChooser();
         chooser.addDefault("Default Auto", new ExampleCommand());
         SmartDashboard.putData("Auto mode", chooser);
     }
 
-	/*
+    /*
      * This function is called once each time the robot enters disabled mode.
      * You can use it to reset any subsystem information you want to clear when
-	 * the robot is disabled.
+     * the robot is disabled.
      */
     public void disabledInit(){
 
@@ -97,19 +97,19 @@ public class Robot extends IterativeRobot {
      * Periodic code for disabled mode goes here. You can use it to update
      * internal values while the robot is not enabled.
      */
-	public void disabledPeriodic() {
-		Scheduler.getInstance().run();
-	}
+    public void disabledPeriodic() {
+        Scheduler.getInstance().run();
+    }
 
-	/*
-	 * This autonomous (along with the chooser code above) shows how to select
-	 * between different autonomous modes using the dashboard. The
-	 * sendable chooser code works with the Java SmartDashboard.
-	 */
+    /*
+     * This autonomous (along with the chooser code above) shows how to select
+     * between different autonomous modes using the dashboard. The
+     * sendable chooser code works with the Java SmartDashboard.
+     */
     public void autonomousInit() {
         autonomousCommand = (Command) chooser.getSelected();
 
-    	// schedule the autonomous command (example)
+        // schedule the autonomous command (example)
         if (autonomousCommand != null) autonomousCommand.start();
     }
 
@@ -124,7 +124,7 @@ public class Robot extends IterativeRobot {
      * This code is called once each time the robot begins teleoperated mode
      */
     public void teleopInit() {
-		// This makes sure that the autonomous stops running when
+        // This makes sure that the autonomous stops running when
         // teleop starts running.
         if (autonomousCommand != null) autonomousCommand.cancel();
     }

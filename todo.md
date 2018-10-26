@@ -1,5 +1,7 @@
 # TODOs
 
+@TODO - update this
+
 Place holder for things to add to the guide
 
 ## Basics Section
@@ -13,13 +15,13 @@ Place holder for things to add to the guide
     - Static methods
 - Safety
 - Robot code
-  - Initialization sequencing
-  - Autonomous Vs. Teleop
+    - Initialization sequencing
+    - Autonomous Vs. Teleop
 - Add Software competition checklist
 - Add any username/password to configure the robot
-  - roboRIO web-based configuration access
-  - radio programming
-  - wireless access port
+    - roboRIO web-based configuration access
+    - radio programming
+    - wireless access port
 
 ## Robot code
 
@@ -30,14 +32,14 @@ Place holder for things to add to the guide
 
 - Git and Github workflow
 - Development process
-  - design -> PoA -> design review -> coding -> QA -> code review -> merge
-  - Code organization
-  - Naming
-  - Musts for collaborative development
-    - RobotMap
-    - try/except blocks
-  - Logging and Debugging
-    - Test Mode
+    - design -> PoA -> design review -> coding -> QA -> code review -> merge
+    - Code organization
+    - Naming
+    - Musts for collaborative development
+        - RobotMap
+        - try/except blocks
+    - Logging and Debugging
+        - Test Mode
 
 ## Competition Readiness
 
@@ -53,4 +55,3 @@ Place holder for things to add to the guide
     - Drivetrain and template code
         - Subsystem
         - Commands
--

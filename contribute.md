@@ -121,6 +121,8 @@ order beginning at 1.
 4. Fourth and final entry
 ```
 
+Make sure to use four spaces / tabs. Markdown sometimes breaks unordered lists otherwise.
+
 #### Links
 
 ```
@@ -129,13 +131,13 @@ order beginning at 1.
 
 You can use this link system for a lot of different things.
 
-- To link to an external website, replace link_address
+* To link to an external website, replace link_address
 with the desired web address.
 
-- To link to another markdown file in the document, replace link_address
+* To link to another markdown file in the document, replace link_address
 with the relative path of the file.
 
-- To link to a header in the same document, replace link_address
+* To link to a header in the same document, replace link_address
 with #header-name, where header-name is the text of the header in lowercase
 and with all spaces replaced with '-'. Use only one '#' regardless of the
 level of header.
