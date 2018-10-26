@@ -10,7 +10,7 @@
     * [WPILib Overview](basics/wpilib_overview.md)
     * [Resources](basics/resources.md)
 
-* [Robot Lessons](robot_lessons/README.md) (@TODO: My compiler's yelling at me in this lesson)
+* [Robot Lessons](robot_lessons/README.md) @TODO
     * [Lesson 1: Motors](robot_lessons/Lesson%201:%20Motors.md)
 
 * [Development Guidelines](dev_guide/README.md)
