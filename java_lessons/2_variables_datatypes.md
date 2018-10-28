@@ -14,7 +14,7 @@ Here is a table of some common primitive data types:
 | `float` | `3.1` | A real number. |
 | `double` | `3.1` | A real number; the _double_ precision version of a `float`. Prefer this over a float whenever possible. |
 | `boolean` | `true` | Either `true` or `false`. |
-| `String` | "foo" | Holds textual data. |
+| `String` | `"foo"` | Holds textual data. |
 
 Each of these types can hold a limited set of data. An `int` can contain neither `foo` nor `3.1`. The numerical types also have a maximum number they can hold; for example, on some systems `float` can hold a maximum of ~2.147483647x10^9, while a double can then hold a maximum of ~9.223372036854776x10^18 (it has double the number of bits available as the float, so it has exponentially more precision). When choosing between a double and a float, choose a double unless you have a reason not to.
 

@@ -122,7 +122,7 @@ if (foo == fooTwo) {
 }
 ```
 
-This is because `String` is not a primitive, and we're not comparing the values of those two strings. Instead, you should call a method on those strings: `equals`. You can, for example, call `foo.equals("foo");", and that would return true. If we want to make the example work, we would do the following:
+This is because `String` is not a primitive, and we're not comparing the values of those two strings. Instead, you should call a method on those strings: `equals`. You can, for example, call `foo.equals("foo");"`, and that would return true. If we want to make the example work, we would do the following:
 
 ```java
 String foo = "foo";
