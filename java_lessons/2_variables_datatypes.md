@@ -4,7 +4,7 @@ This section will further explore the concept of data types, and introduce _vari
 ## Data Types
 As we said in the last section, every piece of data you define in Java has a _type_. We already introduced the `int` and `String` types, but there are some more that we're going to be showing you here.
 
-~_As an aside, we're only introducing **primitive** types here (String is technically not a primitive, but whatever), but there are other more complex types that are defined in classes that we'll discuss later_
+~_As an aside, we're only introducing **primitive** types here (String is technically not a primitive, more on that later), but there are other more complex types that are defined in classes that we'll discuss later_
 
 Here is a table of some common primitive data types:
 

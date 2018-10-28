@@ -96,7 +96,7 @@ if (foo) {
 }
 ```
 
-Or, if you care that `bar == 3`, just that the previous statement didn't run, you can do the following:
+Or, if you don't care that `bar == 3`, just that the previous statement didn't run, you can do the following:
 
 ```java
 // This will print Second statement.
