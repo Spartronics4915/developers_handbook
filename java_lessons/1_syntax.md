@@ -101,5 +101,8 @@ System.out.println("foo" + 3); // Prints foo3
 ```
 
 ## Conclusion
-You just saw _a lot_. Much of it may not make sense. The idea is that you have some exposure, and something to refer back to. If you're ready to practice these concepts, go ahead and do the following PracticeIt lessons:
- 1. 
+You just saw _a lot_. Much of it may not make sense. The idea is that you have some exposure, and something to refer back to. If you're ready to practice these concepts, go ahead and do the following PracticeIt problems:
+ 1.  [`System.out.println`](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/s7%2DoutputSyntax)
+ 2. [Literals](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter2/s1%2DlegalIntLiterals)
+ 3. [Basic Syntax and Error Correction](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/s20%2DFamousSpeech%2Derrors)
+ 4. [Basic syntax and error correction](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/s19%2DSecretMessage%2Derrors)

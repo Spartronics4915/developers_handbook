@@ -30,4 +30,6 @@ Math.pow(3.0, 2.0); // Returns 9.0
 
 ## Conclusion
 Here are the PracticeIt problems for this section:
- 1. 
+ 1. [Method calls without parameters or returns](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/e7%2DMantra)
+ 2. [Complex method structure](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/s23%2DStrange)
+ 3. [Method parameters](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter3/s2%2DMysteryNums)

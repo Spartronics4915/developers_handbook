@@ -59,6 +59,52 @@ if (!foo) {
 
 This example would output foo is false! because `!false` is `true`.
 
+## Else and Else If
+What if you want one if statement to depend on the value of another?
+
+You could do this if you want the second statement to get run _only_ if the first statement doesn't run:
+
+```java
+// This will only print Second statement.
+
+boolean foo = false;
+int bar = 3;
+if (foo) {
+	System.out.println("First statement.")
+}
+
+if (!foo && bar == 3) {
+	System.out.println("Second statement.")
+}
+```
+
+This isn't _that_ confusing here, but you're still duplicating code, which is something we like to avoid in programming. Instead, you can use the `else if` statement:
+
+```java
+// This will print Second statement.
+
+boolean foo = false;
+int bar = 3;
+if (foo) {
+	System.out.println("First statement.")
+} else if (bar == 3) {
+	System.out.println("Second statement.")
+}
+```
+
+Or, if you care that `bar == 3`, just that the previous statement didn't run, you can do the following:
+
+```java
+// This will print Second statement.
+
+boolean foo = false;
+if (foo) {
+	System.out.println("First statement.")
+} else {
+	System.out.println("Second statement.")
+}
+```
+
 ## Equality Caveats
 An important thing to note is that the equality operator (`==`) compares _primitive_ types' values, but it does not compare the value of non-primitive types. Primitive types all start with lower case letters: `int`, `double`, `boolean`, etc. You do know a non-primitive type though: `String`.
 
@@ -84,4 +130,6 @@ if (foo.equals(fooTwo)) {
 
 ## Conclusion
 Go ahead and do the  following PracticeIt problems:
- 1. 
+ 1. [If statement syntax](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter4/s3%2DifStatementSyntax)
+ 2. [If statements and method parameters](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter4/s6%2DifElseMystery2)
+ 3. [if statements and method parameters](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter4/s6%2DifElseMystery2)

@@ -60,4 +60,7 @@ foo = 12 / foo; // foo now equals 4
 
 ## Conclusion
 Now that you've read over that, take some time to do the following PracticeIt problems:
- 1.
+ 1. [Variable Declarations](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter2/s6%2DdeclareRealNumberSyntax)
+ 2. [Data types](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter2/s7%2DfitnessVariables)
+ 3. [Variable declarations](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter2/s8%2DstudentVariables)
+ 4. [Varaible delcarations and use](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter2/s20%2DReceipt) If you're only going to do one of these, do this one. _Hint: You need to replace `38 + 40 + 30` with a variable._
