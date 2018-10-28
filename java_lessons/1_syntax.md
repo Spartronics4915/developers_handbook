@@ -55,7 +55,7 @@ public class HelloWorld {
 
 ## Curly braces
 Curly braces (`{` and `}`) can be seen in our above Hello World program. There's a couple of things about them to understand:
- 1. They **enclose** things (generally _scope_, a concept we'll discuss later)
+ 1. They **enclose** things (they always enclose a _scope_, a concept we'll discuss later)
  2. Every opening brace (`{`) has a corresponding closing brace (`}`). Mismatched braces is a common source of errors.
 
 If you think of them like enclosures (in our Hello World program, they enclose the `HelloWorld` class, and the `main` method) you'll be good for now.
@@ -83,6 +83,7 @@ You will encounter more and more data types and literals as you continue in your
 Now that we can represent data in Java with literals, we should also learn some basic operations on it. Java supports most arithmetic as you have seen it in math.
 
 Here are operators that you can use on `int`s, and `double`s (a data type we will learn more about soon).
+
 | Operator | Operaton Name | Example | Result |
 | -------- | ------------- | ------- | ------ |
 | `+` | Addition |  `2 + 4` | `6` |

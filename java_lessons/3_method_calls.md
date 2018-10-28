@@ -33,3 +33,4 @@ Here are the PracticeIt problems for this section:
  1. [Method calls without parameters or returns](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/e7%2DMantra)
  2. [Complex method structure](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/s23%2DStrange)
  3. [Method parameters](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter3/s2%2DMysteryNums)
+ 4. [Tricky variables and method calls](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter3/s15%2DmathExpressions2) _`Math.sqrt` is square root, `Math.min` gets the smallest of the two numbers you pass in, and `Math.round` rounds the number you pass in to the closest `int`. When this asks for "grade =", it is asking for the value of the `grade` variable at that line._

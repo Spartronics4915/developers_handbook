@@ -7,7 +7,9 @@ As we said in the last section, every piece of data you define in Java has a _ty
 ~_As an aside, we're only introducing **primitive** types here (String is technically not a primitive, but whatever), but there are other more complex types that are defined in classes that we'll discuss later_
 
 Here is a table of some common primitive data types:
+
 | Name | Example Literal | Explanation |
+| ---- | --------------- | ----------- |
 | `int` | `3` | An integer.
 | `float` | `3.1` | A real number. |
 | `double` | `3.1` | A real number; the _double_ precision version of a `float`. Prefer this over a float whenever possible. |

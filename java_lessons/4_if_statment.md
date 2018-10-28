@@ -15,7 +15,9 @@ This checks if `foo`'s value is equal to 9, if it is then it prints the value of
 A very important thing to understand here is that the `if` statement only takes a `boolean`. If we tried to do `if (3)` we would get an error, because 3 is not a `boolean`. (If you recall, a boolean is a data type that can only be true or false).
 
 There are a few operators that compare values and "return" a boolean (they are **not** methods though). Here's a table of them (they should look familiar):
+
 | Operator | Name |
+| -------- | ---- |
 | `==` | Equals |
 | `!=` | Not equals |
 | `>` or `<` | Greater/less than |
@@ -44,7 +46,9 @@ if (Math.pow(baz, 2) == 9) {
 ```
 
 There are also two conditonal operators that compare booleans:
+
 | Operator | Name | Example |
+| -------- | ---- | ------- |
 | `&&` | Conditional AND | `true && true` evaluates to true |
 | `||` | Conditional OR | `true && false` evaluates to false |
 
