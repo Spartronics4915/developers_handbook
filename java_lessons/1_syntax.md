@@ -84,7 +84,7 @@ Now that we can represent data in Java with literals, we should also learn some 
 
 Here are operators that you can use on `int`s, and `double`s (a data type we will learn more about soon).
 
-| Operator | Operaton Name | Example | Result |
+| Operator | Operation Name | Example | Result |
 | -------- | ------------- | ------- | ------ |
 | `+` | Addition |  `2 + 4` | `6` |
 | `-` | Addition |  `2 - 4` | `-2` |

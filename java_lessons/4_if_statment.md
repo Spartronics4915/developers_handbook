@@ -1,4 +1,4 @@
-# If Statments
+# If Statements
 Now that we can define data and move it around, how do we check what it is? The `if` statement is the most common way to do that.
 
 Let's break down a common `if` statement:
@@ -45,12 +45,12 @@ if (Math.pow(baz, 2) == 9) {
 }
 ```
 
-There are also two conditonal operators that compare booleans:
+There are also two conditional operators that compare booleans:
 
 | Operator | Name | Example |
 | -------- | ---- | ------- |
 | `&&` | Conditional AND | `true && true` evaluates to true |
-| `||` | Conditional OR | `true && false` evaluates to false |
+| `\|\|` | Conditional OR | `true && false` evaluates to false |
 
 Also important to note is the logical compliment operator: `!`. It just turns a true value to false. For example:
 
