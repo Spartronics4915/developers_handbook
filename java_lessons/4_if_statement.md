@@ -66,7 +66,7 @@ This example would output foo is false! because `!false` is `true`.
 ## Else and Else If
 What if you want one if statement to depend on the value of another?
 
-You could do this if you want the second statement to get run _only_ if the first statement doesn't run:
+You could do the following if you want the second statement to get run _only_ if the first statement doesn't run:
 
 ```java
 // This will only print Second statement.
@@ -82,7 +82,7 @@ if (!foo && bar == 3) {
 }
 ```
 
-This isn't _that_ confusing here, but you're still duplicating code, which is something we like to avoid in programming. Instead, you can use the `else if` statement:
+The above works, but it's much more elegant to use the `else if` statement:
 
 ```java
 // This will print Second statement.
@@ -96,7 +96,7 @@ if (foo) {
 }
 ```
 
-Or, if you don't care that `bar == 3`, just that the previous statement didn't run, you can do the following:
+Or, if you don't care that `bar == 3`, just that the previous statement didn't run, you can use the `else` statement:
 
 ```java
 // This will print Second statement.
@@ -109,10 +109,16 @@ if (foo) {
 }
 ```
 
-## Equality Caveats
-An important thing to note is that the equality operator (`==`) compares _primitive_ types' values, but it does not compare the value of non-primitive types. Primitive types all start with lower case letters: `int`, `double`, `boolean`, etc. You do know a non-primitive type though: `String`.
+Notice that `else` and `else if` must immediately follow the end of an `if` statement body.
 
-It is for this reason that the following does not print anything:
+## Equality Caveats
+An important thing to note is that the equality operator (`==`) compares _primitive_ types' values, but it does not compare the value of non-primitive types, it compares their pointer (memory address) instead.
+
+Because of this, you shouldn't compare non-primitive types using `==` if you want to compare their values. 
+
+There are 8 primitive types, and they all start with lower case letters: `int`, `double`, `boolean`, `short`, `long`, `float`, `char`, and `byte`. The only non-primitive we've covered is `String`.
+
+It is for that reason that the following does not print anything:
 
 ```java
 String foo = "foo";
@@ -122,7 +128,9 @@ if (foo == fooTwo) {
 }
 ```
 
-This is because `String` is not a primitive, and we're not comparing the values of those two strings. Instead, you should call a method on those strings: `equals`. You can, for example, call `foo.equals("foo");"`, and that would return true. If we want to make the example work, we would do the following:
+This is because `String` is not a primitive, and we're not comparing the values of those two strings. Instead, you should call a method on those strings: `equals`. For example, calling `foo.equals("foo");"` would return true. _Please note that not all objects have an `equals` method._ 
+
+If we want to make the earlier example work, we would do the following:
 
 ```java
 String foo = "foo";

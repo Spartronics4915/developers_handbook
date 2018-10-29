@@ -4,9 +4,9 @@ This section will further explore the concept of data types, and introduce _vari
 ## Data Types
 As we said in the last section, every piece of data you define in Java has a _type_. We already introduced the `int` and `String` types, but there are some more that we're going to be showing you here.
 
-~_As an aside, we're only introducing **primitive** types here (String is technically not a primitive, more on that later), but there are other more complex types that are defined in classes that we'll discuss later_
+~_We're only introducing **primitive** types here (String is technically not a primitive, more on that later), but there are other more complex types that are defined in classes that we'll discuss later_
 
-Here is a table of some common primitive data types:
+Here is a table of some common data types (4 are primitives):
 
 | Name | Example Literal | Explanation |
 | ---- | --------------- | ----------- |
@@ -16,7 +16,7 @@ Here is a table of some common primitive data types:
 | `boolean` | `true` | Either `true` or `false`. |
 | `String` | `"foo"` | Holds textual data. |
 
-Each of these types can hold a limited set of data. An `int` can contain neither `foo` nor `3.1`. The numerical types also have a maximum number they can hold; for example, on some systems `float` can hold a maximum of ~2.147483647x10^9, while a double can then hold a maximum of ~9.223372036854776x10^18 (it has double the number of bits available as the float, so it has exponentially more precision). When choosing between a double and a float, choose a double unless you have a reason not to.
+Each of these types can hold a limited set of data. An `int` can contain neither `foo` nor `3.1`. The numerical types also have a maximum number they can hold; this is why `double` is called double: it is _double_ the precision of a `float`. (When choosing between a `double` and a `float`, choose a `double` unless you have specific a reason not to.)
 
 ## Variables
 You've probably taken algebra, and seen variables before. Often, they're called x or y. We have variables in programming too, but they're a bit different than what you see in math class:
@@ -26,12 +26,14 @@ You've probably taken algebra, and seen variables before. Often, they're called 
 ### Declaring Variables
 Now that we have an idea of what variables are, how do we declare them? In math, we use the equals sign to denote both assignment and equality. In programming, `=` denotes just assignment (`==` tests for equality, which we'll talk about later.)
 
-So, here's an example of declaring an `int` (integer) variable with the name `foo` and the value `3`.
+_Many of the variable names below would be considered bad names if you used them in robot code. We're using names like foo just because it's an example. If we were to define a variable that holds an object for the left motor in real robot code though, we would **not** call it foo (we would probably call it `leftMotor`, or `mLeftMotor`)_
+
+So, here's an example of declaring an `int` (integer) variable with the name `x` and the value `3`.
 
 ```java
 public class Example {
 	public static void main(String[] args) {
-		int foo = 3;
+		int x = 3;
 	}
 }
 ```

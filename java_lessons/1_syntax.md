@@ -1,5 +1,5 @@
 # Basic Syntax
-Welcome to the Spartronics Java lessons! Work your way through these chronologically, and skip over any parts you already know.
+Welcome to the Spartronics Java lessons! Work your way through these chronologically, and skip over any parts you already know. At the end of each lesson there are PracticeIt problems; you should do them unless you're already completely skipping the lesson (if you are skipping the lesson, trying the problems is still recommended, because they will either be easy and quick, or they'll highlight areas you need to improve).
 
 ## Introduction
 Consider the following program:
@@ -12,19 +12,21 @@ public class HelloWorld {
 }
 ```
 
-What do you think this example does? What if I hide some parts of it, like this (the below is not a valid Java program, you need the whole thing as shown above):
+What do you think this example does? Take a moment to think about it.
+
+Is it easier if I hide some parts of it, like this (the below is not a valid Java program, you need the whole thing as shown above):
 ```java
 System.out.println("Hello, world!");
 ```
 
-As you may have guessed, this program calls a _function_ (more on these later) that prints `Hello, world!` (for robot programming, `Hello, world!` would show up on the RIOLog, but this isn't really important now. On other platforms it would show up on the terminal or console.)
+Ok, as you may have guessed, this program calls a _function_ (more on these later) that prints `Hello, world!` (for robot programming, `Hello, world!` would show up on the RIOLog, but this isn't really important now. On other platforms it would show up on the terminal or console.)
 
-Ok, let's break down this program a little more.
+Let's break down this program a little more.
 
 ## Statements
-A program is a set of instructions. In Java, we call each of these instructions **statements**. Each statement ends with a semicolon (`;`), which denotes the end of the statement.
+A program is a set of instructions. In Java, we call each of these instructions **statements**. Each statement ends with a semicolon (`;`).
 
-For our purposes, statements are executed sequentially. In our Hello World program, `System.out.println("Hello, world!");` was a statement.
+For our purposes, in Java, statements are executed sequentially. In our Hello World program, `System.out.println("Hello, world!");` was a statement.
 
 ## Whitespace and comments
 In the above program you can that certain parts are indented. In some languages, indentation means something, but in Java it is ignored. You should still indent your code (using tabs or spaces), because it makes it easier to read.
