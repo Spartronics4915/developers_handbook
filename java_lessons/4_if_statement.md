@@ -50,7 +50,7 @@ There are also two conditional operators that compare booleans:
 | Operator | Name | Example |
 | -------- | ---- | ------- |
 | `&&` | Conditional AND | `true && true` evaluates to true |
-| `||` | Conditional OR | `true && false` evaluates to false |
+| `❘❘` | Conditional OR | `true && false` evaluates to false |
 
 Also important to note is the logical compliment operator: `!`. It just turns a true value to false. For example:
 
