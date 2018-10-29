@@ -10,8 +10,14 @@
     * [WPILib Overview](basics/wpilib_overview.md)
     * [Resources](basics/resources.md)
 
-* [Robot Lessons](robot_lessons/README.md) @TODO
-    * [Lesson 1: Motors](robot_lessons/Lesson%201:%20Motors.md)
+* [Robot Lessons](robot_lessons/README.md)
+  * [Lesson 1: Motors](robot_lessons/1_motors.md)
+
+* [Java Lessons](java_lessons/README.md)
+  * [Lesson 1: Introductory Syntax](java_lessons/1_syntax.md)
+  * [Lesson 2: Variables and Datatypes](java_lessons/2_variables_datatypes.md)
+  * [Lesson 3: Method Calls](java_lessons/3_method_calls.md)
+  * [Lesson 4: The If Statement](java_lessons/4_if_statement.md)
 
 * [Development Guidelines](dev_guide/README.md)
     * [Flashing Components](dev_guide/flashing.md)
