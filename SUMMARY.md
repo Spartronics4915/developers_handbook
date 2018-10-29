@@ -11,7 +11,7 @@
   * [Resources](basics/resources.md)
 
 * [Robot Lessons](robot_lessons/README.md)
-  * [Lesson 1: Motors](robot_lessons/Lesson%201:%20Motors.md)
+  * [Lesson 1: Motors](robot_lessons/1_motors.md)
 
 * [Java Lessons](java_lessons/README.md)
   * [Lesson 1: Introductory Syntax](java_lessons/1_syntax.md)
