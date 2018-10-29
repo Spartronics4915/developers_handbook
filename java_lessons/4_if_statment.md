@@ -1,4 +1,4 @@
-# If Statements
+# The If Statement
 Now that we can define data and move it around, how do we check what it is? The `if` statement is the most common way to do that.
 
 Let's break down a common `if` statement:
