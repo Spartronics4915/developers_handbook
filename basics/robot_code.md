@@ -11,7 +11,7 @@ on Capek's term _robot_. For our purpose:
 > world, can sense its environment, and can act on it to achieve some goals.
 
 - _Autonomous_ robots act on the basis of its own decisions, given input
-from its environment as applicable, and is not controlled by a human
+  from its environment as applicable, and is not controlled by a human
 - _Teleoperated_ robots are externally controlled by humans, from a distance
 
 ## Sensors
@@ -51,7 +51,7 @@ the environment. As an example, a car's cruise control adjusts for changes in
 the terrain and head-winds by adjusting the throttle setting to maintain the
 set speed.
 
-# Robot Programming
+## Robot Programming
 The fundamental challenge of all robotics is a method of controlling the robot.
 How do you move the arm from one location to another? How far did the robot move
 before stopping? How do you tell where the robot is, without an separate viewer
@@ -175,12 +175,12 @@ without the need for braking or other mechanical controls.
 It is important to realize that the PID control loop will always use power and
 perform calculations while active, and that power will be dissipated in the
 motor (or other actuator), resulting in excess heat, along with battery
-voltage drop. It is wise to disable the PID control 
+voltage drop. It is wise to disable the PID control
 loop when it is not needed, such as when
 an actuator is parked or locked by a mechanical brake.
 
-
 WPILibrary simplifies many of these steps for FIRST FRC programmer.
 
-# References
-- [The Robotics Primer](https://mitpress.mit.edu/books/robotics-primer) by Maja J Mataric
+## References
+- [The Robotics Primer](https://mitpress.mit.edu/books/robotics-primer)
+by Maja J Mataric

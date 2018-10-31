@@ -4,6 +4,9 @@ Consistent and aggressively enforced code style helps reduce errors and conflict
 
 ## Code Formatting
 
+@TODO - do we still have this? can we do this with vs code?
+
+
 Pinned to the `#programming` Slack channel is a file called `Code Formatting.zip`.
 
 Download that, unzip it, then open Eclipse.
