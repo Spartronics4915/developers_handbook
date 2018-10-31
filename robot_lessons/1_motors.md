@@ -145,6 +145,12 @@ There's just two other methods you should know:
  1. [`getY`](http://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/GenericHID.html#getY--), which gets the joystick's value on the Y-axis (forward and backward).
  2. [`getRawButton`](http://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/GenericHID.html#getRawButton-int-), which gets the status of a button. This takes a parameter, so be sure to read the javadoc!
 
+Before you do the following exercises, you will need to import the `Joystick` class by adding the following line to the top of your file:
+
+```java
+import edu.wpi.first.wpilibj.Joystick;
+```
+
   - Make it so that the first motor's output is based on the value of the joystick's Y-axis. You should instantiate your joystick on port 1.
 	- Allow your second motor to be toggled by pressing a button. This means that when you press the button if the motor is on it turns off, and if the motor is off it turns on. You should check the value of button 1.
 
