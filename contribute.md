@@ -51,7 +51,7 @@ browsers and interpreters.
 
 [Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 is an excellent guide to the basics of markdown syntax and is highly
-recommended for anyone who is interested in contributing to this document. Additionally, Markdown "grammar" rules are also available [on GitHub.](https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md)
+recommended for anyone who is interested in contributing to this document.
 
 You can use any plain text editor to read and edit .md files. One powerful
 editor for this purpose is [Atom](atom.io), made by GitHub. It has a robust
