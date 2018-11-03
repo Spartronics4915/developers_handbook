@@ -46,14 +46,14 @@ a `TalonSRX` and storing it in a variable looks like this:
 
 ```java
 TalonSRX motor; // Make the variable
-motor = new TalonSRX(3); // Instantiate a motor controller object on CAN ID 14
+motor = new TalonSRX(14); // Instantiate a motor controller object on CAN ID 14
 ```
 
 The idea here is that we have a variable which holds an instance of a `TalonSRX`
 class, and we have to make a new `TalonSRX` to put in it. An important piece of
 this to understand is that `TalonSRX` takes a parameter in its constructor (a
 constructor is like a special function that sets up a new instance of a class).
-This is the `3` in `new TalonSRX(3)`. This 3 is the ID (on the CAN bus)
+This is the `14` in `new TalonSRX(14)`. This 14 is the ID (on the CAN bus)
 of the motor controller; it's like an address for motors.
 
 ## Moving motors
@@ -75,7 +75,7 @@ This would look like the following:
 
 ```java
 TalonSRX motor; // Make the variable
-motor = new TalonSRX(3); // Instantiate a motor controller object on CAN ID 3
+motor = new TalonSRX(14); // Instantiate a motor controller object on CAN ID 14
 motor.set(ControlMode.PercentOutput, 0.5); // Run the motor at 50%
 ```
 
@@ -89,7 +89,7 @@ That would look like this:
 ```java
 @Override
 public void robotInit() {
-  TalonSRX motor = new TalonSRX(3);
+  TalonSRX motor = new TalonSRX(14);
 }
 ```
 
@@ -132,7 +132,7 @@ public class Lesson extends IterativeRobot {
 
 	@Override
 	public void teleopPeriodic() {
-
+    motor.set(ControlMode.PercentOutput, 0.5); // Run the motor at 50%
 	}
 }
 
