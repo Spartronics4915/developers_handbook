@@ -14,19 +14,19 @@ public class Lesson extends IterativeRobot {
 	}
 
 	@Override
-	public void autonomousInit() {
+	public void teleopInit() {
 
 	}
 
 	@Override
-	public void autonomousPeriodic() {
+	public void teleopPeriodic() {
 
 	}
 }
 
 ```
 
-In the above code, `robotInit` will get called once by WPILib, when the robot starts. `autonomousInit` will get called every time autonomous starts (there's also a very similar method called `teleopInit`; what do you think that does?). `autonomousPeriodic` will get called every time the robot receives a message from the driver station, about every 20 milleseconds, or 50 times per second.
+In the above code, `robotInit` will get called once by WPILib, when the robot starts. `teleopInit` will get called every time teleop starts (there's also a very similar method called `autonomousInit`; what do you think that does?). `teleopPeriodic` will get called every time the robot receives a message from the driver station, about every 20 milleseconds, or 50 times per second.
 
 A structure like this will be in every robot you work on (usually the class is called `Robot`), but on larger codebases you will probably not directly interact with these methods.
 
@@ -39,7 +39,7 @@ As you may know, we can *instantiate* (make a new instance, or object) of a clas
 
 ```java
 TalonSRX motor; // Make the variable
-motor = new TalonSRX(3); // Instantiate a motor controller object on CAN ID 3
+motor = new TalonSRX(3); // Instantiate a motor controller object on CAN ID 14
 ```
 
 The idea here is that we have a variable which holds an instance of a `TalonSRX` class, and we have to make a new `TalonSRX` to put in it. An important piece of this to understand is that `TalonSRX` takes a parameter in its constructor (a constructor is like a special function that sets up a new instance of a class). This is the `3` in `new TalonSRX(3)`. This 3 is the ID (on the CAN bus) of the motor controller; it's like an address for motors.
@@ -64,7 +64,7 @@ motor.set(ControlMode.PercentOutput, 0.5); // Run the motor at 50%
 ## Putting it into our class
 To put this all together, we have to fit it into our existing class.
 
-First we need to instantiate our `TalonSRX`. We *don't* want to instantiate it every 20ms in `autonomousPeriodic`, and we don't even want to instantiate it every time autonomous starts (`autonomousInit`), so we should put it in `robotInit`.
+First we need to instantiate our `TalonSRX`. We *don't* want to instantiate it every 20ms in `teleopPeriodic`, and we don't even want to instantiate it every time teleop starts (`teleopInit`), so we should put it in `robotInit`.
 
 That would look like this:
 ```java
@@ -74,9 +74,9 @@ public void robotInit() {
 }
 ```
 
-Now we just call `motor.set` in `autonomousPeriodic` (if we don't call `set` a lot the motor will stop). Right?
+Now we just call `motor.set` in `teleopPeriodic` (if we don't call `set` a lot the motor will stop). Right?
 
-**Wrong!** How do we access `motor` in `autonomousPeriodic` if it's only defined in `robotInit`? Well, you can make it a *member variable* of your class, which means that all of the class's methods can access it.
+**Wrong!** How do we access `motor` in `teleopPeriodic` if it's only defined in `robotInit`? You can't... Unless you make it a *member variable* of your class, which means that all of the class's methods can access it.
 
 That looks like this:
 ```java
@@ -89,7 +89,10 @@ public class Lesson extends IterativeRobot {
 
 All of this together looks like this:
 ```java
+package com.spartronics4915.learnyouarobot;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
+
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
@@ -98,19 +101,20 @@ public class Lesson extends IterativeRobot {
 
 	@Override
 	public void robotInit() {
-		motor = new TalonSRX(3); // Motor is on CAN ID 3
+		motor = new TalonSRX(14); // Motor is CAN ID 14
 	}
 
 	@Override
-	public void autonomousInit() {
+	public void teleopInit() {
 
 	}
 
 	@Override
-	public void autonomousPeriodic() {
-		motor.set(ControlMode.PercentOutput, 0.5);
+	public void teleopPeriodic() {
+
 	}
 }
+
 
 ```
 
@@ -125,7 +129,7 @@ Now that we have this set up, what if you want to reverse the output of the moto
 ### Doing it again
 What if we have another motor on CAN address 4, and we don't want to invert that motor but we *do* want to run it at 100%?
 
- - Go ahead and make a `motorTwo` variable, and set it to 100% in `autonomousPeriodic`.
+ - Go ahead and make a `motorTwo` variable, and set it to 100% in `teleopPeriodic`.
 
 ### Incorporating driver input
 How would we make this respond to driver input?
