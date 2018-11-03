@@ -1,41 +1,48 @@
 # Spartronics Git Workflow
 
-## Glossary
+For introduction to git, please see section [Git Intro](../git_intro/README.md)
 
-`version control`: Software that tracks how and why files change over time, and allow you to go back in time to any point.
+<!-- TOC -->
 
-`git`: Version control software of choice, it's very common.
+- [Spartronics Git Workflow](#spartronics-git-workflow)
+- [Overview](#overview)
+    - [Resources](#resources)
+- [Workflow Steps](#workflow-steps)
+- [Top 5 Commands](#top-5-commands)
 
-`repository`: Special folder which holds version-controlled files.
+<!-- /TOC -->
 
-`github`: Website which "hosts" Git repositories for free.
+# Overview
+Spartronics Programming Team uses the GitHub's fork & pull request workflow.
+This workflow balances flexibility with productivity for the individual developers.
+* Individuals have the flexibility of working on their own repos, while
+  collaborating as a small team, such as pair programming or getting code
+  reviews from mentors before a PR
+* Standard practice is to push local repo to remote forks, ensuring code
+  continuity and code backup
+* Programming leads can monitor and review code contributions and ensuring
+  master is always production ready
 
-`remote`: The "remote" copy of your repository, generally the place you send code when it's ready.
+## Resources
+* [GitHub Guides: Forking Projects](https://guides.github.com/activities/forking/)
+* [GitHub Gist: GitHub Forking](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 
-`commit`: A specific point in time for your repository. Also stores the reason (message) that you made the commit. Be descriptive!
+# Workflow Steps
+![Fork & PR Workflow](../git_intro/images/repos.png)
 
-`clone`: The act of making a copy of a remote, with all its history.
+Basic git commands and process is documented [here](../git_intro/git_fundamentals.md#git-fork). If you are new to git, please start w/ our [Git Intro](../git_intro/README.md).
 
-`push`: The act of sending commits to a remote.
+Start with pulling the initial repo and establishing your local repo. This command is handy to stay in sync w/ upstream: `$ git pull upstream master`.
 
-`pull`: The act of fetching commits from a remote which you don't have yet, and integrating them in to your local copy of the repository.
+1. Make changes on your local repo
+2. Test changes on the robot
+3. `git add` the changes
+4. `git commit` the changes
+5. `git push origin master` the commits
+6. Make a pull request at your fork's web page
+7. `git pull upstream master` once pull request is accepted
 
-## Guides
-
-- All sorts of documentation, videos, cheat sheets...: [https://git-scm.com/documentation](https://git-scm.com/documentation)
-- Git wiki: [http://git.wiki.kernel.org/](http://git.wiki.kernel.org/)
-- It's incredibly dense, but here's the official "Git everyday" guide: [https://jk.gs/giteveryday.html](https://jk.gs/giteveryday.html) (esp. "Individual - Participant" section)
-- The official Git book, _Pro Git v2_: [https://git-scm.com/book/en/v2](https://git-scm.com/book/en/v2) (it's a website, not a physical book unless you really want a copy)
-- "Git for Web Designers": [http://www.webdesignerdepot.com/2009/03/intro-to-git-for-web-designers/](http://www.webdesignerdepot.com/2009/03/intro-to-git-for-web-designers/)
-- "Git for Computer Scientists", if you know what a directed acyclic graph is: [http://eagain.net/articles/git-for-computer-scientists/](http://eagain.net/articles/git-for-computer-scientists/)
-- "Git in the Trenches", real-world Git usage guide: [http://cbx33.github.io/gitt/](http://cbx33.github.io/gitt/)
-- "Version Control by Example" chap. 8: [http://ericsink.com/vcbe/html/git_example.html](http://ericsink.com/vcbe/html/git_example.html)
-- "The Git Parable", the actual theory behind Git, doesn't cover actually using it: [http://tom.preston-werner.com/2009/05/19/the-git-parable.html](http://tom.preston-werner.com/2009/05/19/the-git-parable.html)
-
-Source: [https://jk.gs/git/bot/trigger.php](https://jk.gs/git/bot/trigger.php)
-
-## Top 5 Commands
-
+# Top 5 Commands
 1. `git status`
     - Shows the current status of your git repository, including:
         - What files you've edited (shown in red until you `git add` them)
@@ -59,45 +66,3 @@ Source: [https://jk.gs/git/bot/trigger.php](https://jk.gs/git/bot/trigger.php)
     - Pushes your commits to a remote
     - Most often used like `git push origin master` -- "push the `master` branch to `origin`"
     - Do this after you make a couple commits
-
-## Setting up Git
-
-Fork the repository here: https://github.com/Spartronics4915/2017-STEAMworks/fork
-
-Use your package manager, or install GitHub's program here: https://desktop.github.com/
-
-Open the "Git Shell" app (or a plain shell that knows about `git`.)
-
-Run these commands, without the dollar sign at the front, though quotes are important:
-
-```bash
-$ git config --global user.name "Your Name"
-$ git config --global user.email "the email you used to sign up for github"
-$ cd
-$ mkdir workspace
-$ cd workspace
-$ git clone https://github.com/<your username>/2017-STEAMworks
-$ cd 2017-STEAMworks
-$ git remote add upstream https://github.com/Spartronics4915/2017-STEAMworks
-```
-
-Now that everything is set up, you can just use this command to get back there
-in the future. You'll have to do this every time you open the shell.
-
-```bash
-$ cd ~/workspace/2017-STEAMworks
-```
-
-Now use the rest of the git commands to save your work.
-
-## Rest of the workflow
-
-Before starting work on something: `$ git pull upstream master`
-
-1. Make changes
-2. Test changes
-3. `git add` the changes
-4. `git commit` the changes
-5. `git push origin master` the commits
-6. Make a pull request at your fork's web page
-7. `git pull upstream master` once pull request is accepted

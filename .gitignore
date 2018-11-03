@@ -1,0 +1,9 @@
+*.sketch
+.DS_Store
+.vscode
+.wpilib
+.bak
+.settings
+*.code-workspace
+*~
+build
