@@ -2,59 +2,77 @@
 This lesson will introduce basic motor control, and class instantiation.
 
 ## Class Setup
-First, we need to set up our class so that it gets run by WPILib. You can do that like this:
+First, we need to set up our class so that it gets run by WPILib.
+You can do that like this:
 
 ```java
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 public class Lesson extends IterativeRobot {
-	@Override
-	public void robotInit() {
+    @Override
+    public void robotInit() {
 
-	}
+    }
 
 	@Override
 	public void teleopInit() {
 
-	}
+    }
 
 	@Override
 	public void teleopPeriodic() {
 
-	}
+    }
 }
 
 ```
 
 In the above code, `robotInit` will get called once by WPILib, when the robot starts. `teleopInit` will get called every time teleop starts (there's also a very similar method called `autonomousInit`; what do you think that does?). `teleopPeriodic` will get called every time the robot receives a message from the driver station, about every 20 milleseconds, or 50 times per second.
 
-A structure like this will be in every robot you work on (usually the class is called `Robot`), but on larger codebases you will probably not directly interact with these methods.
+A structure like this will be in every robot you work on (usually the class is
+called `Robot`), but on larger codebases you will probably not directly interact
+with these methods.
 
 ## Instantiating motors
-In this example we're going to be controlling a TalonSRX motor controller, which will drive a motor. This is important to know because that's the motor controller class you have to use.
+In this example we're going to be controlling a TalonSRX motor controller,
+which will drive a motor.
+This is important to know because that's the motor controller class you have to use.
 
 What do I mean by that? How do you use a motor controller class?
 
-As you may know, we can *instantiate* (make a new instance, or object) of a class by using the `new` keyword. A basic example of making a new instance of a `TalonSRX` and storing it in a variable looks like this:
+As you may know, we can *instantiate* (make a new instance, or object) of
+a class by using the `new` keyword. A basic example of making a new instance of
+a `TalonSRX` and storing it in a variable looks like this:
 
 ```java
 TalonSRX motor; // Make the variable
 motor = new TalonSRX(3); // Instantiate a motor controller object on CAN ID 14
 ```
 
-The idea here is that we have a variable which holds an instance of a `TalonSRX` class, and we have to make a new `TalonSRX` to put in it. An important piece of this to understand is that `TalonSRX` takes a parameter in its constructor (a constructor is like a special function that sets up a new instance of a class). This is the `3` in `new TalonSRX(3)`. This 3 is the ID (on the CAN bus) of the motor controller; it's like an address for motors.
+The idea here is that we have a variable which holds an instance of a `TalonSRX`
+class, and we have to make a new `TalonSRX` to put in it. An important piece of
+this to understand is that `TalonSRX` takes a parameter in its constructor (a
+constructor is like a special function that sets up a new instance of a class).
+This is the `3` in `new TalonSRX(3)`. This 3 is the ID (on the CAN bus)
+of the motor controller; it's like an address for motors.
 
 ## Moving motors
-Now that we have a variable called `motor` that holds a `TalonSRX` object in it, we can call methods on it.
+Now that we have a variable called `motor` that holds a `TalonSRX` object in it,
+we can call methods on it.
 
 One of these methods is `set`, which is defined as the following:
-`public void set(ControlMode mode, double outputValue)`. It sets the output of a motor.
+`public void set(ControlMode mode, double outputValue)`.
+It sets the output of a motor.
 
-This means that it's a method that other classes can access (`public`), that returns nothing (`void`), which takes a `ControlMode`, and an output value (a `double`).
+This means that it's a method that other classes can access (`public`), that
+returns nothing (`void`), which takes a `ControlMode`, and an output value (a `double`).
 
-If we set our control mode to `ControlMode.PercentOutput`, and our output value to `0.5`, the motor will run at 50% power for as long as we call the `set` method with those parameters.
+If we set our control mode to `ControlMode.PercentOutput`, and our output value
+to `0.5`, the motor will run at 50% power for as long as we call the
+`set` method with those parameters.
 
 This would look like the following:
+
 ```java
 TalonSRX motor; // Make the variable
 motor = new TalonSRX(3); // Instantiate a motor controller object on CAN ID 3
@@ -67,6 +85,7 @@ To put this all together, we have to fit it into our existing class.
 First we need to instantiate our `TalonSRX`. We *don't* want to instantiate it every 20ms in `teleopPeriodic`, and we don't even want to instantiate it every time teleop starts (`teleopInit`), so we should put it in `robotInit`.
 
 That would look like this:
+
 ```java
 @Override
 public void robotInit() {
@@ -79,6 +98,7 @@ Now we just call `motor.set` in `teleopPeriodic` (if we don't call `set` a lot t
 **Wrong!** How do we access `motor` in `teleopPeriodic` if it's only defined in `robotInit`? You can't... Unless you make it a *member variable* of your class, which means that all of the class's methods can access it.
 
 That looks like this:
+
 ```java
 public class Lesson extends IterativeRobot {
   TalonSRX motor;
@@ -88,6 +108,7 @@ public class Lesson extends IterativeRobot {
 ```
 
 All of this together looks like this:
+
 ```java
 package com.spartronics4915.learnyouarobot;
 
@@ -97,7 +118,7 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
 public class Lesson extends IterativeRobot {
-	TalonSRX motor;
+    TalonSRX motor;
 
 	@Override
 	public void robotInit() {
@@ -107,7 +128,7 @@ public class Lesson extends IterativeRobot {
 	@Override
 	public void teleopInit() {
 
-	}
+    }
 
 	@Override
 	public void teleopPeriodic() {
@@ -122,12 +143,18 @@ public class Lesson extends IterativeRobot {
 In this section we're going to ask you to do something without giving you the code.
 
 ### Inverting our motor
-Now that we have this set up, what if you want to reverse the output of the motor? You could just change 0.5 to -0.5, but that can rapidly become confusing when you need to reverse it again (this may seem unlikely, but once things get more complex it can happen). Instead of unary negation, there's a method that will do this for us: [`setInverted`](https://www.ctr-electronics.com/downloads/api/java/html/com/ctre/phoenix/motorcontrol/can/BaseMotorController.html#setInverted-boolean-). Just call `motor.setInverted`, and you can reverse the motor's output.
+Now that we have this set up, what if you want to reverse the output of
+the motor? You could just change 0.5 to -0.5, but that can rapidly become
+confusing when you need to reverse it again (this may seem unlikely, but
+once things get more complex it can happen). Instead of unary negation,
+there's a method that will do this for us: [`setInverted`](https://www.ctr-electronics.com/downloads/api/java/html/com/ctre/phoenix/motorcontrol/can/BaseMotorController.html#setInverted-boolean-).
+Just call `motor.setInverted`, and you can reverse the motor's output.
 
  - Now that you know that, go ahead and invert the motor's output.
 
 ### Doing it again
-What if we have another motor on CAN address 4, and we don't want to invert that motor but we *do* want to run it at 100%?
+What if we have another motor on CAN address 4, and we don't want to
+invert that motor but we *do* want to run it at 100%?
 
  - Go ahead and make a `motorTwo` variable, and set it to 100% in `teleopPeriodic`.
 

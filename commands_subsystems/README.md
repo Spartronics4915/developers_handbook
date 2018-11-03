@@ -13,7 +13,7 @@ Each subsystem class is a subclass of the WPILib Subsystem class.
 
 ```java
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.command.PIDSubsystem
+import edu.wpi.first.wpilibj.command.PIDSubsystem;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
 public class IntakeLauncher extends Subsystem {
@@ -37,7 +37,7 @@ Commands enable us to operate our robot as a system. Commands are small chunks o
 
 ```java
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.CommandGroup
+import edu.wpi.first.wpilibj.command.CommandGroup;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
 

@@ -1,6 +1,7 @@
 # Networking and roboRIO
 
-roboRIO is configured with mdns using static IP configuration. This improves performance and removes potential DHCP issues during competitions.
+roboRIO is configured with mdns using static IP configuration. This
+improves performance and removes potential DHCP issues during competitions.
 
 - IP address is based on team number: 10.49.15.x
 - Subnet mask: 255.255.255.0
@@ -25,11 +26,14 @@ https://github.com/Spartronics4915/2016-Stronghold/wiki/Setting-up-the-Axis-Came
 ## Configuring PCs and Macs for mdns
 For Macs: if you have issues connecting to robot network try this via Terminal
 
-```networksetup -setv6off Wi-Fi```
+`networksetup -setv6off Wi-Fi`
 
-To change IP on Windows computers use Control Panel's network status and local area network settings for TCP/IP configuration.
+To change IP on Windows computers use Control Panel's network status and
+local area network settings for TCP/IP configuration.
 
-To change IP on Mac computers: Click "Open Network Preferences" under the wifi settings. Click "Advanced". Click "TCP/IP". Set Configure IPv4 to "Manually" to be able to set your custom IP in "IPv4 Address".
+To change IP on Mac computers: Click "Open Network Preferences" under the wifi
+settings. Click "Advanced". Click "TCP/IP". Set Configure IPv4 to "Manually"
+to be able to set your custom IP in "IPv4 Address".
 
 And, remember -- ping is your friend! From Terminal check if you can see the robot
-```ping 10.49.15.2```
+`ping 10.49.15.2`

@@ -81,7 +81,8 @@ $ cd 2017-STEAMworks
 $ git remote add upstream https://github.com/Spartronics4915/2017-STEAMworks
 ```
 
-Now that everything is set up, you can just use this command to get back there in the future.  You'll have to do this every time you open the shell.
+Now that everything is set up, you can just use this command to get back there
+in the future. You'll have to do this every time you open the shell.
 
 ```bash
 $ cd ~/workspace/2017-STEAMworks
