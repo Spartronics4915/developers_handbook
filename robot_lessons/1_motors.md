@@ -153,7 +153,7 @@ Just call `motor.setInverted`, and you can reverse the motor's output.
  - Now that you know that, go ahead and invert the motor's output.
 
 ### Doing it again
-What if we have another motor on CAN address 4, and we don't want to
+What if we have another motor on CAN address 15, and we don't want to
 invert that motor but we *do* want to run it at 100%?
 
  - Go ahead and make a `motorTwo` variable, and set it to 100% in `teleopPeriodic`.
@@ -182,7 +182,7 @@ Before you do the following exercises, you will need to import the `Joystick` cl
 import edu.wpi.first.wpilibj.Joystick;
 ```
 
-  - Make it so that the first motor's output is based on the value of the joystick's Y-axis. You should instantiate your joystick on port 1.
+  - Make it so that the first motor's output is based on the value of the joystick's Y-axis. You should instantiate your joystick on port 0.
 	- Allow your second motor to be toggled by pressing a button. This means that when you press the button if the motor is on it turns off, and if the motor is off it turns on. You should check the value of button 1.
 
 The above are the most difficult and least guided exercises. Be sure to ask questions and look up things you don't know.
