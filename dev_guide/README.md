@@ -15,10 +15,12 @@ This section covers topics relating to Spartronics 4915 development guidelines.
 
 * [Competition Readiness](./competitions.md)
 
-* [Networking](./networking.md)
+* [roboRIO and Networking](./networking.md)
 
 * [Resources](./resources.md)
 
-* [Robot Code](./robot_code.md)
+* [Robot Programming](./robot_code.md)
 
 * [WPILib Overview](./wpilib_overview.md)
+
+* [Java Highlights] @TODO
