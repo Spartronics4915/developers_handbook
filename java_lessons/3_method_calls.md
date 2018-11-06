@@ -17,7 +17,7 @@ You've actually already seen method calls. Remember this?
 
 ```java
 public class HelloWorld {
-    public static void main(String[]) {
+    public static void main(String[] args) {
         System.out.println("Hello, world!");
     }
 }
