@@ -9,6 +9,7 @@ Anything that relates to git or git related tools such as vi, or unix commands.
 - [Common vi commands](#common-vi-commands)
 - [Common git questions](#common-git-questions)
     - [How do I revert previous commit?](#how-do-i-revert-previous-commit)
+    - [What is "non-fast-forward"?](#what-is-non-fast-forward)
 
 <!-- /TOC -->
 
@@ -36,6 +37,19 @@ $ cat <filename>
 
 # make directory
 $ mkdir <dir_name>
+
+# delete a file
+$ rm <filename>
+
+# recursively delete a directory -- BE VERY CAREFUL WITH THIS COMMAND!!
+$ rm -rf <directory-name>
+
+# move a file from current directory to another directory location
+$ mv <filename> <directory-location>
+# rename a file in current directory -- applies to filename or directory name
+$ mv <oldname> <newname>
+# move & rename a file from current directory to directory above
+$ mv <filename> ../<new-filename>
 ```
 
 # Common vi commands
@@ -56,3 +70,10 @@ dw
 
 # Common git questions
 ## How do I revert previous commit?
+
+## What is "non-fast-forward"?
+
+When your local repo is behind the repo you are pushing to you will see an error
+non-fast-forward updates were rejected. That means you need to retrieve the
+changes before you can push your changes. Read more about [git pull vs git fetch
+&& git merge](./git_fundamentals.md#(#git-pull-vs-git-fetch-&&-git-merge)
