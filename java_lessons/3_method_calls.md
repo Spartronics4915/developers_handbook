@@ -40,6 +40,15 @@ Here's how you would call that:
 Math.pow(3.0, 2.0); // Returns 9.0
 ```
 
+A key part of this method is that it _returns_ a value. `System.out.println` returns `void`, which means it returns nothing. This method returns a `double`. This means you could do the following:
+
+```java
+double num = Math.pow(3.0, 2.0);
+System.out.println("3^2 is "+num);
+```
+
+And you would end up printing out `3^2 is 9`.
+
 ## Conclusion
 Here are the PracticeIt problems for this section:
  1. [Method calls without parameters or returns](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/e7%2DMantra)
