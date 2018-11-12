@@ -6,4 +6,5 @@
 .settings
 *.code-workspace
 *~
+*.swp
 build
