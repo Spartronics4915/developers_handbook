@@ -17,3 +17,5 @@
 as versioning.
 
 @TODO package the eclipse code setup as a template
+
+@XXX - do before PR
