@@ -19,7 +19,7 @@
   * [Lesson 3: Method Calls](java_lessons/3_method_calls.md)
   * [Lesson 4: The If Statement](java_lessons/4_if_statement.md)
 
-* [Git Introduction]()
+* [Git Introduction](git_intro/README.md)
     * [Introducing Git and GitHub](git_intro/git_about.md)
     * [Git Fundamentals](git_intro/git_fundamentals.md)
     * [Next Level Git](git_intro/git_advanced.md)
