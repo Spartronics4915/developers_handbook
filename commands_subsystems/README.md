@@ -1,3 +1,5 @@
+IMPORTANT: Spartronics now uses Team 254 codebase -- the command-based programming information hasn't been updated since its inception in 2016-2017.
+
 # Command-based Programming: Overview
 
 Spartronics team uses WPI's command-based design pattern to organize robot code.
