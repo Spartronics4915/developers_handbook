@@ -15,15 +15,8 @@ Random bits to clean and organize
 - Ensure both robots' motors are configured and wired identically
   to avoid switching profiles.
 
-<<<<<<< HEAD
 ### Rework these....
-=======
-<<<<<<< HEAD
-### Rework these....
-=======
-### Rework these.... @ TODO
->>>>>>> 6a150585dda34f5d85c825022abd9f18f86e7246
->>>>>>> 36a0c05f08a56b4e20ab4e13f9c7b11047273305
+
 **Sensor Inputs**: All sensor inputs should be checked for range values.
 
 **Actuator outputs**: All method outputs should be checked for range as
