@@ -2,19 +2,21 @@
 This section covers the basics of setting up the git environment and the most
 commonly used commands.
 
-* Install the latest version of git for your computer: https://www.git-scm.com/downloads
+* [Install the latest version of git for your computer](https://www.git-scm.com/downloads)
   * Simply click on the link for your operating system to download the installer
   * Follow the instructions to install the package
-  * Optionally install GitHub's desktop GUI client: https://desktop.github.com/
-* If you don't already have one, sign up for a free GitHub account: https://www.github.com
+  * Optionally [install GitHub's desktop GUI client](https://desktop.github.com/)
+* If you don't already have one, [sign up for a free GitHub account](https://www.github.com)
 
-Commands are executed in the terminal window. Examples in this document show the command
-to be executed after a dollar sign ($) prompt. *Do not type the dollar sign when entering
-commands.* Note that some commands include quotes around words or phrases. These quotes
-are important -- *don't skip them*. Lines that begin with the hash symbol (#) are comments
-for informational purposes only.
+Commands are executed in the terminal window. Examples in this document show the
+command to be executed after a dollar sign ($) prompt.
+*Do not type the dollar sign when entering commands.* Note that some commands
+include quotes around words or phrases. These quotes are important --
+*don't skip them*. Lines that begin with the hash symbol (#) are commentsfor
+informational purposes only.
 
-**Important:** git provides helpful information -- pay attention to the git output messages.
+**Important:** git provides helpful information -- pay attention to the git
+output messages.
 
 There are many git references and tutorials on-line. Here is the link to
 [GitHub's bootcamp](https://help.github.com/categories/bootcamp/).
@@ -22,35 +24,36 @@ There are many git references and tutorials on-line. Here is the link to
 <!-- TOC -->
 
 - [Git Fundamentals](#git-fundamentals)
-- [Understanding git](#understanding-git)
-- [Important set-up for the new git user](#important-set-up-for-the-new-git-user)
-    - [Username & email](#username--email)
-    - [Default editor](#default-editor)
-- [Creating and contributing to a repo](#creating-and-contributing-to-a-repo)
-    - [Git init](#git-init)
-    - [Adding files](#adding-files)
-    - [Git commit messages](#git-commit-messages)
-    - [Git log and git show](#git-log-and-git-show)
-    - [Git clone](#git-clone)
-    - [Git fork](#git-fork)
-    - [GitHub pull request](#github-pull-request)
-    - [Mergeing](#merging)
-    - [Merge conflicts](#merge-conflicts)
-- [Basic repo configuration](#basic-repo-configuration)
-    - [Git remotes](#git-remotes)
-    - [.gitignore](#gitignore)
-- [Git Commands](#git-commands)
-    - [git help](#git-help)
-    - [git init](#git-init)
-    - [git status](#git-status)
-    - [git pull vs git fetch && git merge](#git-pull-vs-git-fetch--git-merge)
+    - [Understanding git](#understanding-git)
+    - [Important set-up for the new git user](#important-set-up-for-the-new-git-user)
+        - [Username & email](#username--email)
+        - [Default editor](#default-editor)
+    - [Creating and contributing to a repo](#creating-and-contributing-to-a-repo)
+        - [Git init](#git-init)
+        - [Adding files](#adding-files)
+        - [Git commit messages](#git-commit-messages)
+        - [Git log and git show](#git-log-and-git-show)
+        - [Git clone](#git-clone)
+        - [Git fork](#git-fork)
+        - [GitHub pull request](#github-pull-request)
+        - [Merging](#merging)
+        - [Merge conflicts](#merge-conflicts)
+    - [Basic repo configuration](#basic-repo-configuration)
+        - [Git remotes](#git-remotes)
+        - [.gitignore](#gitignore)
+    - [Git Commands](#git-commands)
+        - [git help](#git-help)
+        - [git init](#git-init)
+        - [git status](#git-status)
+        - [git pull vs git fetch && git merge](#git-pull-vs-git-fetch--git-merge)
         - [What is git checkout? And a branch?](#what-is-git-checkout-and-a-branch)
-    - [git add and git commit](#git-add-and-git-commit)
-- [push changes to your online repo](#push-changes-to-your-online-repo)
+        - [git add and git commit](#git-add-and-git-commit)
+        - [git push](#git-push)
+        - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
 
 <!-- /TOC -->
 
-# Understanding git
+## Understanding git
 Git is a _version control system_. It keeps track of changes that the
 developer makes to the files in the repo, and allows these changes to
 be shared with others, removed at a later time, or re-ordered and
@@ -79,8 +82,9 @@ to reveal these hidden files.)
 
 ![Git staging](images/git_staging.png)
 
-# Important set-up for the new git user
-## Username & email
+## Important set-up for the new git user
+
+### Username & email
 When a developer commits a change to a repository, the commit is labeled
 with their user name and email address. It is important to set up your
 development machine with valid identity information so that your teammates
@@ -99,7 +103,7 @@ $ git config --global user.name "Your Real Name"
 $ git config --global user.email "your.real.email@somewhere.com"
 ```
 
-## Default editor
+### Default editor
 Git brings up a text editor whenever the user is required to enter
 information about a commit. The default editor that it chooses may
 not be what the developer likes. It is possible to change the default
@@ -110,8 +114,9 @@ editor in a similar way to setting the user identity.
 $ git config --global core.editor "nano -w"
 ```
 
-# Creating and contributing to a repo
-## Git init
+## Creating and contributing to a repo
+
+### Git init
 You can create a repo easily on your computer. Doing so will create
 a private repo, as it is not automatically associated with a server
 (ie, GitHub) that will allow it to be shared. You can create these
@@ -137,6 +142,7 @@ Initialized empty Git repository in /Users/binnur/my_coolest_project/.git/
 Initializing a git repo automatically creates a .git directory to manage
 tracked files.  Deleting this directory will delete all project history.
 __Don't do that unless you really want to destroy your copy of the repository__
+
 ```sh
 # list all files
 $ ls -a
@@ -146,6 +152,7 @@ At this point, our project tracking is setup and ready to go, but there are
 no files in the repo. Remember previous comment about how helpful git is?
 Let's take a look at its status after _git init_.
 It tells us to use _git add_ to track files we want to add to version control.
+
 ```sh
 # show the status of git
 $ git status
@@ -156,7 +163,7 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-## Adding files
+### Adding files
 To add some files to the repository, or to track the changes that are made
 to files that are already in the repo, there is a two-step process: _add_
 and then _commit_. The first step (the _add_) copies the file into a special
@@ -228,7 +235,7 @@ Date:   Mon Nov 5 21:42:26 2018 -0800
     been tested on the robot.
 ```
 
-## Git commit messages
+### Git commit messages
 _git commit_ messages are how changes to a repo are documented and described.
 They are critical for collaboration, and also merely remembering what work
 was done before. It is __very important__ that all developers write high quality
@@ -247,7 +254,7 @@ The commit message format is as follows.
 
 Read more about writing good commits [here](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
-## Git log and git show
+### Git log and git show
 _git log_ is a great way to explore the contents of a repo.
 An important thing to note is the git hash, the long string of _hexadecimal_
 digits that identifies each unique commit. This hash is important for
@@ -278,7 +285,7 @@ $ git show 97a7c5f0d
 $ git show 97a7c5f0d --stat
 ```
 
-## Git clone
+### Git clone
 _git clone_ is the process of creating a copy of a shared remote repository.
 The command takes a parameter that is the location of the remote repo,
 and this location can be another git directory on the same machine, or
@@ -306,7 +313,7 @@ Receiving objects: 100% (1144/1144), 219.01 KiB | 2.28 MiB/s, done.
 Resolving deltas: 100% (461/461), done.
 ```
 
-## Git fork
+### Git fork
 GitHub supports the use of the _forking workflow_. In this workflow, the
 developer duplicates the main project repo into their own GitHub account
 workspace, and then clones that duplicated repo onto their computer in
@@ -314,7 +321,6 @@ order to make changes to the project. In this way, the developer can
 make all the changes that they want to the clone on their machine, and
 can also push those changes to their copy of the repo on GitHub, without
 affecting the main project at all.
-
 
 Here are example of forks in my GitHub account.
 ![Binnur's forks](images/forks.png)
@@ -331,7 +337,7 @@ _pull request_ to allow the team to review the changes and then _merge_
 them from your repo into the main team repo. If issues are found,
 the reviewer can make suggestions for changes to be made before merging.
 
-## GitHub pull request
+### GitHub pull request
 You can contribute your changes (that you pushed to your fork) to the
 _upstream_ repository by submitting a _pull request_. You do this on
 GitHub, as pull requests are not a part of the basic git tool. They are
@@ -349,7 +355,7 @@ can _fetch_ or _pull_ the changes into their local repostories.
 
 [See GitHub documentation](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
 
-## Merging
+### Merging
 When a pull request is accepted, the changes from the developer repo are
 _merged_ into the main repo. It is also possible to merge one branch
 into another within your own repo, or merge a remote branch on GitHub
@@ -379,7 +385,7 @@ happen if two developers both made changes to the same file, especially
 if their changes were very close together (or even on the same line of
 code).
 
-## Merge conflicts
+### Merge conflicts
 In a collaborative environment, merge conflicts are inevitable.
 A merge conflict occurs when changes in your history are nearby changes
 made by another developer, and that other developer merged their changes
@@ -404,10 +410,9 @@ complete set of changes from other developers before creating your changes.
 The more out of sync your local repo is from the upstream, the more merge
 conflicts you can expect to have.
 
+## Basic repo configuration
 
-# Basic repo configuration
-
-## Git remotes
+### Git remotes
 For background on _git remotes_, see [What is a repo and remotes?](./git_about.md#"What-is-a-repo-and-remotes").
 
 ```sh
@@ -415,10 +420,10 @@ For background on _git remotes_, see [What is a repo and remotes?](./git_about.m
 $ git remote add upstream https://github.com/Spartronics4915/2017-STEAMworks
 # show remotes for my local developers_handbook repo
 $ git remote -v
-binnur	git@github.com:binnur/developers_handbook.git (fetch)
-binnur	git@github.com:binnur/developers_handbook.git (push)
-origin	git@github.com:Spartronics4915/developers_handbook.git (fetch)
-origin	git@github.com:Spartronics4915/developers_handbook.git (push)
+binnur  git@github.com:binnur/developers_handbook.git (fetch)
+binnur  git@github.com:binnur/developers_handbook.git (push)
+origin  git@github.com:Spartronics4915/developers_handbook.git (fetch)
+origin  git@github.com:Spartronics4915/developers_handbook.git (push)
 ```
 
 Using these remotes, I can pull updated history from _origin_, i.e. Spartronics'
@@ -432,12 +437,12 @@ and 'origin' to refer to our fork.
 It is not wise to name a remote the same as a branch (ie, don't name a
 remote _master_), or vice-versa. It can make git operations very confusing.
 
-## .gitignore
+### .gitignore
 The _.gitignore_ file lists all files (by name, or via wildcard characters)
 that should not be tracked by git. This is useful to keep build artifacts or
 developer-specific configuration files out of git, so that they don't affect
 the development environment of other contributors.
-See [GitHub's ignoring files for more information] (https://help.github.com/articles/ignoring-files/).
+See [GitHub's ignoring files for more information](https://help.github.com/articles/ignoring-files/).
 
 ```sh
 # ignore sketch files, anywhere in the git repo
@@ -445,8 +450,9 @@ $ cat .gitignore
 *.sketch
 ```
 
-# Git Commands
-## git help
+## Git Commands
+
+### git help
 You can access git help anytime -- and don't forget to pay attention
 to git messages after git commands are executed! (They are trying to tell
 you something...)
@@ -460,7 +466,7 @@ $ git help status
 $ git help clone
 ```
 
-## git init
+### git init
 See [git init](./#Git-init) section for more information.
 
 ```sh
@@ -469,7 +475,7 @@ $ git init
 Initialized empty Git repository in /Users/binnur/my_coolest_project/.git/
 ```
 
-## git status
+### git status
 _git status_ is your friend! It is an overview of the status of the repo.
 
 ```sh
@@ -481,31 +487,33 @@ Your branch is ahead of 'binnur/gitintro' by 1 commit.
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	.gitignore
-	git_intro/git_advanced.md
-	git_intro/git_configure.md
-	git_intro/git_faq.md
-	git_intro/git_fundamentals.md
-	git_intro/images/.DS_Store
-	git_intro/images/clone.png
-	git_intro/images/forking.png
-	git_intro/images/forks.png
-	git_intro/images/git_staging.png
-	robot_lessons/.vscode/
-	robot_lessons/.wpilib/
-	robot_lessons/lesson1.code-workspace
-	robot_lessons/lesson1/.settings/org.eclipse.jdt.core.prefs
-	robot_lessons/lesson1/build/
-	tutorials.code-workspace
+    .gitignore
+    git_intro/git_advanced.md
+    git_intro/git_configure.md
+    git_intro/git_faq.md
+    git_intro/git_fundamentals.md
+    git_intro/images/.DS_Store
+    git_intro/images/clone.png
+    git_intro/images/forking.png
+    git_intro/images/forks.png
+    git_intro/images/git_staging.png
+    robot_lessons/.vscode/
+    robot_lessons/.wpilib/
+    robot_lessons/lesson1.code-workspace
+    robot_lessons/lesson1/.settings/org.eclipse.jdt.core.prefs
+    robot_lessons/lesson1/build/
+    tutorials.code-workspace
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
 Looking at the git status, I can tell:
 * I am on the 'gitintro' branch
-* My branch is ahead of its remote by 1 commit, meaning other developers following my fork on binnur/gitintro can not see my most recent change
+* My branch is ahead of its remote by 1 commit, meaning other developers
+    following my fork on binnur/gitintro can not see my most recent change
 * I have several untracked files and I need to use _git add_ to add them to the repo
 
-## git pull vs git fetch && git merge
+### git pull vs git fetch && git merge
 _git pull_ vs _git fetch && git merge_ has a similar outcome with different
 intents.
 
@@ -579,7 +587,7 @@ $ git checkout <branch-name>
 $ git branch -a
 ```
 
-## git add and git commit
+### git add and git commit
 _git add_ and _git commit_ are used in combination to 'save' the git repo's
 current state. _git add_ makes a change to the staging area by adding
 files from working directory to the repo's staging area. Changes are not
@@ -607,7 +615,7 @@ $ git commit
  create mode 100644 git_intro/git_fundamentals.md
  ```
 
-## git push
+### git push
 Using _git push_ commits changes made to your local repo to remote repository.
 _git push_ takes two arguments:
 * remote name, ex. _origin_

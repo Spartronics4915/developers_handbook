@@ -1,4 +1,6 @@
-# Command Constructors
+# Methods
+
+## Command Constructors
 
 ```java
 public ArcadeDriveCommand()
@@ -49,6 +51,7 @@ Command(String name)
 Command(double timeout)
 Command(String name, double timeout)
 ```
+
 There are 4 superclass constructors that belong to Command. They
 can be used to set the name of the command's instance or the
 duration that the command will run (the timeout). The default
@@ -57,11 +60,11 @@ You can only set the name of a command instance using Command's
 constructor, but you can set the timeout using setTimeout(double
 seconds).
 
-**IMPORTANT: NEVER USE ANY LONG OR UNENDING LOOPS IN COMMANDS**
+**IMPORTANT: NEVER USE ANY LONG OR UNENDING LOOPS IN COMMANDS:**
 
 ___
 
-# The initialize() method.
+## The initialize() method.
 
 ```java
 public void initialize()
@@ -82,9 +85,9 @@ For maximum readability of your code, the initialize() method
 should only call subsystem methods, and call as few as possible. It
 shouldn't call methods of subsystems your command does not require.
 
----
+___
 
-# The execute() method
+## The execute() method
 
 ```java
 public void execute()
@@ -105,9 +108,9 @@ For maximum readability of your code, the execute() method should only
 call subsystem methods, and should call as few as possible. It
 shouldn't call methods of subsystems the command does not require.
 
----
+___
 
-# The isFinished() method
+## The isFinished() method
 
 ```java
 public boolean isFinished()
@@ -130,17 +133,19 @@ own. However, isFinished() is not checked when a command is
 interrupted. When another command is started that requires the
 same subsystem, the method interrupted() determines what happens.
 
----
+___
 
-# The end() method
+## The end() method
 
 *An example of an end() method:*
+
 ```java
 public void end()
 {
     robotDrive.stop();
 }
 ```
+
 The end() method is called exactly once at the end of a method's
 normal execution. It is only called by the Scheduler if isFinished()
 returns **true**, and after end() is completed, cancel() is called
@@ -151,9 +156,9 @@ command, but this will not cancel the command.
 If there is something that needs to happen at the end of your
 execution, it should be done here.
 
----
+___
 
-# The interrupted() method
+## The interrupted() method
 
 ```java
 public void interrupted()
@@ -170,4 +175,4 @@ scheduler is accounted here. Because the **end()** method also
 shares a similar purpose, most **interrupted()** methods only
 call **end()**.
 
----
+___

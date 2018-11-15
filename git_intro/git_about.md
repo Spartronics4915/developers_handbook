@@ -3,15 +3,15 @@
 <!-- TOC -->
 
 - [Introducing Git and GitHub](#introducing-git-and-github)
-  - [What is Git and GitHub?](#what-is-git-and-github)
-  - [Common Terms](#common-terms)
-    - [What is a workflow? And, what does it have to do with git?](#what-is-a-workflow-and-what-does-it-have-to-do-with-git)
-    - [Why command-line for git vs. GUI app?](#why-command-line-for-git-vs-gui-app)
-    - [What is a repo and remotes?](#what-is-a-repo-and-remotes)
-    - [What is cloning or forking, and upstream?](#what-is-cloning-or-forking-and-upstream)
-    - [What is branching? Checkout what?!](#what-is-branching-checkout-what)
-    - [What does it mean to pull and merge? And what is a pull request?](#what-does-it-mean-to-pull-and-merge-and-what-is-a-pull-request)
-    - [What is commit vs stash vs push?](#what-is-commit-vs-stash-vs-push)
+    - [What is Git and GitHub?](#what-is-git-and-github)
+    - [Common Terms](#common-terms)
+        - [What is a workflow? And, what does it have to do with git?](#what-is-a-workflow-and-what-does-it-have-to-do-with-git)
+        - [Why command-line for git vs. GUI app?](#why-command-line-for-git-vs-gui-app)
+        - [What is a repo and remotes?](#what-is-a-repo-and-remotes)
+        - [What is cloning or forking, and upstream?](#what-is-cloning-or-forking-and-upstream)
+        - [What is branching? Checkout what?!](#what-is-branching-checkout-what)
+        - [What does it mean to pull and merge? And what is a pull request?](#what-does-it-mean-to-pull-and-merge-and-what-is-a-pull-request)
+        - [What is commit vs stash vs push?](#what-is-commit-vs-stash-vs-push)
 
 <!-- /TOC -->
 
@@ -44,18 +44,20 @@ Workflow refers to a sequence of steps that are required to proceed from
 initiation to completion. At its core, the development workflow involves
 the following three steps:
 ![Development Workflow](images/dev_workflow.png)
-* _dev_: development work, writing code using your text editor
-* _test_: build and verify that code works to its specification, fix as needed
-* _prod_: deploy to production, in the case of FIRST this would be our robot
+- _dev_: development work, writing code using your text editor
+- _test_: build and verify that code works to its specification, fix as needed
+- _prod_: deploy to production, in the case of FIRST this would be our robot
 
 Git enables teams to establish workflow they need to get to production ready code.
 Steps include, but are not limited to:
-* deploying pre-production code to "staging" for testing
-  * git branching simplifies managing staging vs. production code
-* enforcing code reviews before merging code
-  * pull requests ensure code is properly reviewed before merging
-* identifying specific versions in order to track important releases, such as at competitions
-  * tags can be applied to specific commits to mark a point in the timeline of the project
+- deploying pre-production code to "staging" for testing
+    - git branching simplifies managing staging vs. production code
+- enforcing code reviews before merging code
+    - pull requests ensure code is properly reviewed before merging
+- identifying specific versions in order to track important releases, such as at
+        competitions
+    - tags can be applied to specific commits to mark a point in the timeline of
+        the project
 
 Git, though confusing at first, gives full empowerment to individuals --
 it is really difficult to break anything in git that cannot be fixed unless you

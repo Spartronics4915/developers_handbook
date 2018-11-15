@@ -76,7 +76,6 @@ finishes when all the commands started in that group finish.
 
 > Important: Commands require subsystem(s) to be present.  Command groups automatically require all the subsystems for each of the commands in the group. This puts additional constraints on your subsystem design: _should you combine two similarly related subsystems as one?_ Make sure you think through the operational needs of the system as that dependency may complicate future commands.
 
-
 ## Scheduler
 The scheduler is responsible for scheduling Commands. Although many commands
 maybe running virtually at the same time, robot code is single threaded, i.e.

@@ -12,12 +12,13 @@ improves performance and removes potential DHCP issues during competitions.
   - .10: Jetson
   - .11: Axis camera
 
-RoboRio mDNS IP address (requires [MS Silverlight](https://www.microsoft.com/silverlight/)): roboRIO-4915-FRC.local
+RoboRio mDNS IP address (requires [MS Silverlight](https://www.microsoft.com/silverlight/)):
+roboRIO-4915-FRC.local
 
 ## Radio configuration
-See [instructions from 2016 robot.] (https://github.com/Spartronics4915/2016-Stronghold/wiki/Installing-Radio-Firmware)
+See [instructions from 2016 robot.](https://github.com/Spartronics4915/2016-Stronghold/wiki/Installing-Radio-Firmware)
 
-See [instructions from 2017 robot.] (https://github.com/Spartronics4915/2017-STEAMworks/wiki/Axis-Camera)
+See [instructions from 2017 robot.](https://github.com/Spartronics4915/2017-STEAMworks/wiki/Axis-Camera)
 
 ## Camera configuration
 See [instructions from 2016 robot.](

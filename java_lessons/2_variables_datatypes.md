@@ -6,7 +6,9 @@ As we said in the last section, every piece of data you define in Java
 has a _type_. We already introduced the `int` and `String` types, but there are
 some more that we're going to be showing you here.
 
-~_We're only introducing **primitive** types here (String is technically not a primitive, more on that later), but there are other more complex types that are defined in classes that we'll discuss later_
+~_We're only introducing **primitive** types here (String is technically not a_
+_primitive, more on that later), but there are other more complex types that are_
+_defined in classes that we'll discuss later_
 
 Here is a table of some common data types (4 are primitives):
 
@@ -41,7 +43,11 @@ In math, we use the equals sign to denote both assignment and equality.
 In programming, `=` denotes just assignment (`==` tests for equality,
 which we'll talk about later.)
 
-_Many of the variable names below would be considered bad names if you used them in robot code. We're using names like foo just because it's an example. If we were to define a variable that holds an object for the left motor in real robot code though, we would **not** call it foo (we would probably call it `leftMotor`, or `mLeftMotor`)_
+_Many of the variable names below would be considered bad names if you used them_
+_in robot code. We're using names like foo just because it's an example. If we_
+_were to define a variable that holds an object for the left motor in real robot_
+_code though, we would **not** call it foo (we would probably call it_
+_`leftMotor`, or `mLeftMotor`)_
 
 So, here's an example of declaring an `int` (integer) variable with
 the name `x` and the value `3`.
