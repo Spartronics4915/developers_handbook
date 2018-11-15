@@ -10,7 +10,7 @@ Alongside the different chapters are code examples for better understanding
 of the concepts in the section.
 
 This handbook is presented using
-[Gitbook](https://binnur.gitbooks.io/spartronics-developers-handbook/content/)
+[Gitbook](https://spartronics4915.gitbook.io/developer-handbook/)
 and is written in Github Flavored Markdown. For information on how to
 contribute to this document, read contribute.md which contains the writing
 guide for this book, as well as how to use markdown.
