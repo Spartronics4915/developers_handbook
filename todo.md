@@ -1,11 +1,12 @@
 # TODOs
 
-@TODO - update this
-
 Place holder for things to add to the guide
 
-## Basics Section
+## Actuators
 
+## Basics
+
+- Merge into dev_guide?
 - SmartDashboard & Network Tables
 - Driver Station Logs
 - Camera Setup
@@ -23,12 +24,23 @@ Place holder for things to add to the guide
     - radio programming
     - wireless access port
 
-## Robot code
+### Robot code
 
 - Initialization sequencing
 - Autonomous Vs. Teleop
 
-## Development Guidelines
+## Commands Subsystems
+
+- Scheduler: Know your master...
+- Commands
+- Subsystems
+    - One system vs. two: intake and intake wheels example
+- Diving into Subsystems
+    - Drivetrain and template code
+        - Subsystem
+        - Commands
+
+## Dev Guide
 
 - Git and Github workflow
 - Development process
@@ -40,18 +52,10 @@ Place holder for things to add to the guide
         - try/except blocks
     - Logging and Debugging
         - Test Mode
-
-## Competition Readiness
-
 - Competition Checklist
 
-## Command-based programming: subsystem vs. commands
+## Git Intro
 
-- Scheduler: Know your master...
-- Commands
-- Subsystems
-    - One system vs. two: intake and intake wheels example
-- Diving into Subsystems
-    - Drivetrain and template code
-        - Subsystem
-        - Commands
+## Java Lessons
+
+## Robot Lessons
