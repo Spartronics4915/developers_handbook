@@ -14,9 +14,9 @@ utility functions such as timing and field management.
 WPILib provides base classes such as Iterative Robot for robot programming.
 For Spartronics, we use Command-base robot model that WPILib offers for
 creating our robot. It provides built in support for making it easy to design
-our robot, its subsystems, and control interactions between the robot and the
-operator interface. See more in [Command Based
-Programming](commands_subsystems/README.md).
+our robot, its subsystems, and control interactions between the robot and
+the operator interface.
+See more in [Command Based Programming](commands_subsystems/README.md).
 
 ## roboRIO
 Introduced in 2015 competition season, [NI
