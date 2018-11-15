@@ -5,15 +5,16 @@ Anything that relates to git or git related tools such as vi, or unix commands.
 <!-- TOC -->
 
 - [FAQ](#faq)
-- [Common bash shell](#common-bash-shell)
-- [Common vi commands](#common-vi-commands)
-- [Common git questions](#common-git-questions)
-    - [How do I revert previous commit?](#how-do-i-revert-previous-commit)
-    - [What is "non-fast-forward"?](#what-is-non-fast-forward)
+    - [Common bash shell](#common-bash-shell)
+    - [Common vi commands](#common-vi-commands)
+    - [Common git questions](#common-git-questions)
+        - [How do I revert previous commit?](#how-do-i-revert-previous-commit)
+        - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
 
 <!-- /TOC -->
 
-# Common bash shell
+## Common bash shell
+
 ``` sh
 # print working directory
 $ pwd
@@ -52,10 +53,12 @@ $ mv <oldname> <newname>
 $ mv <filename> ../<new-filename>
 ```
 
-# Common vi commands
+## Common vi commands
 Refer to various reference cards, such as [this one](https://www.ks.uiuc.edu/Training/Tutorials/Reference/virefcard.pdf).
 
-Important to remember vi has two modes: insertion and command. When you first start vi, editor is in command mode -- ESC returns the editor into command mode. Common commands:
+Important to remember vi has two modes: insertion and command. When you first
+start vi, editor is in command mode -- ESC returns the editor into command mode.
+Common commands:
 
 ```sh
 # quit w/o saving -- <shift><:>
@@ -68,10 +71,11 @@ i
 dw
 ```
 
-# Common git questions
-## How do I revert previous commit?
+## Common git questions
+s
+### How do I revert previous commit?
 
-## What is "non-fast-forward"?
+### What is "non-fast-forward"?
 
 When your local repo is behind the repo you are pushing to you will see an error
 non-fast-forward updates were rejected. That means you need to retrieve the
