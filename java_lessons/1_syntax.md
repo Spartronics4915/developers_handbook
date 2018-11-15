@@ -77,7 +77,8 @@ public class HelloWorld {
 Curly braces (`{` and `}`) can be seen in our above Hello World program.
 There's a couple of things about them to understand:
 
- 1. They **enclose** things (they always enclose a _scope_, a concept we'll discuss later)
+ 1. They **enclose** things (they always enclose a _scope_, a concept we'll
+    discuss later)
  2. Every opening brace (`{`) has a corresponding closing brace (`}`).
    Mismatched braces are a common source of errors.
 

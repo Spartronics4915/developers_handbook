@@ -19,8 +19,8 @@ For content to be included in the GitBook, it must be in a markdown file
 
 ## Naming Conventions
 
-**File and folder names will be lowercase only, and will separate words using
-underscores.** Keep file and folder names short when possible. The only
+**File and folder names will be lowercase only, and will separate words using**
+**underscores.** Keep file and folder names short when possible. The only
 exception to lowercase file names is in the case of README.md and SUMMARY.md.
 
 ## Subdirectories
@@ -135,7 +135,8 @@ You can use this link system for a lot of different things.
 with the desired web address.
 
 * To link to another markdown file in the document, replace link_address
-with the relative path of the file.
+with the relative path of the file. (/ tells Gitbook to start in the base
+directory, while ./ or nothing tells it to start in the current folder.)
 
 * To link to a header in the same document, replace link_address
 with #header-name, where header-name is the text of the header in lowercase

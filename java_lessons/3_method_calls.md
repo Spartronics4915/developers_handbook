@@ -23,10 +23,13 @@ public class HelloWorld {
 }
 ```
 
-`System.out.println` is a method call in this example (we're calling a method called `println`).
-Here, it's taking a `String`, returning nothing (a return of nothing is also called `void`)
+`System.out.println` is a method call in this example (we're calling a method c
+alled `println`).
+Here, it's taking a `String`, returning nothing (a return of nothing is also
+called `void`)
 
-As you can see, the syntax for methods is relatively simple: `<function name>(<function parameters>)`.
+As you can see, the syntax for methods is relatively simple:
+`<function name>(<function parameters>)`.
 
 Another useful set of functions are defined in the `Math` class.
 Exponentiation can be performed with the `Math.pow` method (pow as in power).
@@ -40,7 +43,9 @@ Here's how you would call that:
 Math.pow(3.0, 2.0); // Returns 9.0
 ```
 
-A key part of this method is that it _returns_ a value. `System.out.println` returns `void`, which means it returns nothing. This method returns a `double`. This means you could do the following:
+A key part of this method is that it _returns_ a value. `System.out.println`
+returns `void`, which means it returns nothing. This method returns a `double`.
+This means you could do the following:
 
 ```java
 double num = Math.pow(3.0, 2.0);
@@ -57,4 +62,5 @@ Here are the PracticeIt problems for this section:
  4. [Tricky variables and method calls](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter3/s15%2DmathExpressions2)
    _`Math.sqrt` is square root, `Math.min` gets the smallest of the two numbers_
    _you pass in, and `Math.round` rounds the number you pass in to the closest `int`._
-   _When this asks for "grade =", it is asking for the value of the `grade` variable at that line._
+   _When this asks for "grade =", it is asking for the value of the `grade`_
+   _variable at that line._

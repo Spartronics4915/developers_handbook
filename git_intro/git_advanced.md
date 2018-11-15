@@ -5,36 +5,39 @@ commands we covered in the [git fundamentals](./git_fundamentals.md) section
 (pull, push, fetch) enables transferring/sharing different versions of the code
 to other repos.
 
-In this section, we will dive deeper into git structure and other git commands and tools to help improve productivity.
+In this section, we will dive deeper into git structure and other git commands
+and tools to help improve productivity.
+
 <!-- TOC -->
 
 - [More Git!](#more-git)
-- [Resources & References](#resources--references)
-- [Git Structure](#git-structure)
-    - [Intro to git internals](#intro-to-git-internals)
-    - [Branches and Tags](#branches-and-tags)
-    - [Tracking and merging branches](#tracking-and-merging-branches)
+    - [Resources & References](#resources--references)
+    - [Git Structure](#git-structure)
+        - [Intro to git internals](#intro-to-git-internals)
+        - [Branches and Tags](#branches-and-tags)
+        - [Tracking and merging branches](#tracking-and-merging-branches)
         - [git rebase & git squash](#git-rebase--git-squash)
-    - [Reverting changes](#reverting-changes)
-- [Git Commands & Helful Tools](#git-commands--helful-tools)
-    - [Git bash completion](#git-bash-completion)
-    - [More on gitconfig](#more-on-gitconfig)
-    - [git diff](#git-diff)
-    - [git stash](#git-stash)
-    - [git references or refs](#git-references-or-refs)
-    - [remove or move a file: git rm && git mv](#remove-or-move-a-file-git-rm--git-mv)
+        - [Reverting changes](#reverting-changes)
+    - [Git Commands & Helful Tools](#git-commands--helful-tools)
+        - [Git bash completion](#git-bash-completion)
+        - [More on gitconfig](#more-on-gitconfig)
+        - [git diff](#git-diff)
+        - [git stash](#git-stash)
+        - [git references or refs](#git-references-or-refs)
+        - [remove or move a file: git rm && git mv](#remove-or-move-a-file-git-rm--git-mv)
 
 <!-- /TOC -->
 
-# Resources & References
+## Resources & References
 There are great resources on git.
 
-* [Commit Often, Perfect Later, Publish Once: Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
-* [Pro Git Book](https://git-scm.com/book/en/v2)
-* [Introduction to distributed version control w/ git](https://cleanercode.com/introduction-to-git-talk/introduction-to-git.pdf)
+- [Commit Often, Perfect Later, Publish Once: Git Best Practices](https://sethrobertson.github.io/GitBestPractices/)
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [Introduction to distributed version control w/ git](https://cleanercode.com/introduction-to-git-talk/introduction-to-git.pdf)
 
-# Git Structure
-## Intro to git internals
+## Git Structure
+
+### Intro to git internals
 Git repo is basically a hidden directory (.git) at the top level of your repo.
 It holds everything that is needed to track the needed changes. If you want to
 backup your repo, this is the only directory you will need.
@@ -51,8 +54,8 @@ info/
 objects/
 refs/
 ```
-For more background on the git internals, checkout [git book]
-(https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain).
+
+For more background on the Git internals, check out [Git book](https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain).
 
 HEAD is a symbolic reference to the branch you are on. Git is a tree structure
 where each commit creates a new node in that tree, and git commands help
@@ -66,7 +69,7 @@ makes git *almost* indestructible.
 $ gitk --all
 ```
 
-## Branches and Tags
+### Branches and Tags
 A branch is a pointer to a specific commit. Switching branches walks the tree to
 derive the history of the repo. _git tag_ is similar to _git branch_, however
 it operates like a bookmark to a specific point in time.
@@ -93,7 +96,8 @@ $ git fetch origin
 In git, branches basically another node in the tree -- this makes them
 lightweight. Many teams use feature-driven branching to aid their workflow.
 
-_git tag_ is useful for marking special releases. A tag can be lightweight, just a pointer, or annotated w/ tagger name, description, date, etc.
+_git tag_ is useful for marking special releases. A tag can be lightweight, just
+a pointer, or annotated w/ tagger name, description, date, etc.
 
 ```sh
 # list existing tags
@@ -126,7 +130,7 @@ $ git push origin :refs/tags/<tag-name>
 $ git checkout <tag-name>
 ```
 
-## Tracking and merging branches
+### Tracking and merging branches
 By default, git branches do not know about each other. Tracking creates linkages
 between the two repos, making it easier to stay in sync between two repos as git
 will inform you if your branch is ahead or behind the tracked branch.
@@ -138,7 +142,8 @@ $ git checkout --track origin/<branch-name>
 $ git branch -u origin/<branch-name>
 ```
 
-Branches explicitly need to be pushed to remotes. Similarly, explicitly deleted. Note, you can also use GitHub interface for deleting branches on remotes.
+Branches explicitly need to be pushed to remotes. Similarly, explicitly deleted.
+Note, you can also use GitHub interface for deleting branches on remotes.
 
 ```sh
 # push a new branch
@@ -150,12 +155,12 @@ $ git push origin --delete <branch-name>
 While _git branch_ creates a fork in the road, _git merge_ allows the forked
 history to be integrated again. A typical example is to merge a feature branch
 to master. Process overview:
-* checkout the branch to be updated
-* specify the merge from a target branch
-* optional: delete the target branch
+- checkout the branch to be updated
+- specify the merge from a target branch
+- optional: delete the target branch
 
 ```sh
-# checkout master branch or verify you are on the receiving branch 
+# checkout master branch or verify you are on the receiving branch
 $ git checkout master
 $ git status
 # merge from another branch, such as a feature branch
@@ -187,11 +192,11 @@ and squashing commits.
 $ git rebase -i <branch>
 ```
 
-## Reverting changes
+### Reverting changes
 There are different ways to undo prior changes and commits.
-* _revert_ takes a specified commit and creates a new commit which inverses the
+- _revert_ takes a specified commit and creates a new commit which inverses the
   specified commit -- safe operation as creates a new commit
-* _reset_ takes a specified commit and resets to match the state of the repo at
+- _reset_ takes a specified commit and resets to match the state of the repo at
   that specified commit -- can cause conflicts is history is changed
 
   Some common operations are below.
@@ -203,13 +208,15 @@ $ git checkout -- <filename>
 $ git reset HEAD
 ```
 
-# Git Commands & Helful Tools
-## Git bash completion
-If you are using bash shell, there is a nice auto-complete feature you can enable for git.
+## Git Commands & Helful Tools
+
+### Git bash completion
+If you are using bash shell, there is a nice auto-complete feature you can
+enable for git.
 
 Follow the instructions for setting it up: [git-completion.bash](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash).
 
-## More on gitconfig
+### More on gitconfig
 _gitconfig_ has handy tools/options from customizing git colors to setting
 aliases. More on
 [_gitconfig_](http://michaelwales.com/articles/make-gitconfig-work-for-you/).
@@ -221,7 +228,7 @@ $ git config --global alias.co checkout
 $ git config --global alias.st status
 ```
 
-## git diff
+### git diff
 Git can show you a list of differences between two commits, or a list of
 differences between a given commit and the current state using the command _git
 diff_.
@@ -233,9 +240,10 @@ $ git diff <filename>
 $ git diff <branch-name>
 ```
 
-## git stash
+### git stash
 There are times when you are not ready to commit, but you need to change
-branches -- _git stash_ is to your rescue. It stashes your changes to be returned to at a later time.
+branches -- _git stash_ is to your rescue. It stashes your changes to be
+returned to at a later time.
 
 ```sh
 # stash your changes
@@ -248,7 +256,7 @@ $ git stash list
 $ git stash drop
 ```
 
-## git references or refs
+### git references or refs
 Instead of referencing git contents via sha-1 value, such as `git log 1a410e`,
 you can create named references to that value.
 
@@ -263,8 +271,10 @@ $ cat .git/HEAD
 ref: refs/heads/a_branch
 ```
 
-## remove or move a file: git rm && git mv
-There will be times when you need to remove a file from your git repo, use _git rm_ or remove command. And, when you need to move or rename a file, use _git mv_ or move command.
+### remove or move a file: git rm && git mv
+There will be times when you need to remove a file from your git repo, use
+_git rm_ or remove command. And, when you need to move or rename a file, use
+_git mv_ or move command.
 
 ```sh
 # remove unwanted file from the repo
