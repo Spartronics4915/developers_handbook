@@ -1,5 +1,5 @@
 # Servo motors
-Servo motors (or "Hobby serovos") are small motors that can rotate in an arc to
+Servo motors (or "Hobby servos") are small motors that can rotate in an arc to
 position or actuate a mechanism. They do not rotate continuously (unless
 modified to do so), but instead can be positioned to a known angle under program
 control. The servo is not particularly strong or fast, but is very easy to use,
