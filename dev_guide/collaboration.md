@@ -15,7 +15,11 @@ Random bits to clean and organize
 - Ensure both robots' motors are configured and wired identically
   to avoid switching profiles.
 
+<<<<<<< HEAD
 ### Rework these....
+=======
+### Rework these.... @ TODO
+>>>>>>> 6a150585dda34f5d85c825022abd9f18f86e7246
 **Sensor Inputs**: All sensor inputs should be checked for range values.
 
 **Actuator outputs**: All method outputs should be checked for range as
@@ -35,6 +39,11 @@ and a comment on where the number came from.
 style is beneficial when other members of our team and other teams read your code.
 
 ## Program Development Best Practices
+<<<<<<< HEAD
+=======
+
+### Code Review:
+>>>>>>> 6a150585dda34f5d85c825022abd9f18f86e7246
 
 ### Code Review:
 - All code should be reviewed by software sub-team and sub-team mentor.
@@ -43,7 +52,17 @@ style is beneficial when other members of our team and other teams read your cod
     - Input range check
     - Output range check
 - Check for magic numbers (Are they documented? Better: Make them a constant variable?)
+<<<<<<< HEAD
     - Check that any code written is already done in FIRST library
 - Comments document why the program is written as it is
     - Is the code backed up?
+=======
+
+    - Check if any code written is already done in FIRST library
+
+- Comments document why the program is written as it is
+
+    - Check if the code is backed up
+
+>>>>>>> 6a150585dda34f5d85c825022abd9f18f86e7246
 - ***Does the code meet the robot function requirements!!!!!***
