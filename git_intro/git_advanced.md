@@ -11,11 +11,20 @@ and tools to help improve productivity.
 <!-- TOC -->
 
 - [More Git!](#more-git)
+<<<<<<< HEAD
+- [Resources & References](#resources--references)
+- [Git Structure](#git-structure)
+    - [Intro to git internals](#intro-to-git-internals)
+    - [Branches and Tags](#branches-and-tags)
+    - [Git HEAD](#git-head)
+    - [Tracking and merging branches](#tracking-and-merging-branches)
+=======
     - [Resources & References](#resources--references)
     - [Git Structure](#git-structure)
         - [Intro to git internals](#intro-to-git-internals)
         - [Branches and Tags](#branches-and-tags)
         - [Tracking and merging branches](#tracking-and-merging-branches)
+>>>>>>> 5aad306b86c3ec1a52e998d4ec573d3fe3670d65
         - [git rebase & git squash](#git-rebase--git-squash)
         - [Reverting changes](#reverting-changes)
     - [Git Commands & Helful Tools](#git-commands--helful-tools)
@@ -129,6 +138,57 @@ $ git push origin :refs/tags/<tag-name>
 # you can checkout a tag, though it creates a DETACHED HEAD state
 $ git checkout <tag-name>
 ```
+
+### Git HEAD
+
+By now you may be wondering what "HEAD" is and why it's possible
+to become detached. HEAD is git's way of referring to your current view
+of the repository, and corresponds to a single commit hash. Generally,
+this means HEAD matches the lastest commit on your current branch.
+A detached HEAD state means that you no longer are viewing the latest
+commit on a branch, and are instead veiwing an intermediate commit.
+As such, making additional commits will not directly contribute to
+the history of one of your branches, and will require more finesse to
+integrate into your project.
+
+This does not mean that the detached HEAD state is useless. Far from it.
+It is a great way to rewind history and examine previously working bits
+of code, in order to find out where it all went wrong.
+
+```sh
+# Checkout a previously working commit/tag
+$ git checkout <commit-sha-or-tag-name>
+# From detached HEAD state, your local repository now matches the commit
+# You can compile and test code
+# Commits you make will be off of the detached HEAD state and wont be kept by default
+$ git add .
+$ git commit -m "A commit on a detached HEAD"
+# Create a new branch from the detached HEAD state in order to keep commits
+$ git checkout -b <new-branch-name>
+# The commits you made before making the branch are still tracked
+# HEAD now points to the end of the new branch (not detached)
+# Merge your changes back into master.
+$ git checkout master
+$ git merge <new-branch-name>
+```
+
+Git checkout performs double duty. When used on a branch, tag, or commit
+hash it will move your HEAD to the corresponding commit, changing the view
+of your repository. If used on a file, it will modify the file to the version
+it was in in the appropriate commit (which defaults to HEAD). The changes
+will happen in your current branch/state, meaning it will then be possible to
+commit the old version of the file to your current branch.
+
+```sh
+# Checkout the version of your file as it was in HEAD 
+# WARNING: discards all unstaged, uncommitted changes
+$ git checkout <file>
+# Checkout the version of your file as it was in a tag/commit
+$ git checkout <commit-sha-or-tag-name> <file>
+```
+
+For convenience, HEAD^ refers to the commit before HEAD, and HEAD^^ to the commit
+before that.
 
 ### Tracking and merging branches
 By default, git branches do not know about each other. Tracking creates linkages
