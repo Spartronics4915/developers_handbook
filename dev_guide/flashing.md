@@ -1,5 +1,4 @@
-Flashing the roboRIO and radio
-==============================
+# Flashing the roboRIO and radio
 
 1. [Install the FRC Update Suite](http://wpilib.screenstepslive.com/s/4485/m/13810/l/599669-installing-the-frc-2017-update-suite-all-languages)
     - The license key is in the FIRST-themed manila-sized folder (with the 2017

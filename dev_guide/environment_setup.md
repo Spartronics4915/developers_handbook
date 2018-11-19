@@ -1,5 +1,28 @@
 # Setting Up your Development and Build Environment
 
+<!-- TOC -->
+
+- [Setting Up your Development and Build Environment](#setting-up-your-development-and-build-environment)
+    - [Visual Studio Code](#visual-studio-code)
+        - [Installation](#installation)
+        - [Extensions](#extensions)
+            - [Required Extensions:](#required-extensions)
+            - [Recommended Extensions](#recommended-extensions)
+        - [Recommended Settings](#recommended-settings)
+            - [Trailing Spaces extension](#trailing-spaces-extension)
+            - [Todo Tree extension](#todo-tree-extension)
+            - [markdownlint extension](#markdownlint-extension)
+    - [Java](#java)
+        - [Telling Visual Studio Code where Java is](#telling-visual-studio-code-where-java-is)
+        - [For Windows users:](#for-windows-users)
+        - [For macOS users:](#for-macos-users)
+        - [For Linux users:](#for-linux-users)
+    - [Git](#git)
+        - [Installing Git](#installing-git)
+        - [Configuring Git](#configuring-git)
+
+<!-- /TOC -->
+
 ## Visual Studio Code
 
 ### Installation
@@ -11,35 +34,35 @@ repository as `code`.
 ### Extensions
 
 #### Required Extensions:
-* [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) -
+- [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) -
     open up the Extensions sidebar, and search "java". It's in the top five results.
-* [WPILib](https://github.com/wpilibsuite/vscode-wpilib/releases/tag/v2019.0.0-alpha-4)
-    * Download the latest **alpha** of the WPILib Extension.
-    * Open the Extensions sidebar (Ctrl+Shift+X)
-    * Click the three dots in the upper right corner of the Extensions sidebar
-    * Hit `Install from VSIX...`
-    * Navigate to the WPILib extension you downloaded, and click `Install`.
+- [WPILib](https://github.com/wpilibsuite/vscode-wpilib/releases/tag/v2019.0.0-alpha-4)
+    - Download the latest **alpha** of the WPILib Extension.
+    - Open the Extensions sidebar (Ctrl+Shift+X)
+    - Click the three dots in the upper right corner of the Extensions sidebar
+    - Hit `Install from VSIX...`
+    - Navigate to the WPILib extension you downloaded, and click `Install`.
 
 #### Recommended Extensions
-* [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
-* [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-* [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+- [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 ### Recommended Settings
-* `"editor.quickSuggestions": {"other": false, "comments": false,`
+- `"editor.quickSuggestions": {"other": false, "comments": false,`
     `"strings": false },`
 
 #### Trailing Spaces extension
-* `"trailing-spaces.highlightCurrentLine": false,`
-* `"trailing-spaces.trimOnSave": true,`
+- `"trailing-spaces.highlightCurrentLine": false,`
+- `"trailing-spaces.trimOnSave": true,`
 
-#### Todo Tree
-* `"todo-tree.regex": "((@|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",`
-* `"todo-tree.expanded": true,`
-* `"todo-tree.tags": ["TODO", "FIXME", "XXX", "DONE", "BUG", "!!!", "HACK", "NOTE", "FAQ", "IDEA" ],`
+#### Todo Tree extension
+- `"todo-tree.regex": "((@|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",`
+- `"todo-tree.expanded": true,`
+- `"todo-tree.tags": ["TODO", "FIXME", "XXX", "DONE", "BUG", "!!!", "HACK", "NOTE", "FAQ", "IDEA" ],`
 
-#### markdownlint
-* `"markdownlint.config": {"MD006": false, "MD007": false, "MD013": true,`
+#### markdownlint extension
+- `"markdownlint.config": {"MD006": false, "MD007": false, "MD013": true,`
     `"MD022": false, "MD026": false, "MD032": false, "MD040": false },`
 
 ## Java
@@ -53,12 +76,12 @@ but the OpenJDK also will work. Download the JDK and install it.
 ### For Windows users:
 
 1) Locate your Java installation directory
-   * It should be something like `C:\Program Files\Java\jdk1.11.0_65`
-   * You can also type `where java` in the command prompt
+   - It should be something like `C:\Program Files\Java\jdk1.11.0_65`
+   - You can also type `where java` in the command prompt
 2) Do one of the following:
-   * **Windows 7** - Right click **My Computer** and select `Properties > Advanced`
-   * **Windows 8** - Go to `Control Panel > System > Advanced System Settings`
-   * **Windows 10** - Search for **Environmental Variables** then select
+   - **Windows 7** - Right click **My Computer** and select `Properties > Advanced`
+   - **Windows 8** - Go to `Control Panel > System > Advanced System Settings`
+   - **Windows 10** - Search for **Environmental Variables** then select
         **Edit the system environmental variables**
 3) Click the **Environmental Variables** button
 4) Under **System Variables**, click **New**
