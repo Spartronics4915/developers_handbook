@@ -14,6 +14,7 @@ Place holder for things to add to the guide
     - Drivetrain and template code
         - Subsystem
         - Commands
+- Describe different types of robot (Iterative, Timed...) and different drives (tank, swerve...)
 
 ## Dev Guide
 
@@ -45,3 +46,15 @@ Place holder for things to add to the guide
 ## Java Lessons
 
 ## Robot Lessons
+
+## Website Lessons
+
+3128's ./resources/website.md/ is useful
+
+- Overview of how our website works
+    - Where to find resources
+    - How to publish articles on it
+    - How to upload webpages
+- Quick overview of how to use HTML + CSS
+    - JavaScript warning
+    - JavaScript Overview
