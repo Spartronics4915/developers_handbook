@@ -2,14 +2,6 @@
 
 * [Introduction](README.md)
 
-* [Basics](basics/README.md)
-    * [Networking Setup](basics/networking.md)
-    * [Development Environment](basics/dev_environment.md)
-    * [Java Highlights](basics/java_basics.md)
-    * [Robot Programming](basics/robot_code.md)
-    * [WPILib Overview](basics/wpilib_overview.md)
-    * [Resources](basics/resources.md)
-
 * [Robot Lessons](robot_lessons/README.md)
   * [Lesson 1: Motors](robot_lessons/1_motors.md)
   * [Lesson 3: Subsystems and State Machines](robot_lessons/3_statemachines.md)
@@ -21,7 +13,7 @@
   * [Lesson 4: The If Statement](java_lessons/4_if_statement.md)
   * [Lesson 5: Method Definitions](java_lessons/5_method_definitions.md)
 
-* [Git Introduction]()
+* [Git Introduction](git_intro/README.md)
     * [Introducing Git and GitHub](git_intro/git_about.md)
     * [Git Fundamentals](git_intro/git_fundamentals.md)
     * [Next Level Git](git_intro/git_advanced.md)
@@ -32,9 +24,13 @@
     * [Spartronics Git Workflow](dev_guide/git_flow.md)
     * [Spartronics Development Process](dev_guide/dev_process.md)
     * [Spartronics Programming Style Guide](dev_guide/style_guide.md)
-    * [Visual Studio Code and the Build System](dev_guide/build_system.md)
+    * [Visual Studio Code and the Build System](dev_guide/environment_setup.md)
     * [Collaborative Development](dev_guide/collaboration.md)
     * [Competition Readiness](dev_guide/competitions.md)
+    * [Networking Setup](basics/networking.md)
+    * [Robot Programming](basics/robot_code.md)
+    * [WPILib Overview](basics/wpilib_overview.md)
+    * [Resources](basics/resources.md)
 
 * [Command Based Programming](commands_subsystems/README.md)
     * [Commands](commands_subsystems/commands/README.md)

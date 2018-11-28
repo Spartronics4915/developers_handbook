@@ -1,5 +1,4 @@
-Flashing the roboRIO and radio
-==============================
+# Flashing the roboRIO and radio
 
 1. [Install the FRC Update Suite](http://wpilib.screenstepslive.com/s/4485/m/13810/l/599669-installing-the-frc-2017-update-suite-all-languages)
     - The license key is in the FIRST-themed manila-sized folder (with the 2017
@@ -15,7 +14,8 @@ Flashing the roboRIO and radio
     team number is 4915, as it should be)
     - Go to the roboRIO's admin page at its hostname and give it a static IP of 10.49.15.2
 
-3. [Download the radio flashing tool](https://usfirst.collab.net/sf/frs/do/listReleases/projects.wpilib/frs.frc_radio_configuration_utility) following the steps [here](http://wpilib.screenstepslive.com/s/4485/m/13503/l/144986-programming-your-radio-for-home-use)
+3. [Download the radio flashing tool](https://usfirst.collab.net/sf/frs/do/listReleases/projects.wpilib/frs.frc_radio_configuration_utility)
+    following the steps [here](http://wpilib.screenstepslive.com/s/4485/m/13503/l/144986-programming-your-radio-for-home-use)
     - Pick the latest version and choose the .exe without the _IL extension (Israel)
     - **Unplug the radio's power**.
     - Connect your computer to the ethernet port furthest from the power jack.

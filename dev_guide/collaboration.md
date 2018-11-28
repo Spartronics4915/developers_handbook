@@ -9,13 +9,14 @@ master, regardless of subsystem availability.
 
 Random bits to clean and organize
 
-# Best practices: Programming and All...
+## Best practices: Programming and All...
 
-## Building Two Robots
+### Building Two Robots
 - Ensure both robots' motors are configured and wired identically
   to avoid switching profiles.
 
-## Rework these....
+### Rework these....
+
 **Sensor Inputs**: All sensor inputs should be checked for range values.
 
 **Actuator outputs**: All method outputs should be checked for range as
@@ -34,23 +35,16 @@ and a comment on where the number came from.
 **Code Style**: Follow the programming style guide in the handbook. A consistent
 style is beneficial when other members of our team and other teams read your code.
 
-# Program Development Best Practices
+## Program Development Best Practices
 
-## Code Review:
-
+### Code Review:
 - All code should be reviewed by software sub-team and sub-team mentor.
   More than the author needs to understand the code.
-
 - Code review consists of checking the following:
     - Input range check
     - Output range check
-
 - Check for magic numbers (Are they documented? Better: Make them a constant variable?)
-
     - Check that any code written is already done in FIRST library
-
 - Comments document why the program is written as it is
-
-    - Is the code backed up
-
+    - Is the code backed up?
 - ***Does the code meet the robot function requirements!!!!!***
