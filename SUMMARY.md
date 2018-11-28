@@ -12,12 +12,14 @@
 
 * [Robot Lessons](robot_lessons/README.md)
   * [Lesson 1: Motors](robot_lessons/1_motors.md)
+  * [Lesson 3: Subsystems and State Machines](robot_lessons/3_statemachines.md)
 
 * [Java Lessons](java_lessons/README.md)
   * [Lesson 1: Introductory Syntax](java_lessons/1_syntax.md)
   * [Lesson 2: Variables and Datatypes](java_lessons/2_variables_datatypes.md)
   * [Lesson 3: Method Calls](java_lessons/3_method_calls.md)
   * [Lesson 4: The If Statement](java_lessons/4_if_statement.md)
+  * [Lesson 5: Method Definitions](java_lessons/5_method_definitions.md)
 
 * [Git Introduction]()
     * [Introducing Git and GitHub](git_intro/git_about.md)
