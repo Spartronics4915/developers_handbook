@@ -28,7 +28,7 @@ public class Lesson extends IterativeRobot {
 
 	@Override
 	public void teleopInit() {
-		
+
 	}
 
 	@Override

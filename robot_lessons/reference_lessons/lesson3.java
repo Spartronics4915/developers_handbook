@@ -175,9 +175,9 @@ public class Lesson extends Subsystem
         {
             this.setWantedState(WantedState.CLOSED);
         }
-		else if (joystick.getRawButtonPressed(3))
-		{
-			this.setWantedState(WantedState.EJECT);
-		}
+    		else if (joystick.getRawButtonPressed(3))
+    		{
+    			this.setWantedState(WantedState.EJECT);
+    		}
     }
 }
