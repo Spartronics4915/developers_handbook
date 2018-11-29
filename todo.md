@@ -14,7 +14,8 @@ Place holder for things to add to the guide
     - Drivetrain and template code
         - Subsystem
         - Commands
-- Describe different types of robot (Iterative, Timed...) and different drives (tank, swerve...)
+- Describe different types of robot (Iterative, Timed...)
+- Describe different drives (tank, swerve...)
 
 ## Dev Guide
 
