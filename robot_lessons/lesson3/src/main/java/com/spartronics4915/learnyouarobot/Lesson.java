@@ -6,12 +6,13 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.ControlMode;
-
+import com.spartronics4915.learnyouarobot.robot.Logger;
 import com.spartronics4915.learnyouarobot.robot.Subsystem;
 import com.spartronics4915.learnyouarobot.robot.loops.ILooper;
 import com.spartronics4915.learnyouarobot.robot.loops.Loop;
 
-public class Lesson extends Subsystem {
+public class Lesson extends Subsystem
+{
 
     private static Lesson mInstance = null;
 
@@ -32,25 +33,25 @@ public class Lesson extends Subsystem {
     private enum SystemState
     {
         CLOSING, INTAKING,
-	}
+    }
 
     private WantedState mWantedState = WantedState.CLOSED;
-	private SystemState mSystemState = SystemState.CLOSING;
+    private SystemState mSystemState = SystemState.CLOSING;
 
-	private TalonSRX mIntakeMotor = null;
+    private TalonSRX mIntakeMotor = null;
 
     private Lesson()
     {
         boolean success = true;
         try
         {
-			// Instantiate your hardware here
-			mIntakeMotor = new TalonSRX(14);
+            // Instantiate your hardware here
+            mIntakeMotor = new TalonSRX(14);
         }
         catch (Exception e)
         {
-			success = false;
-			logException("Couldn't instantiate hardware", e);
+            success = false;
+            logException("Couldn't instantiate hardware", e);
         }
 
         logInitialized(success);
@@ -74,19 +75,17 @@ public class Lesson extends Subsystem {
         {
             synchronized (Lesson.this)
             {
-                SystemState newState = mSystemState;
+                SystemState newState = defaultStateTransfer();
                 switch (mSystemState)
                 {
-					case INTAKING:
-						mIntakeMotor.set(ControlMode.PercentOutput, 1.0);
-						newState = defaultStateTransfer();
-						break;
+                    case INTAKING:
+                        mIntakeMotor.set(ControlMode.PercentOutput, 1.0);
+                        break;
                     case CLOSING:
-						stop();
-						newState = defaultStateTransfer();
-						break;
+                        stop();
+                        break;
                     default:
-                        newState = defaultStateTransfer();
+                        Logger.error("Unhandled system state!");
                 }
                 mSystemState = newState;
             }
@@ -110,52 +109,57 @@ public class Lesson extends Subsystem {
             case CLOSED:
                 newState = SystemState.CLOSING;
                 break;
+            case INTAKE:
+                newState = SystemState.INTAKING;
+                break;
             default:
                 newState = SystemState.CLOSING;
                 break;
         }
         return newState;
-	}
+    }
 
-	public synchronized void setWantedState(WantedState wantedState)
-	{
-		mWantedState = wantedState;
-	}
+    public synchronized void setWantedState(WantedState wantedState)
+    {
+        mWantedState = wantedState;
+    }
 
-	@Override
-	public void registerEnabledLoops(ILooper enabledLooper) {
-		enabledLooper.register(mLoop);
-	}
+    @Override
+    public void registerEnabledLoops(ILooper enabledLooper)
+    {
+        enabledLooper.register(mLoop);
+    }
 
-	@Override
-	public boolean checkSystem()
-	{
-		return false;
-	}
+    @Override
+    public boolean checkSystem()
+    {
+        return false;
+    }
 
-	@Override
-	public void outputTelemetry()
-	{
+    @Override
+    public void outputTelemetry()
+    {
 
-	}
+    }
 
-	@Override
-	public void stop()
-	{
-		// Stop your hardware here
-		mIntakeMotor.set(ControlMode.PercentOutput, 0.0);
-	}
+    @Override
+    public void stop()
+    {
+        // Stop your hardware here
+        mIntakeMotor.set(ControlMode.PercentOutput, 0.0);
+    }
 
-	// This method would not normally be in a subsystem (it would be in Robot), but you need to edit it to get user input
-	public void teleopPeriodic(Joystick joystick)
-	{
-		if (joystick.getRawButtonPressed(1))
-		{
-			this.setWantedState(WantedState.INTAKE);
-		}
-		else if (joystick.getRawButtonPressed(2))
-		{
-			this.setWantedState(WantedState.CLOSED);
-		}
-	}
+    // This method would not normally be in a subsystem (it would be in Robot), but
+    // you need to edit it to get user input
+    public void teleopPeriodic(Joystick joystick)
+    {
+        if (joystick.getRawButtonPressed(1))
+        {
+            this.setWantedState(WantedState.INTAKE);
+        }
+        else if (joystick.getRawButtonPressed(2))
+        {
+            this.setWantedState(WantedState.CLOSED);
+        }
+    }
 }

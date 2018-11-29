@@ -18,13 +18,13 @@ public enum WantedState {
 }
 ```
 
-I now have a type called `WantedState`. If I make a variable of type `WantedState`, I can set its value **only** to either `EAT`, or `SLEEP`. For example:
+I now have a type called `WantedState`. If I make a variable of type `WantedState`, I can set its value **only** to either `CLOSED`, `INTAKE`, or `EJECT`. For example:
 
 ```java
 public WantedState mWantedState = WantedState.CLOSED;
 ```
 
-I could also then set the value of `mWantedState` to `WantedState.INTAKE` (or `WantedState.EJECT`). I **cannot** set it to any other value.
+I could also then set the value of `mWantedState` to `WantedState.INTAKE` (or one of the other two values).
 
 I also need to define another `enum`, called `SystemState`. With the wanted states I defined above, I would have the following:
 
@@ -70,13 +70,12 @@ public static void setWantedState(WantedState ws) {
 }
 ```
 
-This will set the wanted state, but not the system state. We need a method to handle state transitions. Another requirement of this method is that you _cannot_ go straight from `CLOSING` to `EJECTING`. You must intake in between. We can define this method as follows:
+This will set the wanted state, but not the system state. We need a method to handle state transitions. We can define this method as follows:
 
 ```java
 private SystemState defaultStateTransfer() {
     SystemState newState = mSystemState;
-    switch (mWantedState)
-    {
+    switch (mWantedState) {
         case CLOSED:
             newState = SystemState.CLOSING;
             break;
@@ -84,10 +83,7 @@ private SystemState defaultStateTransfer() {
             newState = SystemState.INTAKING;
             break;
         case EJECT:
-            // We can only go to ejecting if our current system state is SystemState.INTAKING
-            if (mSystemState == SystemState.INTAKING) {
-              newState = SystemState.EJECTING;
-            }
+            newState = SystemState.EJECTING;
             break;
         default:
             newState = SystemState.CLOSING;
@@ -122,14 +118,14 @@ switch (foo) {
 }
 ```
 
-One important note here is that if we don't include the `break` keyword after each branch in the `switch`, that `case` will fallthrough to the next `case`.
+One important note here is that if we don't include the `break` keyword after each branch in the `switch`, that `case` will fallthrough to the next `case`. (See the comment in the code snippet for more explanation).
 
 Now, if we call this method after someone has called `setWantedState`, we will get to the appropriate system state.
 
 ### Acting on states and putting it all together
-As you can see above, were changing a lot of variables, but we're not _doing_ anything with them. Also, where does `defaultStateTransfer` get called?
+As you can see above, were changing a lot of variables, but we're not actually _doing_ anything with them. Also, where does `defaultStateTransfer` get called?
 
-Let's introduce your subsystem's loop:
+This happens in your subsystem's `Loop`. Here's what a skeleton of that might look like:
 
 ```java
 private Loop mLoop = new Loop() {
@@ -156,3 +152,74 @@ private Loop mLoop = new Loop() {
     }
 };
 ```
+
+At the beginning of autonomous or teleop, the `onStart` method is called. During autonomoous and teleop, every ~1/100 of a second, `onLoop` is called. Finally, when autonomous or teleop ends, `onStop` is called.
+
+We run motors and other hardware based on the system state. This happens inside the `onLoop` method. An example of that method (with hardware control added) for this hypothetical subsystem would be:
+
+```java
+@Override
+public void onLoop(double timestamp) {
+  synchronized (Lesson.this) {
+    SystemState newState = defaultStateTransfer();
+    switch (mSystemState) {
+    case INTAKING:
+      mIntakeMotor.set(ControlMode.PercentOutput, 1.0);
+      break;
+    case EJECTING:
+      mIntakeMotor.set(ControlMode.PercentOutput, -1.0);
+      break;
+    case CLOSING:
+      stop();
+      break;
+    default:
+      Logger.error("Unhandled system state!");
+    }
+    mSystemState = newState;
+  }
+}
+```
+
+We now have two very similar looking switch statements, but you should keep in mind that the `onLoop` method handles `SystemState`s, while the `handleDefaultStateTransfer` method handles `WantedState`s.
+
+All of this together looks like [this](./lesson3.java). You can also open this up in `learnyouarobot`. (That example does not include the `EJECT`/`EJECTING` states. See below for more information in this regard.)
+
+### Driver input and other methods
+You may be wondering who calls `setWantedState`. In the actual robot code, this is called from the main `Robot` loop and the various autonomous modes, and you probably won't see much of the calling code. However, in this lesson, there's a special method in your subsystem called `teleopPeriodic`. This method is passed a `Joystick`, so you can set wanted state based on joystick input. This could look like the below code:
+
+```java
+public void teleopPeriodic(Joystick joystick) {
+    if (joystick.getRawButtonPressed(1)) {
+        this.setWantedState(WantedState.INTAKE);
+    } else if (joystick.getRawButtonPressed(2)) {
+        this.setWantedState(WantedState.CLOSED);
+    }
+}
+```
+
+You may also notice a couple of other methods in your subsystem with empty bodies. They have a definite purpose, but are out of the scope of this lesson. Ask a mentor or experienced student about them if you're curious.
+
+## Extending knowledge
+Now we're going to ask you to do something, without giving you the code.
+
+### Adding ejecting states
+We're going to make it so that we have a new ejecting state, which runs the motor backwards instead of forwards. The steps are as follows:
+
+1. Add a wanted state called `EJECT`, and system state called `EJECTING` in the appropriate enums.
+2. Handle `EJECT` in the `handleDefaultStateTransfer` method.
+3. Handle `EJECTING` by running the motor backwards in the `onLoop` method.
+4. Set the wanted state to `EJECT` when `joystick.getRawButtonPressed(3)` is `true`.
+
+### Restricting state transitions
+New requirement in from the engineering team! It's bag day, they've been up all night, and they realized that the robot explodes if the intake goes straight from `CLOSING` to `EJECTING` (the test robot has also taken on a new and attractive charcoal color). Your mission, if you choose to accept it, is to disallow transitions from `CLOSING` directly to `EJECTING` (e.g. the driver **must** go from `CLOSING` -> `INTAKING` -> `EJECTING`). The steps are as follows:
+
+ 1. In `onLoop`, when the system state is `CLOSING` and the `newState == SystemState.EJECTING`, set `newState` to `SystemState.CLOSING` instead.
+
+ ### Pneumatics!
+ The engineering team just added a pneumatic cylinder to the intake! When it's ejecting, you need to make the pneumatic cylinder go out. When the intake is not ejecting, the cylinder should be in. These are the steps:
+
+  1. Make a new variable at the top of your subsystem class (below the definition of `mPrimaryMotor`) called `mEjectSolenoid` of the type `DoubleSolenoid`. Set its value to `null`.
+  2. In your subsystem's constructor, set the value of `mEjectSolenoid` to `new DoubleSolenoid(1, 2)`.<!-- TODO: Is 1 and 2 right? -->
+  3. In your `onLoop` method, add a variable of the type `DoubleSolenoid.Value` called `solenoidValue`, and set its initial value to `DoubleSolenoid.Value.kOff`.<!-- TODO: Is kOff right? -->
+  4. If the `SystemState` is `EJECTING`, set the variable holding a `solenoidValue` to `DoubleSolenoid.Value.kReverse`. <!-- TODO: Is kReverse right? -->
+  5. At the bottom of `onLoop`, after your `switch` statement, but still in the `synchronized` block, add a call to `mEjectSolenoid.set(solenoidValue)`.
