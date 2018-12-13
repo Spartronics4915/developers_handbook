@@ -194,7 +194,7 @@ public void teleopPeriodic(Joystick joystick) {
     } else if (joystick.getRawButtonPressed(2)) {
         this.setWantedState(WantedState.CLOSED);
     } else if (joystick.getRawButtonPressed(3)) {
-    this.setWantedState(WantedState.EJECT);
+    	this.setWantedState(WantedState.EJECT);
     }
 }
 ```
