@@ -120,7 +120,7 @@ switch (foo) {
 
 One important thing to note here is that if we don't include the `break` keyword at the end of each `case` in the `switch`, that `case` will fallthrough to the next `case`. (See the comment in the code snippet above for more explanation).
 
-Now, if we call `handleDefaultStateTransfer` method after someone has called `setWantedState`, we will get to the appropriate system state.
+Now, if we call `defaultStateTransfer` method after someone has called `setWantedState`, we will get to the appropriate system state.
 
 ### Acting on states and putting it all together
 As you can see above, we're changing a lot of variables, but we're not actually _doing_ anything with them. Also, where does `defaultStateTransfer` get called?
@@ -180,7 +180,7 @@ public void onLoop(double timestamp) {
 }
 ```
 
-We now have two very similar looking switch statements, but you should keep in mind that the `onLoop` method handles `SystemState`s, while the `handleDefaultStateTransfer` method handles `WantedState`s.
+We now have two very similar looking switch statements, but you should keep in mind that the `onLoop` method handles `SystemState`s, while the `defaultStateTransfer` method handles `WantedState`s.
 
 All of this together looks like [this](./lesson3/src/main/java/com/spartronics4915/learnyouarobot/Lesson.java). You can also open this up in `learnyouarobot`. (That example does not include the `EJECT`/`EJECTING` states. See below for more information in this regard.)
 
@@ -208,7 +208,7 @@ Now we're going to ask you to do something, without giving you the code. Ask men
 We're going to make it so that we have a new ejecting state, which runs the motor backwards instead of forwards. The steps are as follows:
 
  1. Add a wanted state called `EJECT`, and system state called `EJECTING` in the appropriate `enum`s.
- 2. Handle the `EJECT` `WantedState` in the `handleDefaultStateTransfer` method.
+ 2. Handle the `EJECT` `WantedState` in the `defaultStateTransfer` method.
  3. Handle the `EJECTING` `SystemState`, by running the motor backwards, in the `onLoop` method.
  4. Set the wanted state to `EJECT` when `joystick.getRawButtonPressed(3)` is `true` in `teleopPeriodic`.
 
@@ -220,7 +220,7 @@ New requirement in from the engineering team! It's bag day, they've been up all 
 ### Pneumatics!
 The engineering team just added a pneumatic cylinder to the intake! When we're `EJECTING`, you need to make the pneumatic cylinder go out. When the intake is not ejecting, the cylinder should be in. Please be careful with the pneumatic cylinder, it's pretty _heckin' **speedy**_. Anyway, these are the steps:
 
- 1. Make a new variable at the top of your subsystem class (below the definition of `mPrimaryMotor`). Name the variable `mEjectSolenoid`, it should be of the type `DoubleSolenoid`. Set its initial value to `null`.
+ 1. Make a new variable at the top of your subsystem class (below the definition of `mIntakeMotor`). Name the variable `mEjectSolenoid`, it should be of the type `DoubleSolenoid`. Set its initial value to `null`.
  2. In your subsystem's constructor, set the value of `mEjectSolenoid` to `new DoubleSolenoid(1, 2)`.<!-- TODO: Is 1 and 2 right? -->
  3. In your `onLoop` method, add a variable of the type `DoubleSolenoid.Value` called `solenoidValue`, and set its initial value to `DoubleSolenoid.Value.kOff`.<!-- TODO: Is kOff right? -->
  4. If the `SystemState` is `EJECTING`, set `solenoidValue` to `DoubleSolenoid.Value.kReverse`.<!-- TODO: Is kReverse right? -->
