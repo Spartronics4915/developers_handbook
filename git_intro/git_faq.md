@@ -5,11 +5,11 @@ Anything that relates to git or git related tools such as vi, or unix commands.
 <!-- TOC -->
 
 - [FAQ](#faq)
-    - [Common bash shell](#common-bash-shell)
-    - [Common vi commands](#common-vi-commands)
-    - [Common git questions](#common-git-questions)
-        - [How do I revert previous commit?](#how-do-i-revert-previous-commit)
-        - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
+  - [Common bash shell](#common-bash-shell)
+  - [Common vi commands](#common-vi-commands)
+  - [Common Git commands](#common-git-commands)
+    - [How do I revert previous commit?](#how-do-i-revert-previous-commit)
+    - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
 
 <!-- /TOC -->
 
@@ -71,13 +71,46 @@ i
 dw
 ```
 
-## Common git questions
-s
+## Common Git commands
+We gave out a "Git Cheatsheet" at the beginning of the year that is very helpful.
+An online version can be found [here.](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+
+``` bash
+# sets the name attached to commits - this should be your full name
+git config --global user.name "name"
+
+# sets the email attached to commits - should be the email used for GitHub
+git config --global user.email "email"
+
+# makes a new local repository with the specified name
+git init <projectname>
+
+# downloads a repository in the current directory
+git clone <url>.git
+
+# stages all modified files for commit
+git add .
+
+# commits all staged changes with a commit message
+git commit -m "Commit message"
+
+# pushes all commited changes to the origin repository
+git push origin master
+
+# pulls all changes from the latest version of the code
+git pull upstream master
+
+# fetches the latest commits without merging them
+git fetch <repository> <branch>
+
+# gets rid of ALL your changes and resets the repository to upstream - use with EXTREME CAUTION
+git reset --hard upstream/master
+```
+
 ### How do I revert previous commit?
 
 ### What is "non-fast-forward"?
 
 When your local repo is behind the repo you are pushing to you will see an error
 non-fast-forward updates were rejected. That means you need to retrieve the
-changes before you can push your changes. Read more about [git pull vs git fetch
-&& git merge](./git_fundamentals.md#(#git-pull-vs-git-fetch-&&-git-merge)
+changes before you can push your changes. Read more about [git pull vs git fetch and git merge.](./git_fundamentals)
