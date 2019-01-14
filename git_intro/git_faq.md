@@ -113,4 +113,5 @@ git reset --hard upstream/master
 
 When your local repo is behind the repo you are pushing to you will see an error
 non-fast-forward updates were rejected. That means you need to retrieve the
-changes before you can push your changes. Read more about [git pull vs git fetch and git merge.](./git_fundamentals)
+changes before you can push your changes. Read more about
+[git pull vs git fetch and git merge.](./git_fundamentals)

@@ -11,29 +11,21 @@ and tools to help improve productivity.
 <!-- TOC -->
 
 - [More Git!](#more-git)
-<<<<<<< HEAD
-- [Resources & References](#resources--references)
-- [Git Structure](#git-structure)
+  - [Resources & References](#resources--references)
+  - [Git Structure](#git-structure)
     - [Intro to git internals](#intro-to-git-internals)
     - [Branches and Tags](#branches-and-tags)
     - [Git HEAD](#git-head)
     - [Tracking and merging branches](#tracking-and-merging-branches)
-=======
-    - [Resources & References](#resources--references)
-    - [Git Structure](#git-structure)
-        - [Intro to git internals](#intro-to-git-internals)
-        - [Branches and Tags](#branches-and-tags)
-        - [Tracking and merging branches](#tracking-and-merging-branches)
->>>>>>> 5aad306b86c3ec1a52e998d4ec573d3fe3670d65
-        - [git rebase & git squash](#git-rebase--git-squash)
-        - [Reverting changes](#reverting-changes)
-    - [Git Commands & Helful Tools](#git-commands--helful-tools)
-        - [Git bash completion](#git-bash-completion)
-        - [More on gitconfig](#more-on-gitconfig)
-        - [git diff](#git-diff)
-        - [git stash](#git-stash)
-        - [git references or refs](#git-references-or-refs)
-        - [remove or move a file: git rm && git mv](#remove-or-move-a-file-git-rm--git-mv)
+    - [git rebase & git squash](#git-rebase--git-squash)
+    - [Reverting changes](#reverting-changes)
+  - [Git Commands & Helful Tools](#git-commands--helful-tools)
+    - [Git bash completion](#git-bash-completion)
+    - [More on gitconfig](#more-on-gitconfig)
+    - [git diff](#git-diff)
+    - [git stash](#git-stash)
+    - [git references or refs](#git-references-or-refs)
+    - [remove or move a file: git rm && git mv](#remove-or-move-a-file-git-rm--git-mv)
 
 <!-- /TOC -->
 
@@ -180,7 +172,7 @@ will happen in your current branch/state, meaning it will then be possible to
 commit the old version of the file to your current branch.
 
 ```sh
-# Checkout the version of your file as it was in HEAD 
+# Checkout the version of your file as it was in HEAD
 # WARNING: discards all unstaged, uncommitted changes
 $ git checkout <file>
 # Checkout the version of your file as it was in a tag/commit

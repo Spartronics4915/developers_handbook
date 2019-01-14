@@ -3,15 +3,15 @@
 <!-- TOC -->
 
 - [Introducing Git and GitHub](#introducing-git-and-github)
-    - [What is Git and GitHub?](#what-is-git-and-github)
-    - [Common Terms](#common-terms)
-        - [What is a workflow? And, what does it have to do with git?](#what-is-a-workflow-and-what-does-it-have-to-do-with-git)
-        - [Why command-line for git vs. GUI app?](#why-command-line-for-git-vs-gui-app)
-        - [What is a repo and remotes?](#what-is-a-repo-and-remotes)
-        - [What is cloning or forking, and upstream?](#what-is-cloning-or-forking-and-upstream)
-        - [What is branching? Checkout what?!](#what-is-branching-checkout-what)
-        - [What does it mean to pull and merge? And what is a pull request?](#what-does-it-mean-to-pull-and-merge-and-what-is-a-pull-request)
-        - [What is commit vs stash vs push?](#what-is-commit-vs-stash-vs-push)
+  - [What is Git and GitHub?](#what-is-git-and-github)
+  - [Common Terms](#common-terms)
+    - [What is a workflow? And, what does it have to do with git?](#what-is-a-workflow-and-what-does-it-have-to-do-with-git)
+    - [Why command-line for git vs. GUI app?](#why-command-line-for-git-vs-gui-app)
+    - [What is a repo and remotes?](#what-is-a-repo-and-remotes)
+    - [What is cloning or forking, and upstream?](#what-is-cloning-or-forking-and-upstream)
+    - [What is branching? Checkout what?!](#what-is-branching-checkout-what)
+    - [What does it mean to pull and merge? And what is a pull request?](#what-does-it-mean-to-pull-and-merge-and-what-is-a-pull-request)
+    - [What is commit vs stash vs push?](#what-is-commit-vs-stash-vs-push)
 
 <!-- /TOC -->
 
