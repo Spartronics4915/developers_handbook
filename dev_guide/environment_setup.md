@@ -20,7 +20,7 @@
 
 <!-- /TOC -->
 
-[Screensteps Live instructions](https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/999999-installing-c-and-java-development-tools-for-frc#windows)
+[Screensteps Live instructions](https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/999999-installing-c-and-java-development-tools-for-frc)
 
 ## Installation
 
