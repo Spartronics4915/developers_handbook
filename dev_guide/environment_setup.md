@@ -57,7 +57,7 @@
   - The `java.home` variable tells VS Code where to find the Java installation.
   - Click the WPILib icon in the top right, and enter in "Set VS Code". Select
     the `WPILib: Set VS Code Java Home to FRC Home` (This setting only affects
-    Visual Studio Code).
+    Visual Studio Code). The "java.home" variable should be set to `~/frc2019/jdk`.
 
 ### Debian-based systems
 
@@ -77,7 +77,7 @@
   - The `java.home` variable tells VS Code where to find the Java installation.
   - Click the WPILib icon in the top right, and enter in "Set VS Code". Select
   the `WPILib: Set VS Code Java Home to FRC Home` (This setting only affects
-  Visual Studio Code).
+  Visual Studio Code). The "java.home" variable should be set to `~/frc2019/jdk`.
 
 ## Post-Installation Testing
 - Clone a repository set up for this year
