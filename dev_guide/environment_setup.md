@@ -3,77 +3,145 @@
 <!-- TOC -->
 
 - [Setting Up your Development and Build Environment](#setting-up-your-development-and-build-environment)
+  - [Installation](#installation)
+    - [Windows](#windows)
+    - [MacOS](#macos)
+    - [Debian-based systems](#debian-based-systems)
+  - [Post-Installation Testing](#post-installation-testing)
+    - [Common Issues](#common-issues)
+    - [Recommended VS Code extensions and settings](#recommended-vs-code-extensions-and-settings)
+  - [Generic Installation](#generic-installation)
     - [Visual Studio Code](#visual-studio-code)
-        - [Installation](#installation)
-        - [Extensions](#extensions)
-            - [Required Extensions:](#required-extensions)
-            - [Recommended Extensions](#recommended-extensions)
-        - [Recommended Settings](#recommended-settings)
-            - [Trailing Spaces extension](#trailing-spaces-extension)
-            - [Todo Tree extension](#todo-tree-extension)
-            - [markdownlint extension](#markdownlint-extension)
+      - [Extensions](#extensions)
     - [Java](#java)
-        - [Telling Visual Studio Code where Java is](#telling-visual-studio-code-where-java-is)
-        - [For Windows users:](#for-windows-users)
-        - [For macOS users:](#for-macos-users)
-        - [For Linux users:](#for-linux-users)
-    - [Git](#git)
-        - [Installing Git](#installing-git)
-        - [Configuring Git](#configuring-git)
+      - [For Windows users](#for-windows-users)
+      - [For macOS users](#for-macos-users)
+      - [For Linux users](#for-linux-users)
 
 <!-- /TOC -->
 
-## Visual Studio Code
+[Screensteps Live instructions](https://wpilib.screenstepslive.com/s/currentCS/m/getting_started/l/999999-installing-c-and-java-development-tools-for-frc#windows)
 
-### Installation
+## Installation
+
+- Download the latest WPILib release for your operating system from [GitHub.](https://github.com/wpilibsuite/allwpilib/releases)
+
+### Windows
+- Uninstall the WPILib extension in VS Code if installed.
+- Extract the downloaded ZIP file and run the installer.
+- Continue through the prompts. If you have VS Code already downloaded, it's
+  recommended to select your existing download.
+- Set the `java.home` variable
+  - The `java.home` variable tells VS Code where to find the Java installation.
+  - Click the WPILib icon in the top right, and enter in "Set VS Code". Select
+    the `WPILib: Set VS Code Java Home to FRC Home` (This setting only affects
+    Visual Studio Code).
+
+### MacOS
+- [Install Visual Studio Code](https://code.visualstudio.com) (unless already installed).
+  - Double click on the ZIP file to expand it and copy the "Visual Studio Code"
+    file to the Applications folder.
+- [Download and install the latest (Mac) WPILib release.](https://github.com/wpilibsuite/allwpilib/releases)
+  Because of the size of this file, someone should have a predownloaded version.
+  - Unzip and untar the downloaded file by locating it in Finder, doubleclicking
+  to remove the .gz extension, and doubleclicking again to remove the .tar extension.
+  - Create a new folder called "frc2019" in your home (~) directory, and copy the
+  contents of the untarred folder (WPILib_Mac-201X.X.X) to that folder.
+  - Open a terminal window, `cd` to `~/frc2019/tools`, and run `python ToolsUpdater.py`.
+- Install the extensions for Visual Studio Code.
+  - Open VS Code, and press `Cmd+Shift+P` to bring up the *Command Palette*.
+  - Start typing in "Install from VSIX" and select the option `Extensions: Install from VSIX`.
+  - Install, *in this order*, `Cpp.vsix`, `JavaLang.vsix`, `JavaDeps.vsix`, `JavaDebug.vsix`, and `WPILib.vsix`.
+    All these are located at `~/frc2019/vsCodeExtensions`.
+- Set the `java.home` variable
+  - The `java.home` variable tells VS Code where to find the Java installation.
+  - Click the WPILib icon in the top right, and enter in "Set VS Code". Select
+    the `WPILib: Set VS Code Java Home to FRC Home` (This setting only affects
+    Visual Studio Code).
+
+### Debian-based systems
+
+- Install Visual Studio Code through a package manager or from [Microsoft's website.](https://code.visualstudio.com)
+- [Download and install the latest (Linux) WPILib release.](https://github.com/wpilibsuite/allwpilib/releases)
+    Because of the size of this file, someone should have a predownloaded version.
+  - Unzip and untar the downloaded file.
+  - Create a new folder called "frc2019" in your home (~) directory, and copy the
+    contents of the untarred folder (WPILib_Linux-201X.X.X) to that folder.
+  - Open a terminal window, `cd` to `~/frc2019/tools`, and run `python3 ToolsUpdater.py`.
+- Install the extensions for Visual Studio Code.
+  - Open VS Code, and press `Ctrl+Shift+P` to bring up the *Command Palette*.
+  - Start typing in "Install from VSIX" and select the option `Extensions: Install from VSIX`.
+  - Install, *in this order*, `Cpp.vsix`, `JavaLang.vsix`, `JavaDeps.vsix`, `JavaDebug.vsix`, and `WPILib.vsix`.
+    All these are located at `~/frc2019/vsCodeExtensions`.
+- Set the `java.home` variable
+  - The `java.home` variable tells VS Code where to find the Java installation.
+  - Click the WPILib icon in the top right, and enter in "Set VS Code". Select
+  the `WPILib: Set VS Code Java Home to FRC Home` (This setting only affects
+  Visual Studio Code).
+
+## Post-Installation Testing
+- Clone a repository set up for this year
+  (example: `git clone https://github.com/dbadb/2019-DeepSpace.git`)
+- Open the *folder* in VS Code
+- Run `./gradlew` in the repository
+- Run `./gradlew jar` in the repository
+  - This downloads the JAR files necessary for deploying code
+- Connect to robot WiFi
+- Press `Shift+F5` to `WPILib: Deploy Robot Code`.
+
+### Common Issues
+- Stuck on `XX% - Starting Java Language Server`
+  - This takes a while! 90% of the time, it's starting, but slowly.
+    - On Linux, you can view the Java processes with `ps -ef | fgref java`.
+  - If the problem persists, try restarting Visual Studio Code.
+- Cannot find `ctre.something`
+  - Running `./gradlew jar` should gather those dependancies.
+- `Various Windows process errors`
+  - Try rebooting. Seriously.
+
+### Recommended VS Code extensions and settings
+
+- [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
+  - `"trailing-spaces.highlightCurrentLine": false,`
+  - `"trailing-spaces.trimOnSave": true,`
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+  - `"todo-tree.regex": "((@|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",`
+  - `"todo-tree.expanded": true,`
+  - `"todo-tree.tags": ["TODO", "FIXME", "XXX", "DONE", "BUG", "!!!", "HACK", "NOTE", "FAQ", "IDEA" ],`
+- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+  - `"markdownlint.config": {"MD006": false, "MD007": false, "MD013": true,`
+      `"MD022": false, "MD026": false, "MD032": false, "MD040": false },`
+
+## Generic Installation
+
+If you have already installed using the above steps, ***Go No Further!***
+This section was made before the `allwpilib` packages, but is useful for people
+with weird operating systems.
+
+### Visual Studio Code
+
 [Download Visual Studio Code from here for most operating systems.](https://code.visualstudio.com/download)
 
 If on an Arch-based Linux distribution, VS Code is also available in the community
 repository as `code`.
 
-### Extensions
+#### Extensions
 
-#### Required Extensions:
 - [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) -
     open up the Extensions sidebar, and search "java". It's in the top five results.
-- [WPILib](https://github.com/wpilibsuite/vscode-wpilib/releases/tag/v2019.0.0-alpha-4)
-    - Download the latest **alpha** of the WPILib Extension.
+- WPILib Extension
+    - [Download the latest WPILib Extension.](https://github.com/wpilibsuite/vscode-wpilib/releases/latest/)
     - Open the Extensions sidebar (Ctrl+Shift+X)
     - Click the three dots in the upper right corner of the Extensions sidebar
     - Hit `Install from VSIX...`
     - Navigate to the WPILib extension you downloaded, and click `Install`.
 
-#### Recommended Extensions
-- [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
-- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+### Java
+Download and install the Java 11 JDK or the OpenJDK version.
 
-### Recommended Settings
-- `"editor.quickSuggestions": {"other": false, "comments": false,`
-    `"strings": false },`
+[Oracle's Java 11 JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 
-#### Trailing Spaces extension
-- `"trailing-spaces.highlightCurrentLine": false,`
-- `"trailing-spaces.trimOnSave": true,`
-
-#### Todo Tree extension
-- `"todo-tree.regex": "((@|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",`
-- `"todo-tree.expanded": true,`
-- `"todo-tree.tags": ["TODO", "FIXME", "XXX", "DONE", "BUG", "!!!", "HACK", "NOTE", "FAQ", "IDEA" ],`
-
-#### markdownlint extension
-- `"markdownlint.config": {"MD006": false, "MD007": false, "MD013": true,`
-    `"MD022": false, "MD026": false, "MD032": false, "MD040": false },`
-
-## Java
-This year we will be using Java 11. You're going to need the
-**Java Development Kit (JDK)**. You can download
-[Oracle's Java 11 JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html),
-but the OpenJDK also will work. Download the JDK and install it.
-
-### Telling Visual Studio Code where Java is
-
-### For Windows users:
+#### For Windows users
 
 1) Locate your Java installation directory
    - It should be something like `C:\Program Files\Java\jdk1.11.0_65`
@@ -92,39 +160,19 @@ but the OpenJDK also will work. Download the JDK and install it.
 depending on the alphabetical order. For example,
 `C:\Program Files\Java\jdk1.11.0_65` shortens to `C:\Progra~1\Java\jdk1.11.0_65`.
 
-### For macOS users:
+#### For macOS users
 
 1) Run `echo $JAVA_HOME` to check if the variable is already set
    (JAVA_HOME tells your computer where Java is)
 2) If the output is empty, edit the `.bash_profile` and add `export JAVA_HOME=$(/usr/libexec/java_home)`
-3) Press `Ctrl + X` to exit and `Ctrl + Y` to save your changes.
-4) Now you need to restart your bash file: `source .bash_profile`
-5) Check that the variable has been set again with `echo $JAVA_HOME`.
+3) Now you need to restart your bash file: `source .bash_profile`
+4) Check that the variable has been set again with `echo $JAVA_HOME`.
 
-### For Linux users:
+#### For Linux users
 In Visual Studio Code, add this line at the top of your `settings.json`.
 
-`"java.home": "/usr/lib/jvm/default",`
+`"java.home": "/usr/lib/jvm/default-java",`
 
-## Git
-
-### Installing Git
-If you haven't already, download and install Git from [here.](https://git-scm.com/)
-On macOS and most Linux systems, Git comes preinstalled by default.
-
-Once you've installed Git, you're going to need to configure it.
-
-### Configuring Git
-
-It's helpful if everyone knows who you are when working in groups.
-Git's `user.name` and `user.email` options help us tell who you are when `commit`ing
-any code.
-
-`git config --global user.name "FirstName LastName"` will set your name.
-The `--global` tag sets it for all Git projects, not just one repository.
-
-`git config --global user.email "your@email.com"` sets an email associated with
-your commits. **It is important to use the email you signed up with GitHub with.**
-
-Finally, check that you have entered in the correct username and email with
-`git config --list`.
+If this location doesn't work, `cd` to `/usr/lib/jvm/` and poke around there.
+Common problems include slight distro differences, the wrong / multiple Java
+versions, and wonky `$JAVA_HOME`s.
