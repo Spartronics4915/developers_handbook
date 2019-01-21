@@ -46,4 +46,6 @@
         * [Troubleshooting Talon SRX](actuators/talon/troubleshooting.md)
     * [Servos](actuators/servos/README.md)
 
+* [Data Analysis](data_analysis/README.md)
+
 * [Contribute!](contribute.md)
