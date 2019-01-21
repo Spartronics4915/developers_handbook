@@ -12,7 +12,7 @@ Scouting data is recorded using a mobile application customized for each year's 
 
 # Anaconda Navigator
 
-We use [Anaconda Navigator](https://www.anaconda.com/) to launch either a [Python](http://www.python.org) or [R](https://www.r-project.org) programming and data analysis environment.
+We use [Anaconda Navigator](https://docs.anaconda.com/anaconda/navigator/) to launch either a [Python](http://www.python.org) or [R](https://www.r-project.org) programming and data analysis environment.
 
 Download Anaconda Navigator [here](https://www.anaconda.com/download/). Select the **Python 3.7 version** (or the latest Python 3 version) for your operating system, and follow the installation instructions.
 
