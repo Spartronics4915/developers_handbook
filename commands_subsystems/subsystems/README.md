@@ -33,7 +33,8 @@ class](http://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/
 meaning they must override the method **initDefaultCommand()**.
 
 ```java
-public void initDefaultCommand() {
+public void initDefaultCommand()
+{
     setDefaultCommand(new ArcadeDriveCommand());
 }
 ```

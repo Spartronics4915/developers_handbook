@@ -34,13 +34,15 @@ Joystick joystickDrive; // This object is the driver's joystick which
                         // controls the driving of the robot.
 
 // Called once when this Command runs the first time
-protected void initialize() {
+protected void initialize()
+{
     // Initializes the joystick so that we can read the user's input
     joystickDrive = Robot.oi.driveStick;
 }
 
 // Called repeatedly when this Command is scheduled to run
-protected void execute() {
+protected void execute()
+{
     // We pass the joystick directly to our mecanumDrive method, which
     // extracts the important information about direction and spin
     // and controls the motors appropriately
@@ -83,7 +85,8 @@ down on motor wear.
  *
  * @param joystick Joystick controlling the robot movement
  */
-public void mecanumDrive(Joystick joystick) {
+public void mecanumDrive(Joystick joystick)
+{
 
     // First we extract the important values from the joystick.
     // In order: Left/Right, Forward/Back, Rotation, and the button value
@@ -98,7 +101,8 @@ public void mecanumDrive(Joystick joystick) {
     double twistScale = DEFAULT_TWIST_SCALE;
 
     // If the speedButton is held down, the twistScale is raised to 1 (full)
-    if (speedButton) {
+    if (speedButton)
+    {
         twistScale = 1;
     }
 
@@ -111,10 +115,12 @@ public void mecanumDrive(Joystick joystick) {
     // This is important so that we aren't passing small values that the
     // motors cannot execute.
     // DEFAULT_BUFFER = 0.2
-    if (Math.abs(joystickX) <= DEFAULT_BUFFER) {
+    if (Math.abs(joystickX) <= DEFAULT_BUFFER)
+    {
         joystickX = 0;
     }
-    if (Math.abs(joystickY) <= DEFAULT_BUFFER) {
+    if (Math.abs(joystickY) <= DEFAULT_BUFFER)
+    {
         joystickY = 0;
     }
 
@@ -132,11 +138,13 @@ public void mecanumDrive(Joystick joystick) {
 
     // Increases the deadzone buffer of the other directions if the robot
     // should strafeOnly or go forwardOnly
-    if (strafeOnly) {
+    if (strafeOnly)
+    {
         bufferY *= DOUBLE;
         bufferZ *= DOUBLE;
     }
-    if (forwardOnly) {
+    if (forwardOnly)
+    {
         bufferX *= DOUBLE;
         bufferZ *= DOUBLE;
     }
@@ -165,13 +173,18 @@ public void mecanumDrive(Joystick joystick) {
 
     // If all of the inputs are within their deadzone's, then the robot
     // will stop moving.
-    if (deadZoneX && deadZoneY && deadZoneTwist) {
+    if (deadZoneX && deadZoneY && deadZoneTwist)
+    {
         robotDrive.stopMotor();
-    } else if (fieldMode) {
+    }
+    else if (fieldMode)
+    {
         // If the robot is in field mode (set by another command), it will
         // also pass a gyroscope angle along with the scaled parameters.
         robotDrive.mecanumDrive_Cartesian(throttleX, throttleY, throttleTwist, trackGyro());
-    } else {
+    }
+    else
+    {
         // Uses the scaled parameters with the default mecanum drive method
         // in RobotDrive.java
         robotDrive.mecanumDrive_Cartesian(throttleX, throttleY, throttleTwist, 0);
