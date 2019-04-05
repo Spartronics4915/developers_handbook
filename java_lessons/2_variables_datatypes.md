@@ -33,15 +33,12 @@ what you see in math class:
 
  1. Variables in math are assumed to contain all complex numbers, while variables
    in Java must have their type explicitly stated, and can hold data other than numbers.
- 2. Variable names in math are pretty vague and bad. In programming, we try to
-   give our variables clear names that say what they are (without being
-   needlessly verbose).
+ 2. Math problems are often short, so you can usually get away with using relatively meaningless single letter variable names. Most programs we write are longer and have more moving parts than these math problems, so in our context single letter variable names are considered vauge and bad (unless you're [Arthur Whitney](http://kparc.com/b/)). You should try to give your variables clear names that say what they contain (without being needlessly verbose or redundant).
 
 ### Declaring Variables
 Now that we have an idea of what variables are, how do we declare them?
 In math, we use the equals sign to denote both assignment and equality.
-In programming, `=` denotes just assignment (`==` tests for equality,
-which we'll talk about later.)
+In programming, `=` only denotes assignment (`==` is what tests for equality, which we'll talk about later.)
 
 _Many of the variable names below would be considered bad names if you used them_
 _in robot code. We're using names like foo just because it's an example. If we_
