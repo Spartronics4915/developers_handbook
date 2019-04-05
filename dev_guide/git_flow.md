@@ -5,10 +5,10 @@ For introduction to git, please see section [Git Intro](../git_intro/README.md)
 <!-- TOC -->
 
 - [Spartronics Git Workflow](#spartronics-git-workflow)
-    - [Overview](#overview)
-        - [Resources](#resources)
-    - [Workflow Steps](#workflow-steps)
-    - [Top 5 Commands](#top-5-commands)
+  - [Overview](#overview)
+    - [Resources](#resources)
+  - [Workflow Steps](#workflow-steps)
+  - [Top 5 Commands](#top-5-commands)
 
 <!-- /TOC -->
 

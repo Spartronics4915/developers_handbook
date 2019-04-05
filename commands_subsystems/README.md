@@ -24,7 +24,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.command.PIDSubsystem;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
-public class IntakeLauncher extends Subsystem {
+public class IntakeLauncher extends Subsystem
+{
   ...
 }
 ```
@@ -58,11 +59,13 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
 
-public class IntakeBallCommandGroup extends CommandGroup {
+public class IntakeBallCommandGroup extends CommandGroup
+{
   ...
 }
 
-public class StopWheelsCommand extends Command {
+public class StopWheelsCommand extends Command
+{
   ...
 }
 ```

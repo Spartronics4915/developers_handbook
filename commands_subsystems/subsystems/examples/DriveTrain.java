@@ -25,7 +25,8 @@ import java.util.List;
  * forward on the joystick is always in a single direction, regardless of
  * the robot's orientation.
  */
-public class DriveTrain extends Subsystem {
+public class DriveTrain extends Subsystem
+{
 
 	RobotDrive robotDrive;
 	CustomDebugger debugger = Robot.debugger;
@@ -53,13 +54,15 @@ public class DriveTrain extends Subsystem {
 
 	// Put methods for controlling this subsystem
 	// here. Call these from Commands.
-	public void initDefaultCommand() {
+	public void initDefaultCommand()
+	{
 		setDefaultCommand(new MecanumDriveCommand());
 
 		robotDrive = RobotMap.driveTrainRobotDrive;
 	}
 
-	public RobotDrive getRobotDrive() {
+	public RobotDrive getRobotDrive()
+	{
 		return robotDrive;
 	}
 
@@ -72,7 +75,8 @@ public class DriveTrain extends Subsystem {
 	 *
 	 * @param joystick Joystick controlling the robot movement
 	 */
-	public void mecanumDrive(Joystick joystick) {
+	public void mecanumDrive(Joystick joystick)
+	{
 
 		double joystickX = joystick.getAxis(Joystick.AxisType.kX);
 		double joystickY = joystick.getAxis(Joystick.AxisType.kY);
@@ -81,17 +85,20 @@ public class DriveTrain extends Subsystem {
 
 		double twistScale = DEFAULT_TWIST_SCALE;
 
-		if (speedButton) {
+		if (speedButton)
+		{
 			twistScale = 1;
 		}
 
 		throttle = 0.40 * (-joystick.getThrottle()) + 0.60;
 		debugger.logError(LoggerNames.DRIVETRAIN, "Throttle Value: " + throttle);
 
-		if (Math.abs(joystickX) <= 0.2) {
+		if (Math.abs(joystickX) <= 0.2)
+		{
 			joystickX = 0;
 		}
-		if (Math.abs(joystickY) <= 0.2) {
+		if (Math.abs(joystickY) <= 0.2)
+		{
 			joystickY = 0;
 		}
 
@@ -102,11 +109,13 @@ public class DriveTrain extends Subsystem {
 		double bufferY = DEFAULT_BUFFER;
 		double bufferZ = DEFAULT_BUFFER;
 
-		if (strafeOnly) {
+		if (strafeOnly)
+		{
 			bufferY *= DOUBLE;
 			bufferZ *= DOUBLE;
 		}
-		if (forwardOnly) {
+		if (forwardOnly)
+		{
 			bufferX *= DOUBLE;
 			bufferZ *= DOUBLE;
 		}
@@ -127,11 +136,16 @@ public class DriveTrain extends Subsystem {
 		Robot.driveTrain.trackGyro();
 
 
-		if (deadZoneX && deadZoneY && deadZoneTwist) {
+		if (deadZoneX && deadZoneY && deadZoneTwist)
+		{
 			robotDrive.stopMotor();
-		} else if (fieldMode) {
+		}
+		else if (fieldMode)
+		{
 			robotDrive.mecanumDrive_Cartesian(throttleX, throttleY, throttleTwist, gyroHeading);
-		} else {
+		}
+		else
+		{
 			robotDrive.mecanumDrive_Cartesian(throttleX, throttleY, throttleTwist, 0);
 		}
 
@@ -141,7 +155,8 @@ public class DriveTrain extends Subsystem {
 	/**
 	 * Calibrates the gyro using gyro.reset()
 	 */
-	public void calibrateGyro() {
+	public void calibrateGyro()
+	{
 		gyro.reset();
 	}
 
@@ -149,7 +164,8 @@ public class DriveTrain extends Subsystem {
 	 * Drives using mecanumDrive_Cartesian forward
 	 * @param speed that it drives at.
 	 */
-	public void driveStraight(double speed) {
+	public void driveStraight(double speed)
+	{
 		robotDrive.mecanumDrive_Cartesian(0.0, speed, 0.0, 0.0);
 	}
 
@@ -157,7 +173,8 @@ public class DriveTrain extends Subsystem {
 	 * Drives using mecanumDrive_Cartesian sideways
 	 * @param speed that it drives at
 	 */
-	public void driveSideways(double speed){
+	public void driveSideways(double speed)
+	{
 		robotDrive.mecanumDrive_Cartesian(speed, 0.0, 0.0, 0.0);
 	}
 
@@ -165,13 +182,17 @@ public class DriveTrain extends Subsystem {
 	 * Turns the robot.
 	 * @param left Whether to turn left (true), or right (false)
 	 */
-	public void turn(boolean left){
-		for (int i = 0; i < motors.size(); i++) {
+	public void turn(boolean left)
+	{
+		for (int i = 0; i < motors.size(); i++)
+		{
 			RobotMap.changeControlMode(ControlMode.Speed);
-			if (left) {
+			if (left)
+			{
 				robotDrive.mecanumDrive_Cartesian(0, 0, -0.5, 0);
 			}
-			else {
+			else
+			{
 				robotDrive.mecanumDrive_Cartesian(0, 0, 0.5, 0);
 			}
 		}
@@ -185,7 +206,8 @@ public class DriveTrain extends Subsystem {
      * @param elapsed Time since the last sampling of the motor.
      * @return Distance traveled since the last sampling of the encoder.
      */
-    public double getDistanceForMotor(CANTalon motor, long elapsed) {
+	public double getDistanceForMotor(CANTalon motor, long elapsed)
+	{
         int ticksPerRevolution = 1000;
         double circumferenceOfWheel = WHEEL_DIAMETER * Math.PI;
         int inchesPerFoot = 12;
@@ -197,7 +219,8 @@ public class DriveTrain extends Subsystem {
      *
      * @param stick used to control the DriveTrain.
      */
-    public void arcadeDrive(Joystick stick) {
+	public void arcadeDrive(Joystick stick)
+	{
         robotDrive.arcadeDrive(stick);
     }
 
@@ -206,12 +229,14 @@ public class DriveTrain extends Subsystem {
      *
      * @return what mode it is in - true for field mode.
      */
-    public boolean toggleFieldMode() {
+	public boolean toggleFieldMode()
+	{
         fieldMode = !fieldMode;
         return fieldMode;
     }
 
-    public double trackGyro() {
+	public double trackGyro()
+	{
         gyroHeading = -gyro.getAngle() + startingAngle;
         return gyroHeading;
     }

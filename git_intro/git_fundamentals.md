@@ -2,11 +2,11 @@
 This section covers the basics of setting up the git environment and the most
 commonly used commands.
 
-* [Install the latest version of git for your computer](https://www.git-scm.com/downloads)
-  * Simply click on the link for your operating system to download the installer
-  * Follow the instructions to install the package
-  * Optionally [install GitHub's desktop GUI client](https://desktop.github.com/)
-* If you don't already have one, [sign up for a free GitHub account](https://www.github.com)
+- [Install the latest version of git for your computer](https://www.git-scm.com/downloads)
+  - Simply click on the link for your operating system to download the installer
+  - Follow the instructions to install the package
+  - Optionally [install GitHub's desktop GUI client](https://desktop.github.com/)
+- If you don't already have one, [sign up for a free GitHub account](https://www.github.com)
 
 Commands are executed in the terminal window. Examples in this document show the
 command to be executed after a dollar sign ($) prompt.
@@ -24,32 +24,32 @@ There are many git references and tutorials on-line. Here is the link to
 <!-- TOC -->
 
 - [Git Fundamentals](#git-fundamentals)
-    - [Understanding git](#understanding-git)
-    - [Important set-up for the new git user](#important-set-up-for-the-new-git-user)
-        - [Username & email](#username--email)
-        - [Default editor](#default-editor)
-    - [Creating and contributing to a repo](#creating-and-contributing-to-a-repo)
-        - [Git init](#git-init)
-        - [Adding files](#adding-files)
-        - [Git commit messages](#git-commit-messages)
-        - [Git log and git show](#git-log-and-git-show)
-        - [Git clone](#git-clone)
-        - [Git fork](#git-fork)
-        - [GitHub pull request](#github-pull-request)
-        - [Merging](#merging)
-        - [Merge conflicts](#merge-conflicts)
-    - [Basic repo configuration](#basic-repo-configuration)
-        - [Git remotes](#git-remotes)
-        - [.gitignore](#gitignore)
-    - [Git Commands](#git-commands)
-        - [git help](#git-help)
-        - [git init](#git-init)
-        - [git status](#git-status)
-        - [git pull vs git fetch && git merge](#git-pull-vs-git-fetch--git-merge)
-        - [What is git checkout? And a branch?](#what-is-git-checkout-and-a-branch)
-        - [git add and git commit](#git-add-and-git-commit)
-        - [git push](#git-push)
-        - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
+  - [Understanding git](#understanding-git)
+  - [Important set-up for the new git user](#important-set-up-for-the-new-git-user)
+    - [Username & email](#username--email)
+    - [Default editor](#default-editor)
+  - [Creating and contributing to a repo](#creating-and-contributing-to-a-repo)
+    - [Git init](#git-init)
+    - [Adding files](#adding-files)
+    - [Git commit messages](#git-commit-messages)
+    - [Git log and git show](#git-log-and-git-show)
+    - [Git clone](#git-clone)
+    - [Git fork](#git-fork)
+    - [GitHub pull request](#github-pull-request)
+    - [Merging](#merging)
+    - [Merge conflicts](#merge-conflicts)
+  - [Basic repo configuration](#basic-repo-configuration)
+    - [Git remotes](#git-remotes)
+    - [.gitignore](#gitignore)
+  - [Git Commands](#git-commands)
+    - [git help](#git-help)
+    - [git init](#git-init)
+    - [git status](#git-status)
+    - [git pull vs git fetch && git merge](#git-pull-vs-git-fetch--git-merge)
+    - [What is git checkout? And a branch?](#what-is-git-checkout-and-a-branch)
+    - [git add and git commit](#git-add-and-git-commit)
+    - [git push](#git-push)
+    - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
 
 <!-- /TOC -->
 
@@ -248,9 +248,9 @@ What is a bad commit message?
 Check out examples [here](https://www.codelord.net/2015/03/16/bad-commit-messages-hall-of-shame/).
 
 The commit message format is as follows.
-* 1st line is a summary, 50 characters or less
-* 2nd line is a blank line
-* 3rd line and onward, 80 characters or less per line, describes the change in detail
+- 1st line is a summary, 50 characters or less
+- 2nd line is a blank line
+- 3rd line and onward, 80 characters or less per line, describes the change in detail
 
 Read more about writing good commits [here](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
@@ -508,10 +508,10 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 Looking at the git status, I can tell:
-* I am on the 'gitintro' branch
-* My branch is ahead of its remote by 1 commit, meaning other developers
+- I am on the 'gitintro' branch
+- My branch is ahead of its remote by 1 commit, meaning other developers
     following my fork on binnur/gitintro can not see my most recent change
-* I have several untracked files and I need to use _git add_ to add them to the repo
+- I have several untracked files and I need to use _git add_ to add them to the repo
 
 ### git pull vs git fetch && git merge
 _git pull_ vs _git fetch && git merge_ has a similar outcome with different
@@ -618,8 +618,8 @@ $ git commit
 ### git push
 Using _git push_ commits changes made to your local repo to remote repository.
 _git push_ takes two arguments:
-* remote name, ex. _origin_
-* branch name, ex. _master_
+- remote name, ex. _origin_
+- branch name, ex. _master_
 
 ```sh
 # push changes to your online repo

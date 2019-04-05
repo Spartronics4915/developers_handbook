@@ -7,7 +7,8 @@ import org.usfirst.frc4915.MecanumDrive.RobotMap;
 //@TODO Improve code: Make code fit coding style requirements, add documentation
 // and generally make it presentable
 
-public class Grabber extends Subsystem {
+public class Grabber extends Subsystem
+{
 
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -15,7 +16,8 @@ public class Grabber extends Subsystem {
     Solenoid primarySolenoid = RobotMap.primarySolenoid;
     Solenoid secondarySolenoid = RobotMap.secondarySolenoid;
 
-    public void initDefaultCommand() {
+    public void initDefaultCommand()
+    {
         // Set the default command for a subsystem here.
         // setDefaultCommand(new MySpecialCommand());
     }
@@ -24,7 +26,8 @@ public class Grabber extends Subsystem {
      * Extend the large piston. This will move arms to position for picking up
      * wide totes.
      */
-    public void primaryOff() {
+    public void primaryOff()
+    {
         primarySolenoid.set(false);
     }
 
@@ -33,7 +36,8 @@ public class Grabber extends Subsystem {
      * totes.
      */
 
-    public void primaryOn() {
+    public void primaryOn()
+    {
         primarySolenoid.set(true);
     }
 
@@ -48,14 +52,16 @@ public class Grabber extends Subsystem {
     /**
      * vents the system
      */
-    public void secondaryOff() {
+    public void secondaryOff()
+    {
         secondarySolenoid.set(false);
     }
 
     /**
      * closes the secondary solenoid to block air outflow
      */
-    public void secondaryOn() {
+    public void secondaryOn()
+    {
         secondarySolenoid.set(true);
     }
 
