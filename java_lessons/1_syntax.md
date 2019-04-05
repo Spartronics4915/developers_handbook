@@ -124,11 +124,12 @@ Here are operators that you can use on `int`s, and `double`s
 
 | Operator | Operation Name | Example | Result |
 | -------- | ------------- | ------- | ------ |
-| `+` | Addition |  `2 + 4` | `6` |
-| `-` | Addition |  `2 - 4` | `-2` |
-| `*` | Multiplication |  `2 * 4` | `8` |
-| `/` | Division |  `2 / 4` |  `2` |
+| `+` | Addition |  `4 + 2` | `6` |
+| `-` | Addition |  `4 - 2` | `2` |
+| `*` | Multiplication |  `4 * 2` | `8` |
+| `/` | Division |  `4 / 2` |  `2` |
 
+In Java, these operators only really apply to numerical types, with one exception:
 The `+` operator also _concatenates_ Strings. Concatenation means putting
 two pieces of text together; if I concatenate `foo` and `bar`, I get `foobar`.
 You can see it in action below:
