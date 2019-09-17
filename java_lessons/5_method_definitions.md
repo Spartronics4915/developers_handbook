@@ -2,8 +2,7 @@
 You've now called a number of methods, like `Math.max(2.0, 3.0);`, but how would
 you define such a method?
 
-_(This method returns the larger of the two numbers you pass in, by the way. In_
-_this example, it would return `3.0`.)_
+_(This method returns the larger of the two numbers you pass in, by the way. In this example, it would return `3.0`.)_
 
 A little bit like this:
 
@@ -35,7 +34,7 @@ with other information that we'll cover later.
     parameters: `a`, which is a `double`, and `b` which is also a `double`.
 
 ## Return Keyword
-There's another new peice of syntax here: the `return` keyword. The idea is that
+There's another new piece of syntax here: the `return` keyword. The idea is that
 when you `return`, the method immediately exits at that point. If the return
 type of your method is `void`, you can just do `return;`. If the return type is
 _not_ `void`, you must return something of the appropriate data type. E.g. if
