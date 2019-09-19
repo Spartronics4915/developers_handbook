@@ -15,7 +15,7 @@ and is written in Github Flavored Markdown. For information on how to
 contribute to this document, read contribute.md which contains the writing
 guide for this book, as well as how to use markdown.
 
-## Summary, but different
+## Table of Contents
 
 - [The Developer Handbook](README.md)
 
@@ -79,7 +79,7 @@ guide for this book, as well as how to use markdown.
 <!--advanced projects section-->
 <!--idk what else to call them-->
 - [Data Analysis](data_analysis/README.md)
-- [Bling](bling/README.md)
+- [Bling](arduino_development/README.md)
 - [Scouting App](scouting_app/README.md)
 - [Web Development](web_development/README.md)
 - [Path Planning and Autonomous](path_planning_and_autonomous/README.md)
@@ -124,12 +124,6 @@ Robot lessons teach programmers who know Java how to program our robots. PID
     - These should be example things to do with a robot, and a testbed.
     - For example, make a motor spin. Control it with a joystick. Create a subsystem. Make a command.
 
-### Advanced Lessons <!--for lack of a better name-->
-
-- Autonomous
-- Data Analysis
-- Website
-
 1646's method
 
     Create a motor and set its power
@@ -144,7 +138,6 @@ Robot lessons teach programmers who know Java how to program our robots. PID
     Make a Subsystem
     a. Start with Drive Train
     Make a Command
-
 
 ## First meeting
 
