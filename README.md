@@ -15,6 +15,76 @@ and is written in Github Flavored Markdown. For information on how to
 contribute to this document, read contribute.md which contains the writing
 guide for this book, as well as how to use markdown.
 
+## Summary, but different
+
+- [The Developer Handbook](README.md)
+
+- [Introduction to Programming](introductory_programming/README.md) @FIXME: does not exist
+  - [What is a robot?](introductory_programming/robot_code.md)
+  - [Setting up your work environment](introductory_programming/environment_setup.md)
+
+  - [Java Lessons](introductory_programming/java_lessons/README.md)
+    - [Lesson 1: Introductory Syntax](introductory_programming/java_lessons/1_syntax.md)
+    - [Lesson 2: Variables and Datatypes](introductory_programming/java_lessons/2_variables_datatypes.md)
+    - [Lesson 3: Method Calls](introductory_programming/java_lessons/3_method_calls.md)
+    - [Lesson 4: The If Statement](introductory_programming/java_lessons/4_if_statement.md)
+    - [Lesson 5: Method Definitions](introductory_programming/java_lessons/5_method_definitions.md)
+    - [Lesson 6: Classes](introductory_programming/java_lessons/6_classes.md) @TODO: not complete
+    - [Lesson 7: Inheritance](introductory_programming/java_lessons/7_inheritance.md) @TODO: extra not complete
+
+  - [Git Introduction](introductory_programming/git_intro/README.md)
+    - [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
+    - [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
+    - [Next Level Git](introductory_programming/git_intro/git_advanced.md)
+    - [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
+    - [Using GitHub Projects](introductory_programming/git_intro/git_projects.md) @TODO: not started
+    - [TODO](introductory_programming/git_intro/git_flow.md) @XXX: what is this?
+    - [TODO](introductory_programming/git_intro/git_setup.md) @XXX: what is this?
+
+  - [Best Practices](introductory_programming/best_practices/README.md)
+    - [Contribute](introductory_programming/best_practices/contribute.md)
+    - [Developer Process](introductory_programming/best_practices/dev_process.md)
+    - [Style Guide](introductory_programming/best_practices/style_guide.md)
+
+  - [Helpful Programming Resources](introductory_programming/resources.md)
+
+- [Robot Programming](robot_programming/README.md)
+
+  - [Command Based Programming](commands_subsystems/README.md) @TODO: all of commands are outdated
+    - [Commands](commands_subsystems/commands/README.md)
+      - [Methods](commands_subsystems/commands/methods.md)
+    - [Subsystems](commands_subsystems/subsystems/README.md)
+      - [Subsystem Examples](commands_subsystems/subsystems/examples.md)
+    - [Scheduler](commands_subsystems/scheduler/README.md)
+
+  - [Hardware Overview](robot_programming/hardware_overview/README.md)
+    - [Actuators](robot_programming/hardware_overview/actuators/README.md)
+      - [Talon SRX](robot_programming/hardware_overview/actuators/talon/README.md)
+        - [Capabilities of Talon SRX](robot_programming/hardware_overview/actuators/talon/capabilities.md)
+        - [Programming Talon SRX](robot_programming/hardware_overview/actuators/talon/programming.md)
+        - [Troubleshooting Talon SRX](robot_programming/hardware_overview/actuators/talon/troubleshooting.md)
+      - [Servos](robot_programming/hardware_overview/actuators/servos/README.md)
+    - [Sensors](robot_programming/hardware_overview/sensors/README.md)
+
+  - [Robot Lessons](robot_programming/robot_lessons/README.md)
+    - [Lesson 1: Motors](robot_programming/robot_lessons/1_motors.md)
+    - [Lesson 3: Subsystems and State Machines](robot_programming/robot_lessons/3_statemachines.md)
+
+  - [Collaborative Development](robot_programming/collaboration.md)
+  - [Competition Readiness](robot_programming/competitions.md)
+  - [Flashing Components](robot_programming/flashing.md)
+  - [WPILib Overview](robot_programming/wpilib_overview.md)
+  - [Networking Setup](robot_programming/networking.md)
+
+<!--advanced projects section-->
+<!--idk what else to call them-->
+- [Data Analysis](data_analysis/README.md)
+- [Bling](bling/README.md)
+- [Scouting App](scouting_app/README.md)
+- [Web Development](web_development/README.md)
+- [Path Planning and Autonomous](path_planning_and_autonomous/README.md)
+- [Vision?](https://github.com/Spartronics4915/Vision)
+
 ## Structure
 
 We follow a "three paths" approach to
@@ -162,55 +232,3 @@ Place holder for things to add to the guide
 - Quick overview of how to use HTML + CSS
     - JavaScript warning
     - JavaScript Overview
-
-## SUMMARY
-
-- [Introduction](README.md)
-
-- [Robot Lessons](robot_lessons/README.md)
-  - [Lesson 1: Motors](robot_lessons/1_motors.md)
-  - [Lesson 3: Subsystems and State Machines](robot_lessons/3_statemachines.md)
-
-- [Java Lessons](java_lessons/README.md)
-  - [Lesson 1: Introductory Syntax](java_lessons/1_syntax.md)
-  - [Lesson 2: Variables and Datatypes](java_lessons/2_variables_datatypes.md)
-  - [Lesson 3: Method Calls](java_lessons/3_method_calls.md)
-  - [Lesson 4: The If Statement](java_lessons/4_if_statement.md)
-  - [Lesson 5: Method Definitions](java_lessons/5_method_definitions.md)
-
-- [Git Introduction](git_intro/README.md)
-    - [Introducing Git and GitHub](git_intro/git_about.md)
-    - [Git Fundamentals](git_intro/git_fundamentals.md)
-    - [Next Level Git](git_intro/git_advanced.md)
-    - [FAQ: git, vi, bash shell](git_intro/git_faq.md)
-
-- [Development Guidelines](dev_guide/README.md)
-    - [Flashing Components](dev_guide/flashing.md)
-    - [Spartronics Git Workflow](dev_guide/git_flow.md)
-    - [Spartronics Development Process](dev_guide/dev_process.md)
-    - [Spartronics Programming Style Guide](dev_guide/style_guide.md)
-    - [Visual Studio Code and the Build System](dev_guide/environment_setup.md)
-    - [Collaborative Development](dev_guide/collaboration.md)
-    - [Competition Readiness](dev_guide/competitions.md)
-    - [Networking Setup](basics/networking.md)
-    - [Robot Programming](basics/robot_code.md)
-    - [WPILib Overview](basics/wpilib_overview.md)
-    - [Resources](basics/resources.md)
-
-- [Command Based Programming](commands_subsystems/README.md)
-    - [Commands](commands_subsystems/commands/README.md)
-        - [Methods](commands_subsystems/commands/methods.md)
-    - [Subsystems](commands_subsystems/subsystems/README.md)
-        - [Subsystem Examples](commands_subsystems/subsystems/examples.md)
-    - [Scheduler](commands_subsystems/scheduler/README.md)
-
-- [Actuators](actuators/README.md)
-    - [Talon SRX](actuators/talon/README.md)
-        - [Capabilities of Talon SRX](actuators/talon/capabilities.md)
-        - [Programming Talon SRX](actuators/talon/programming.md)
-        - [Troubleshooting Talon SRX](actuators/talon/troubleshooting.md)
-    - [Servos](actuators/servos/README.md)
-
-- [Data Analysis](data_analysis/README.md)
-
-- [Contribute!](contribute.md)
