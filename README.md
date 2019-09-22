@@ -90,6 +90,7 @@ A goal is to make this eventually accessible on our team website.
     - Pneumatics <!--Capabilities-->
       - The PCM
       - Programming
+      - Using boolean variables
       - Troubleshooting
   - [Sensors](robot_programming/hardware_overview/sensors/README.md)
     - Types of sensors
@@ -115,7 +116,8 @@ A goal is to make this eventually accessible on our team website.
     - Naming
     - Variables (no magic numbers!!)
     - Organization
-    - Avoiding redundancy
+    - Comments
+    - Avoiding redundant redundancy
   - Collaborative Development
     - Working with your peers
       - Pair coding
