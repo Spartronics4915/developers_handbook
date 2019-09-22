@@ -20,125 +20,124 @@ A goal is to make this eventually accessible on our team website.
 @TODO pull from old codebase wikis
 
 ## Table of Contents
-
 - [The Developer Handbook](README.md)
 
-- [Introduction to Programming](introductory_programming/README.md)
+### [Introduction to Programming](introductory_programming/README.md)
   - [ ] does not exist
   - [What is a robot?](introductory_programming/robot_code.md)
   - [Setting up your work environment](introductory_programming/environment_setup.md)
 
-  - [Java Lessons](introductory_programming/java_lessons/README.md)
-    - [Lesson 1: Introductory Syntax](introductory_programming/java_lessons/1_syntax.md)
-    - [Lesson 2: Variables and Datatypes](introductory_programming/java_lessons/2_variables_datatypes.md)
-    - [Lesson 3: Method Calls](introductory_programming/java_lessons/3_method_calls.md)
-    - [Lesson 4: The If Statement](introductory_programming/java_lessons/4_if_statement.md)
-    - [Lesson 5: Method Definitions](introductory_programming/java_lessons/5_method_definitions.md)
-    - [Lesson 6: Classes](introductory_programming/java_lessons/6_classes.md)
-      - [ ] not complete
-    - [Lesson 7: Inheritance](introductory_programming/java_lessons/7_inheritance.md)
-      - [ ] extra not complete
+#### [Java Lessons](introductory_programming/java_lessons/README.md)
+  - [Lesson 1: Introductory Syntax](introductory_programming/java_lessons/1_syntax.md)
+  - [Lesson 2: Variables and Datatypes](introductory_programming/java_lessons/2_variables_datatypes.md)
+  - [Lesson 3: Method Calls](introductory_programming/java_lessons/3_method_calls.md)
+  - [Lesson 4: The If Statement](introductory_programming/java_lessons/4_if_statement.md)
+  - [Lesson 5: Method Definitions](introductory_programming/java_lessons/5_method_definitions.md)
+  - [Lesson 6: Classes](introductory_programming/java_lessons/6_classes.md)
+    - [ ] not complete
+  - [Lesson 7: Inheritance](introductory_programming/java_lessons/7_inheritance.md)
+    - [ ] extra not complete
 
-  - [Best Practices](introductory_programming/best_practices/README.md)
-    - [Contribute](introductory_programming/best_practices/contribute.md)
-    - [Developer Process](introductory_programming/best_practices/dev_process.md) @todo move
-    - [Style Guide](introductory_programming/best_practices/style_guide.md)
+#### [Best Practices](introductory_programming/best_practices/README.md)
+  - [Contribute](introductory_programming/best_practices/contribute.md)
+  - [Developer Process](introductory_programming/best_practices/dev_process.md) @todo move
+  - [Style Guide](introductory_programming/best_practices/style_guide.md)
 
-  - [Helpful Programming Resources](introductory_programming/resources.md)
+- [Helpful Programming Resources](introductory_programming/resources.md)
 
-- [Robot Programming](robot_programming/README.md)
+### [Robot Programming](robot_programming/README.md)
 
-  - [Git Introduction](introductory_programming/git_intro/README.md)
-    - [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
-    - [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
-    - [Next Level Git](introductory_programming/git_intro/git_advanced.md)
-    - [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
-    - [Using GitHub Projects](introductory_programming/git_intro/git_projects.md)
-      - [ ] not started
-    - [TODO](introductory_programming/git_intro/git_flow.md)
-      - [ ] what is this?
-    - [TODO](introductory_programming/git_intro/git_setup.md)
-      - [ ] what is this?
+#### [Git Introduction](introductory_programming/git_intro/README.md)
+  - [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
+  - [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
+  - [Next Level Git](introductory_programming/git_intro/git_advanced.md)
+  - [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
+  - [Using GitHub Projects](introductory_programming/git_intro/git_projects.md)
+    - [ ] not started
+  - [TODO](introductory_programming/git_intro/git_flow.md)
+    - [ ] what is this?
+  - [TODO](introductory_programming/git_intro/git_setup.md)
+    - [ ] what is this?
 
-  - [Command-Based Programming](robot_programming/command-based_programming/README.md) <!--[What is Command Based programming?](https://wpilib.screenstepslive.com/s/currentCS/m/java/l/599732-what-is-command-based-programming)-->
-    - What is a Subsystem?
-      - One system vs. two: intake and intake wheels example
-    - What is a Command?
-    - More on Subsystems
-      - Default Commands
-    - Lesson: Using Commands
-    - Scheduling Commands
-      - Sequential and Parallel commands (or whatever the rewrite says)
-    - Lesson: Scheduling Commands
-    - Using sensor feedback with PID
-      - PIDSubsystem(?)
-      - PIDCommand(?)
-    - Lesson: Using sensor feedback
-    - More on Subsystems (again)
-      - Constructors and Initialization
-      - Singletons
-    - Advanced Knowledge
-      - Motors
+#### [Command-Based Programming](robot_programming/command-based_programming/README.md) <!--[What is Command Based programming?](https://wpilib.screenstepslive.com/s/currentCS/m/java/l/599732-what-is-command-based-programming)-->
+  - What is a Subsystem?
+    - One system vs. two: intake and intake wheels example
+  - What is a Command?
+  - More on Subsystems
+    - Default Commands
+  - Lesson: Using Commands
+  - Scheduling Commands
+    - Sequential and Parallel commands (or whatever the rewrite says)
+  - Lesson: Scheduling Commands
+  - Using sensor feedback with PID
+    - PIDSubsystem(?)
+    - PIDCommand(?)
+  - Lesson: Using sensor feedback
+  - More on Subsystems (again)
+    - Constructors and Initialization
+    - Singletons
+  - Advanced Knowledge
+    - Motors
 
-  - [Hardware Overview](robot_programming/hardware_overview/README.md)
-    - [Actuators](robot_programming/hardware_overview/actuators/README.md)
-      - Talon SRX <!--+ capabilities-->
-        - Programming Talon SRX
-          - @TODO: kind of on-the-nose? change name
-        - Troubleshooting
-          - @TODO: every major hardware piece should have a troubleshooting section
-      - Servos
-      - Pneumatics <!--Capabilities-->
-        - The PCM
-        - Programming
-        - Troubleshooting
-    - [Sensors](robot_programming/hardware_overview/sensors/README.md)
-      - Types of sensors
-      - When to use what
-      - Implementation in code
+#### [Hardware Overview](robot_programming/hardware_overview/README.md)
+  - [Actuators](robot_programming/hardware_overview/actuators/README.md)
+    - Talon SRX <!--+ capabilities-->
+      - Programming Talon SRX
+        - @TODO: kind of on-the-nose? change name
       - Troubleshooting
-    - roboRIO
-      - Networking
-        - roboRIO web-based configuration access
-        - radio programming
-        - wireless access port
-      - Flashing
+        - @TODO: every major hardware piece should have a troubleshooting section
+    - Servos
+    - Pneumatics <!--Capabilities-->
+      - The PCM
+      - Programming
       - Troubleshooting
+  - [Sensors](robot_programming/hardware_overview/sensors/README.md)
+    - Types of sensors
+    - When to use what
+    - Implementation in code
+    - Troubleshooting
+  - roboRIO
+    - Networking
+      - roboRIO web-based configuration access
+      - radio programming
+      - wireless access port
+    - Flashing
+    - Troubleshooting
 
-  - Development process
-    - Development Flow
-      - [ ] design -> PoA -> design review -> coding -> QA -> code review -> merge
-    - Using Git
-      - Commit often
-      - Commit descriptors
-      - Pull requests (? already covered ?)
-    - Code Conventions
-      - Naming
-      - Variables (no magic numbers!!)
-      - Organization
-      - Avoiding redundancy
-    - Collaborative Development
-      - Working with your peers
-        - Pair coding
-        - [ ] be clear
-      - Working between subteams
-        - RobotMap (? what is this ?)
-        - Electronics
-          - Wiring Diagram
-          - [ ] @Peter - visual MAP of the robot
-        - CAD
-          - Link to updated robot CAD
-    - Catching your failures
-      - More on initialization <!--from command-based_programming-->
-      - Try / Except blocks
-      - Logging and Debugging
-        - Test Mode (even I don't know what this is)
-    - Competition Readiness
-      - [ ] @TODO: move... somewhere?
-      - Competition Checklist
-        - https://github.com/Spartronics4915/2016-Stronghold/wiki/Competition-Checklist
+#### Development Process
+  - Development Flow
+    - [ ] design -> PoA -> design review -> coding -> QA -> code review -> merge
+  - Using Git
+    - Commit often
+    - Commit descriptors
+    - Pull requests (? already covered ?)
+  - Code Conventions
+    - Naming
+    - Variables (no magic numbers!!)
+    - Organization
+    - Avoiding redundancy
+  - Collaborative Development
+    - Working with your peers
+      - Pair coding
+      - [ ] be clear
+    - Working between subteams
+      - RobotMap (? what is this ?)
+      - Electronics
+        - Wiring Diagram
+        - [ ] @Peter - visual MAP of the robot
+      - CAD
+        - Link to updated robot CAD
+  - Catching your failures
+    - More on initialization <!--from command-based_programming-->
+    - Try / Except blocks
+    - Logging and Debugging
+      - Test Mode (even I don't know what this is)
+  - Competition Readiness
+    - [ ] @TODO: move... somewhere?
+    - Competition Checklist
+      - https://github.com/Spartronics4915/2016-Stronghold/wiki/Competition-Checklist
 
-- [Exploring WPILIBj](exploring_wpilibj/README.md)
+### [Exploring WPILIBj](exploring_wpilibj/README.md)
   - Other types of robots
     - Timed, State Machines, etc
   - Different types of drives
@@ -156,19 +155,19 @@ A goal is to make this eventually accessible on our team website.
     - Swerve
       - Fill with %MATHS%
 
-- [Path Planning and Autonomous](path_planning_and_autonomous/README.md)
+### [Path Planning and Autonomous](path_planning_and_autonomous/README.md)
   - [ ] I have no clue what to put here.
   - [ ] Similar structure to java_lessons?
   - [ ] This is Declan's and Jeffrey's forte.
 
-- [Vision?](vision/README.md)
+### [Vision?](vision/README.md)
   - [ ] What's vision for? (similar to introduction to programming/readme)
   - [ ] https://github.com/Spartronics4915/Vision
 
-- [Bling](arduino_development/README.md)
+### [Bling](arduino_development/README.md)
   - [ ] Compile resources
 
-- [Web Development](web_development/README.md)
+### [Web Development](web_development/README.md)
   - SmartDashboard & NetworkTables
   - Team Website
     - How GitHub Pages works
@@ -186,11 +185,11 @@ A goal is to make this eventually accessible on our team website.
   - Resources
     - https://internetingishard.com/
 
-- [Data Analysis](data_analysis/README.md)
+### [Data Analysis](data_analysis/README.md)
   - [ ] During the preseason?
   - [ ] Include the app?
 
-- [Scouting App](scouting_app/README.md) <!--haha-->
+### [Scouting App](scouting_app/README.md) <!--haha-->
   - [ ] Part of Data Analysis?
 
 ## Structure
