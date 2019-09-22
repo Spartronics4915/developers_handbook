@@ -15,11 +15,16 @@ and is written in Github Flavored Markdown. For information on how to
 contribute to this document, read contribute.md which contains the writing
 guide for this book, as well as how to use markdown.
 
+A goal is to make this eventually accessible on our team website.
+
+@TODO pull from old codebase wikis
+
 ## Table of Contents
 
 - [The Developer Handbook](README.md)
 
-- [Introduction to Programming](introductory_programming/README.md) @FIXME: does not exist
+- [Introduction to Programming](introductory_programming/README.md)
+  - [ ] does not exist
   - [What is a robot?](introductory_programming/robot_code.md)
   - [Setting up your work environment](introductory_programming/environment_setup.md)
 
@@ -29,65 +34,172 @@ guide for this book, as well as how to use markdown.
     - [Lesson 3: Method Calls](introductory_programming/java_lessons/3_method_calls.md)
     - [Lesson 4: The If Statement](introductory_programming/java_lessons/4_if_statement.md)
     - [Lesson 5: Method Definitions](introductory_programming/java_lessons/5_method_definitions.md)
-    - [Lesson 6: Classes](introductory_programming/java_lessons/6_classes.md) @TODO: not complete
-    - [Lesson 7: Inheritance](introductory_programming/java_lessons/7_inheritance.md) @TODO: extra not complete
-
-  - [Git Introduction](introductory_programming/git_intro/README.md)
-    - [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
-    - [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
-    - [Next Level Git](introductory_programming/git_intro/git_advanced.md)
-    - [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
-    - [Using GitHub Projects](introductory_programming/git_intro/git_projects.md) @TODO: not started
-    - [TODO](introductory_programming/git_intro/git_flow.md) @XXX: what is this?
-    - [TODO](introductory_programming/git_intro/git_setup.md) @XXX: what is this?
+    - [Lesson 6: Classes](introductory_programming/java_lessons/6_classes.md)
+      - [ ] not complete
+    - [Lesson 7: Inheritance](introductory_programming/java_lessons/7_inheritance.md)
+      - [ ] extra not complete
 
   - [Best Practices](introductory_programming/best_practices/README.md)
     - [Contribute](introductory_programming/best_practices/contribute.md)
-    - [Developer Process](introductory_programming/best_practices/dev_process.md)
+    - [Developer Process](introductory_programming/best_practices/dev_process.md) @todo move
     - [Style Guide](introductory_programming/best_practices/style_guide.md)
 
   - [Helpful Programming Resources](introductory_programming/resources.md)
 
 - [Robot Programming](robot_programming/README.md)
 
-  - [Command Based Programming](commands_subsystems/README.md) @TODO: all of commands are outdated
-    - [Commands](commands_subsystems/commands/README.md)
-      - [Methods](commands_subsystems/commands/methods.md)
-    - [Subsystems](commands_subsystems/subsystems/README.md)
-      - [Subsystem Examples](commands_subsystems/subsystems/examples.md)
-    - [Scheduler](commands_subsystems/scheduler/README.md)
+  - [Git Introduction](introductory_programming/git_intro/README.md)
+    - [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
+    - [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
+    - [Next Level Git](introductory_programming/git_intro/git_advanced.md)
+    - [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
+    - [Using GitHub Projects](introductory_programming/git_intro/git_projects.md)
+      - [ ] not started
+    - [TODO](introductory_programming/git_intro/git_flow.md)
+      - [ ] what is this?
+    - [TODO](introductory_programming/git_intro/git_setup.md)
+      - [ ] what is this?
+
+  - [Command-Based Programming](robot_programming/command-based_programming/README.md) <!--[What is Command Based programming?](https://wpilib.screenstepslive.com/s/currentCS/m/java/l/599732-what-is-command-based-programming)-->
+    - What is a Subsystem?
+      - One system vs. two: intake and intake wheels example
+    - What is a Command?
+    - More on Subsystems
+      - Default Commands
+    - Lesson: Using Commands
+    - Scheduling Commands
+      - Sequential and Parallel commands (or whatever the rewrite says)
+    - Lesson: Scheduling Commands
+    - Using sensor feedback with PID
+      - PIDSubsystem(?)
+      - PIDCommand(?)
+    - Lesson: Using sensor feedback
+    - More on Subsystems (again)
+      - Constructors and Initialization
+      - Singletons
+    - Advanced Knowledge
+      - Motors
 
   - [Hardware Overview](robot_programming/hardware_overview/README.md)
     - [Actuators](robot_programming/hardware_overview/actuators/README.md)
-      - [Talon SRX](robot_programming/hardware_overview/actuators/talon/README.md)
-        - [Capabilities of Talon SRX](robot_programming/hardware_overview/actuators/talon/capabilities.md)
-        - [Programming Talon SRX](robot_programming/hardware_overview/actuators/talon/programming.md)
-        - [Troubleshooting Talon SRX](robot_programming/hardware_overview/actuators/talon/troubleshooting.md)
-      - [Servos](robot_programming/hardware_overview/actuators/servos/README.md)
+      - Talon SRX <!--+ capabilities-->
+        - Programming Talon SRX
+          - @TODO: kind of on-the-nose? change name
+        - Troubleshooting
+          - @TODO: every major hardware piece should have a troubleshooting section
+      - Servos
+      - Pneumatics <!--Capabilities-->
+        - The PCM
+        - Programming
+        - Troubleshooting
     - [Sensors](robot_programming/hardware_overview/sensors/README.md)
+      - Types of sensors
+      - When to use what
+      - Implementation in code
+      - Troubleshooting
+    - roboRIO
+      - Networking
+        - roboRIO web-based configuration access
+        - radio programming
+        - wireless access port
+      - Flashing
+      - Troubleshooting
 
-  - [Robot Lessons](robot_programming/robot_lessons/README.md)
-    - [Lesson 1: Motors](robot_programming/robot_lessons/1_motors.md)
-    - [Lesson 3: Subsystems and State Machines](robot_programming/robot_lessons/3_statemachines.md)
+  - Development process
+    - Development Flow
+      - [ ] design -> PoA -> design review -> coding -> QA -> code review -> merge
+    - Using Git
+      - Commit often
+      - Commit descriptors
+      - Pull requests (? already covered ?)
+    - Code Conventions
+      - Naming
+      - Variables (no magic numbers!!)
+      - Organization
+      - Avoiding redundancy
+    - Collaborative Development
+      - Working with your peers
+        - Pair coding
+        - [ ] be clear
+      - Working between subteams
+        - RobotMap (? what is this ?)
+        - Electronics
+          - Wiring Diagram
+          - [ ] @Peter - visual MAP of the robot
+        - CAD
+          - Link to updated robot CAD
+    - Catching your failures
+      - More on initialization <!--from command-based_programming-->
+      - Try / Except blocks
+      - Logging and Debugging
+        - Test Mode (even I don't know what this is)
+    - Competition Readiness
+      - [ ] @TODO: move... somewhere?
+      - Competition Checklist
+        - https://github.com/Spartronics4915/2016-Stronghold/wiki/Competition-Checklist
 
-  - [Collaborative Development](robot_programming/collaboration.md)
-  - [Competition Readiness](robot_programming/competitions.md)
-  - [Flashing Components](robot_programming/flashing.md)
-  - [WPILib Overview](robot_programming/wpilib_overview.md)
-  - [Networking Setup](robot_programming/networking.md)
+- [Exploring WPILIBj](exploring_wpilibj/README.md)
+  - Other types of robots
+    - Timed, State Machines, etc
+  - Different types of drives
+    - http://www.simbotics.org/resources/mobility
+    - Six-wheel Drop Center
+    - West Coast
+      - https://www.chiefdelphi.com/t/west-coast-drive/91749/4
+    - TANK
+    - Rocker / Slide
+      - https://johnvneun.com/blog/2019/1/3/x019-prototype
+    - Mechanum
+      - Vectors yes
+    - Holonomic
+      - mmm
+    - Swerve
+      - Fill with %MATHS%
 
-<!--advanced projects section-->
-<!--idk what else to call them-->
-- [Data Analysis](data_analysis/README.md)
-- [Bling](arduino_development/README.md)
-- [Scouting App](scouting_app/README.md)
-- [Web Development](web_development/README.md)
 - [Path Planning and Autonomous](path_planning_and_autonomous/README.md)
-- [Vision?](https://github.com/Spartronics4915/Vision)
+  - [ ] I have no clue what to put here.
+  - [ ] Similar structure to java_lessons?
+  - [ ] This is Declan's and Jeffrey's forte.
+
+- [Vision?](vision/README.md)
+  - [ ] What's vision for? (similar to introduction to programming/readme)
+  - [ ] https://github.com/Spartronics4915/Vision
+
+- [Bling](arduino_development/README.md)
+  - [ ] Compile resources
+
+- [Web Development](web_development/README.md)
+  - SmartDashboard & NetworkTables
+  - Team Website
+    - How GitHub Pages works
+      - Sourcing from a main repository
+      - Uploading docs pages from other repositories
+        - Show 2019-DeepSpace / 2020-InfiniteRecharge
+        - Get Vision up there
+    - How Jekyll works
+    - How forestry.io works
+      - Marketing pitch
+      - How to publish articles
+        - [ ] Mention WYSIWYG
+      - How to upload webpages
+    - [ ] Get input from Binnur
+  - Resources
+    - https://internetingishard.com/
+
+- [Data Analysis](data_analysis/README.md)
+  - [ ] During the preseason?
+  - [ ] Include the app?
+
+- [Scouting App](scouting_app/README.md) <!--haha-->
+  - [ ] Part of Data Analysis?
 
 ## Structure
 
-We follow a "three paths" approach to
+This handbook is broken up into se
+
+For new students who have never programmed, or have programmed just not in Java, we recommend they start with the `introductory_lessons` folder.
+If you're confident in Java, `robot_programming` is designed for you. It has a curriculum on commands and subsystems, how to use our version control system, and other general stuff idk
+
 
 ### Introductory Lessons
 The goal of these lessons is to teach people who have never had any experience with Java before how to code, while still including some higher-level concepts.
@@ -152,7 +264,7 @@ Everybody from last year sits through robot programming to learn about the new s
 - Coding style
 - Git workflow
 
-# What does it take to build a robot?
+### What does it take to build a robot?
 - 100% marketing! Without marketing, we have no budget and no presence. Their efforts magnifies our build efforts
 - 60-20-20! There is so much you can do for faulty mechanical design in electronics or software!
     - 60% mechanical
@@ -162,66 +274,3 @@ Everybody from last year sits through robot programming to learn about the new s
     - 30% is your robot
     - 70% is your driving team
 - At the end of the match, did you do what you said you were going to do?
-
-
-## TODOs
-
-Place holder for things to add to the guide
-
-### Actuators
-
-### Commands Subsystems
-
-- Scheduler: Know your master...
-- Commands
-- Subsystems
-    - One system vs. two: intake and intake wheels example
-- Diving into Subsystems
-    - Drivetrain and template code
-        - Subsystem
-        - Commands
-- Describe different types of robot (Iterative, Timed...)
-- Describe different drives (tank, swerve...)
-
-### Dev Guide
-
-- Git and Github workflow
-- Development process
-    - design -> PoA -> design review -> coding -> QA -> code review -> merge
-    - Code organization
-    - Naming
-    - Musts for collaborative development
-        - RobotMap
-        - try/except blocks
-    - Logging and Debugging
-        - Test Mode
-- Competition Checklist
-- SmartDashboard & Network Tables
-- Driver Station Logs
-- Camera Setup
-- Safety
-- Robot code
-    - Initialization sequencing
-    - Autonomous Vs. Teleop
-- Add any username/password to configure the robot
-    - roboRIO web-based configuration access
-    - radio programming
-    - wireless access port
-
-### Git Intro
-
-### Java Lessons
-
-### Robot Lessons
-
-### Website Lessons
-
-3128's ./resources/website.md/ is useful
-
-- Overview of how our website works
-    - Where to find resources
-    - How to publish articles on it
-    - How to upload webpages
-- Quick overview of how to use HTML + CSS
-    - JavaScript warning
-    - JavaScript Overview
