@@ -18,13 +18,13 @@ You may have heard that Java is an _object oriented_ language. For our purposes,
 
 Classes are like the blueprints that objects are made of. It's like I have a blueprint for a house. I have one blueprint, and I can make many houses from it. In this analogy, I have one class from which I can make many objects.
 
-Objects are like the houses made from that blueprint. They're tangible - in real life, you could reach out and touch a house. In our programming world, this means that you can _call methods_ on them.
-Additionally, different styles of houses (objects) can be made from the same blueprint (class), depending on what I _pass_ when _constructing_ the object. You'll come back to this later, but just keep in mind that not every object is identical.
+Objects are like the houses made from that blueprint. They're **tangible** - in real life, you could reach out and touch a house. In our programming world, this means that you can _call methods_ on them.
+Additionally, different styles of houses (objects) can be made from the same blueprint (class), depending on what I _pass_ when _constructing_ the object. <br>
+You'll revisit these terms in depth later, but just keep in mind that not every object is identical.
 
 ## More on Classes
 
 Just like a blueprint
-
 
 
 ## More on Objects
