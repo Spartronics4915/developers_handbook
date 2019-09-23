@@ -54,18 +54,21 @@ $ mv <filename> ../<new-filename>
 ```
 
 ## Common vi commands
+Git's default fallback editor is `vi`, a terminal text editor, similar to nano, but with a higher learning curve and more functionality.
+
 Refer to various reference cards, such as [this one](https://www.ks.uiuc.edu/Training/Tutorials/Reference/virefcard.pdf).
 
-Important to remember vi has two modes: insertion and command. When you first
-start vi, editor is in command mode -- ESC returns the editor into command mode.
-Common commands:
+It's important to know that vi has two modes: insertion and command. When you first
+start vi, editor is in command mode. "i" puts the editor in insertation mode, where you can type without triggering commands -- ESC returns the editor into command mode.
+
+Common commands (in command mode):
 
 ```sh
 # quit w/o saving -- <shift><:>
 :q!
 # save & quit
 :wq
-# insert before cursor
+# change to insert mode
 i
 # delete word
 dw
@@ -108,6 +111,12 @@ git reset --hard upstream/master
 ```
 
 ### How do I revert previous commit?
+
+Sometimes you mess up, and don't realize it until after committing your changes.
+
+Git makes it easy to _revert_ your changes with use of the `git reset` command. Git reset lets you revert to a previous commit hash, which you have to find first with `git log`.
+
+Read more about git reset in [git fundamentals.](git_fundamentals#git-init)
 
 ### What is "non-fast-forward"?
 

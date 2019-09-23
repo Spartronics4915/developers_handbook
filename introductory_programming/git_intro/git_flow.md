@@ -30,8 +30,8 @@ This workflow balances flexibility with productivity for the individual develope
 ## Workflow Steps
 ![Fork & PR Workflow](../git_intro/images/repos.png)
 
-Basic git commands and process flow is documented [here](../git_intro/git_fundamentals.md#git-fork).
-If you are new to git, please start with our [Git Intro](../git_intro/README.md).
+Basic git commands and process flow is documented [here](./git_fundamentals.md#git-fork).
+If you are new to git, please start with our [Git Intro](./README.md).
 
 Start with forking the team repo on GitHub and cloning your repo on your computer.
 This command is handy to stay in sync with the _upstream_ branch:

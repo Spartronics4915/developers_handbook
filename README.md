@@ -26,19 +26,12 @@ A goal is to make this eventually accessible on our team website.
   - [ ] [Setting up your work environment](introductory_programming/environment_setup.md)
 
 #### [An Introduction to Version Control](robot_programming/git_intro/README.md)
-  - [ ] [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
-  - [ ] [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
-    - Setting up Git
-    - Set VS Code as default editor
-  - [ ] [Next Level Git](introductory_programming/git_intro/git_advanced.md)
-  - [ ] [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
-    - Don't teach vi!!
-  - [ ] [Using GitHub Projects](introductory_programming/git_intro/git_projects.md)
-    - not started
-  - [ ] [TODO](introductory_programming/git_intro/git_flow.md)
-    - what is this?
-  - [ ] [TODO](introductory_programming/git_intro/git_setup.md)
-    - what is this?
+  - [x] [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
+  - [x] [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
+  - [x] [Next Level Git](introductory_programming/git_intro/git_advanced.md)
+  - [x] [Git Flow](introductory_programming/git_intro/git_flow.md)
+    - move to robot code?
+  - [x] [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
 
 #### [Java Lessons](introductory_programming/java_lessons/README.md)
   - [ ] [Lesson 1: Introductory Syntax](introductory_programming/java_lessons/1_syntax.md)
@@ -115,6 +108,7 @@ A goal is to make this eventually accessible on our team website.
     - Commit often
     - Commit descriptors
     - Pull requests (? already covered ?)
+    - GitHub Projects
   - [ ] Coding Conventions
     - Best Practices
     - Naming

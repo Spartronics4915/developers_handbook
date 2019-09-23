@@ -1,10 +1,12 @@
 # Git Fundamentals
+
 This section covers the basics of setting up the git environment and the most
 commonly used commands.
 
 - [Install the latest version of git for your computer](https://www.git-scm.com/downloads)
   - Simply click on the link for your operating system to download the installer
   - Follow the instructions to install the package
+    - When prompted to choose an editor, choose `nano` for now.
   - Optionally [install GitHub's desktop GUI client](https://desktop.github.com/)
 - If you don't already have one, [sign up for a free GitHub account](https://www.github.com)
 
@@ -12,7 +14,7 @@ Commands are executed in the terminal window. Examples in this document show the
 command to be executed after a dollar sign ($) prompt.
 *Do not type the dollar sign when entering commands.* Note that some commands
 include quotes around words or phrases. These quotes are important --
-*don't skip them*. Lines that begin with the hash symbol (#) are commentsfor
+*don't skip them*. Lines that begin with the hash symbol (#) are comments, for
 informational purposes only.
 
 **Important:** git provides helpful information -- pay attention to the git
@@ -26,7 +28,7 @@ There are many git references and tutorials on-line. Here is the link to
 - [Git Fundamentals](#git-fundamentals)
   - [Understanding git](#understanding-git)
   - [Important set-up for the new git user](#important-set-up-for-the-new-git-user)
-    - [Username & email](#username--email)
+    - [Username & Email](#username--email)
     - [Default editor](#default-editor)
   - [Creating and contributing to a repo](#creating-and-contributing-to-a-repo)
     - [Git init](#git-init)
@@ -48,8 +50,9 @@ There are many git references and tutorials on-line. Here is the link to
     - [git pull vs git fetch && git merge](#git-pull-vs-git-fetch--git-merge)
     - [What is git checkout? And a branch?](#what-is-git-checkout-and-a-branch)
     - [git add and git commit](#git-add-and-git-commit)
-    - [git push](#git-push)
-    - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
+- [push changes to your online repo](#push-changes-to-your-online-repo)
+- [find the desired commit's hash](#find-the-desired-commits-hash)
+- [reset to an example hash](#reset-to-an-example-hash)
 
 <!-- /TOC -->
 
@@ -84,13 +87,13 @@ to reveal these hidden files.)
 
 ## Important set-up for the new git user
 
-### Username & email
+### Username & Email
 When a developer commits a change to a repository, the commit is labeled
 with their user name and email address. It is important to set up your
 development machine with valid identity information so that your teammates
 know who is working on what. While you can set up any name/address you
 like, for the purposes of our team please use your real name and email
-address.
+address that you signed up for GitHub with.
 
 You only need to set this up once when you install git on your computer.
 After that, all repositories that you work in will be aware of your
@@ -110,8 +113,8 @@ not be what the developer likes. It is possible to change the default
 editor in a similar way to setting the user identity.
 
 ```bash
-# set nano as the default editor in global git configuration
-$ git config --global core.editor "nano -w"
+# set Visual Studio Code as the default editor in global git configuration
+$ git config --global core.editor "code"
 ```
 
 ## Creating and contributing to a repo
@@ -615,6 +618,15 @@ $ git commit
  create mode 100644 git_intro/git_fundamentals.md
  ```
 
+Passing the `-m` flag allows you to write your commit message without the use of a visual editor. As such:
+
+```sh
+$ git commit -m "This is a test commit."
+[gitintro f313252] This is a test commit.
+ 20 files changed, 103 insertations(+), 102 deletions(-)
+ create mode 100644 git_intro/README.md
+```
+
 ### git push
 Using _git push_ commits changes made to your local repo to remote repository.
 _git push_ takes two arguments:
@@ -635,8 +647,20 @@ To github.com:binnur/developers_handbook.git
    30d5926..71bda4d  gitintro -> gitintro
 ```
 
-### What is "non-fast-forward"?
-When your local repo is behind the repo you are pushing to you will see an error
-`non-fast-forward updates were rejected`. That means you need to retrieve the
-changes before you can push your changes. Read more about [git pull vs git fetch
-&& git merge](#git-pull-vs-git-fetch-&&-git-merge).
+### git reset
+
+Sometimes you mess up, and don't realize it until after committing your changes.
+
+Git makes it easy to _revert_ your changes with use of the `git reset` command. Git reset lets you revert to a previous commit hash, which you have to find first with `git log`.
+
+Usage:
+```sh
+# find the desired commit's hash
+git log
+# reset to an example hash
+git reset aGV5Y2hlY2tvdXR0aGlzY29tbWl0
+```
+
+An even easier way to do this is using HEAD. `git reset HEAD` resets to the last commit, and `git reset HEAD^` resets to the one before that.
+
+Passing the `--hard` tag between `reset` and the commit hash will get rid of _all_ changes. **This is dangerous, and should be used with great caution.**
