@@ -88,3 +88,5 @@ public static int getAddress() {
 It is important to note that if tried to access `mAddress` in this static method, it would result in an error, because there's no way to access member variables from static methods. However, you can access static
 
 The key concept here is that I can access variables and methods on a class, or an object, but
+
+@TODO: Complete

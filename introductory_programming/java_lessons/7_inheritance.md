@@ -4,6 +4,6 @@
 
 - [Inheritance](#inheritance)
 
-<!-- /TOC --s>
+<!-- /TOC -->
 
-TODO
+@TODO: Complete

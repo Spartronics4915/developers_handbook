@@ -1,11 +1,13 @@
 # Setting Up your Development and Build Environment
 
+@TODO: Update for 2020
+
 <!-- TOC -->
 
 - [Setting Up your Development and Build Environment](#setting-up-your-development-and-build-environment)
   - [Installation](#installation)
     - [Windows](#windows)
-    - [MacOS](#macos)
+    - [macOS](#macos)
     - [Debian-based systems](#debian-based-systems)
   - [Post-Installation Testing](#post-installation-testing)
     - [Common Issues](#common-issues)
@@ -37,7 +39,7 @@
     the `WPILib: Set VS Code Java Home to FRC Home` (This setting only affects
     Visual Studio Code).
 
-### MacOS
+### macOS
 - [Install Visual Studio Code](https://code.visualstudio.com) (unless already installed).
   - Double click on the ZIP file to expand it and copy the "Visual Studio Code"
     file to the Applications folder.
