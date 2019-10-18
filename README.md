@@ -263,3 +263,14 @@ Everybody from last year sits through robot programming to learn about the new s
     - 30% is your robot
     - 70% is your driving team
 - At the end of the match, did you do what you said you were going to do?
+
+
+Send survey
+Assign people to tracks
+Assign mentors to tracks / students
+Figure out which tracks are doing
+Write tracks
+
+
+Randy
+Ted

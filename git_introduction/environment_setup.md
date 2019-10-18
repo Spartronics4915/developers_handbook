@@ -2,6 +2,10 @@
 
 @TODO: Update for 2020
 
+Every year, we use a specialized set of tools that FIRST provides to write and run our code. These include an **I**ntegrated **D**evelopment **E**nvironment (IDE), Java, and a build system.
+
+We program in Java 11, as Java 12 is not supported [per this Chief Delphi post](https://www.chiefdelphi.com/t/psa-regarding-java-12/350974). Our IDE is Visual Studio Code and we use Gradle to build our code.
+
 <!-- TOC -->
 
 - [Setting Up your Development and Build Environment](#setting-up-your-development-and-build-environment)
@@ -11,7 +15,6 @@
     - [Debian-based systems](#debian-based-systems)
   - [Post-Installation Testing](#post-installation-testing)
     - [Common Issues](#common-issues)
-    - [Recommended VS Code extensions and settings](#recommended-vs-code-extensions-and-settings)
   - [Generic Installation](#generic-installation)
     - [Visual Studio Code](#visual-studio-code)
       - [Extensions](#extensions)
@@ -26,13 +29,13 @@
 
 ## Installation
 
+Visual Studio Code, our IDE and general-purpose editor, is installed first. Versions for macOS, Windows, and most Linux distributations are available [at this download link.](https://code.visualstudio.com/Download) It's also available on Arch-based systems as `code`.
+
+After downloading and installing the above package, we need to supplement its abilities with extensions. Fire up Visual Studio Code, and press `ctrl + shift + P` to launch the command palette. Search "Extensions: Install Extensions" and a sidebar should pop up. You need to install WPILib by WPILib (Official) and Java Extension Pack by Microsoft.
+
 - Download the latest WPILib release for your operating system from [GitHub.](https://github.com/wpilibsuite/allwpilib/releases)
 
 ### Windows
-- Uninstall the WPILib extension in VS Code if installed.
-- Extract the downloaded ZIP file and run the installer.
-- Continue through the prompts. If you have VS Code already downloaded, it's
-  recommended to select your existing download.
 - Set the `java.home` variable
   - The `java.home` variable tells VS Code where to find the Java installation.
   - Click the WPILib icon in the top right, and enter in "Set VS Code". Select
@@ -45,7 +48,7 @@
     file to the Applications folder.
 - [Download and install the latest (Mac) WPILib release.](https://github.com/wpilibsuite/allwpilib/releases)
   Because of the size of this file, someone should have a predownloaded version.
-  - Unzip and untar the downloaded file by locating it in Finder, doubleclicking
+  - Unzip and untar the downloaded file by locating it in Finder, doubleclickinghttps://code.visualstudio.com/Download
   to remove the .gz extension, and doubleclicking again to remove the .tar extension.
   - Create a new folder called "frc2019" in your home (~) directory, and copy the
   contents of the untarred folder (WPILib_Mac-201X.X.X) to that folder.
@@ -100,19 +103,6 @@
   - Running `./gradlew jar` should gather those dependancies.
 - `Various Windows process errors`
   - Try rebooting. Seriously.
-
-### Recommended VS Code extensions and settings
-
-- [Trailing Spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
-  - `"trailing-spaces.highlightCurrentLine": false,`
-  - `"trailing-spaces.trimOnSave": true,`
-- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
-  - `"todo-tree.regex": "((@|//|#|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",`
-  - `"todo-tree.expanded": true,`
-  - `"todo-tree.tags": ["TODO", "FIXME", "XXX", "DONE", "BUG", "!!!", "HACK", "NOTE", "FAQ", "IDEA" ],`
-- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-  - `"markdownlint.config": {"MD006": false, "MD007": false, "MD013": true,`
-      `"MD022": false, "MD026": false, "MD032": false, "MD040": false },`
 
 ## Generic Installation
 
