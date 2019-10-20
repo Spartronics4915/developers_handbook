@@ -133,7 +133,7 @@ guide for this book, as well as how to use markdown.
     - Competition Checklist
       - https://github.com/Spartronics4915/2016-Stronghold/wiki/Competition-Checklist
 
-### [ ] [Exploring WPILIBj](exploring_wpilibj/README.md)
+### [Exploring WPILIBj](exploring_wpilibj/README.md)
   - [ ] Other types of robots
     - Timed, State Machines, etc
   - [ ] Different types of drives
