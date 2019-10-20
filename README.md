@@ -15,45 +15,41 @@ and is written in Github Flavored Markdown. For information on how to
 contribute to this document, read contribute.md which contains the writing
 guide for this book, as well as how to use markdown.
 
-A goal is to make this eventually accessible on our team website.
-
 @TODO pull from old codebase wikis
 
 ## Table of Contents
-- [ ] [The Developer Handbook](README.md)
+  - [ ] [The Developer Handbook](README.md)
 
 ### [Introduction to Programming](introductory_programming/README.md)
   - [ ] [Setting up your work environment](introductory_programming/environment_setup.md)
 
-#### [An Introduction to Version Control](robot_programming/git_intro/README.md)
-  - [x] [Introducing Git and GitHub](introductory_programming/git_intro/git_about.md)
-  - [x] [Git Fundamentals](introductory_programming/git_intro/git_fundamentals.md)
-  - [x] [Next Level Git](introductory_programming/git_intro/git_advanced.md)
-  - [x] [Git Flow](introductory_programming/git_intro/git_flow.md)
-    - move to robot code?
-  - [x] [FAQ: git, vi, bash shell](introductory_programming/git_intro/git_faq.md)
+### [An Introduction to Version Control](git_introduction/README.md)
+  - [x] [Introducing Git and GitHub](git_introduction/git_about.md)
+  - [x] [Git Fundamentals](git_introduction/git_fundamentals.md)
+  - [x] [Next Level Git](git_introduction/git_advanced.md)
+  - [x] [Git Flow](git_introduction/git_flow.md)
+  - [x] [FAQ: git, vi, bash shell](git_introduction/git_faq.md)
+  - [ ] [GitHub Projects](git_introduction/git_projects.md)
 
-#### [Java Lessons](introductory_programming/java_lessons/README.md)
-  - [ ] [Lesson 1: Introductory Syntax](introductory_programming/java_lessons/1_syntax.md)
-  - [ ] [Lesson 2: Variables and Datatypes](introductory_programming/java_lessons/2_variables_datatypes.md)
-  - [ ] [Lesson 3: Method Calls](introductory_programming/java_lessons/3_method_calls.md)
-  - [ ] [Lesson 4: The If Statement](introductory_programming/java_lessons/4_if_statement.md)
-  - [ ] [Lesson 5: Method Definitions](introductory_programming/java_lessons/5_method_definitions.md)
-  - [ ] [Lesson 6: Classes](introductory_programming/java_lessons/6_classes_and_objects.md)
-    - [ ] not complete
-  - [ ] [Lesson 7: Inheritance](introductory_programming/java_lessons/7_inheritance.md)
-    - [ ] extra not complete
-  - [ ] [Helpful Programming Resources](introductory_programming/java_lessons/resources.md)
+### [An Introduction to Java](java_programming/README.md)
+  - [x] [Lesson 1: Introductory Syntax](java_programming/1_syntax.md)
+  - [x] [Lesson 2: Variables and Datatypes](java_programming/2_variables_datatypes.md)
+  - [x] [Lesson 3: Method Calls](java_programming/3_method_calls.md)
+  - [x] [Lesson 4: The If Statement](java_programming/4_if_statement.md)
+  - [x] [Lesson 5: Method Definitions](java_programming/5_method_definitions.md)
+  - [x] [Lesson 6: Classes](java_programming/6_classes_and_objects.md)
+  - [ ] [Lesson 7: Inheritance](java_programming/7_inheritance.md)
+  - [ ] [Helpful Programming Resources](java_programming/resources.md)
 
 ### [Robot Programming](robot_programming/README.md)
-- [ ] [What is a Robot?](robot_programming/robot_code.md)
+  - [ ] [What is a Robot?](robot_programming/robot_code.md)
 
-#### [Best Practices](introductory_programming/best_practices/README.md)
+#### [Best Practices](robot_programming/best_practices/README.md)
   - [ ] [Contribute](introductory_programming/best_practices/contribute.md)
   - [ ] [Developer Process](introductory_programming/best_practices/dev_process.md) @todo move
   - [ ] [Style Guide](introductory_programming/best_practices/style_guide.md)
 
-#### [Command-Based Programming](robot_programming/command-based_programming/README.md) <!--[What is Command Based programming?](https://wpilib.screenstepslive.com/s/currentCS/m/java/l/599732-what-is-command-based-programming)-->
+#### [Command-Based Programming](robot_programming/commands_subsystems/README.md) <!--[What is Command Based programming?](https://wpilib.screenstepslive.com/s/currentCS/m/java/l/599732-what-is-command-based-programming)-->
   - [ ] What is a Subsystem?
     - One system vs. two: intake and intake wheels example
   - [ ] What is a Command?
@@ -156,16 +152,16 @@ A goal is to make this eventually accessible on our team website.
       - Fill with %MATHS%
 
 ### [Path Planning and Autonomous](path_planning_and_autonomous/README.md)
-  - I have no clue what to put here.
-  - Similar structure to java_lessons?
   - This is Declan's and Jeffrey's forte.
 
-### [Vision?](vision/README.md)
+### [Vision](vision/README.md)
   - What's vision for? (similar to introduction to programming/readme)
   - https://github.com/Spartronics4915/Vision
+  -
 
-### [Bling](arduino_development/README.md)
+### [Embedded Development](embedded_development/README.md)
   - Compile resources
+  - This is bling
 
 ### [Web Development](web_development/README.md)
   - [ ] SmartDashboard & NetworkTables
@@ -184,28 +180,13 @@ A goal is to make this eventually accessible on our team website.
     - Get input from Binnur
   - [ ] Resources
     - https://internetingishard.com/
+    - https://j-james.me/interneting-is-hard/
 
 ### [Data Analysis](data_analysis/README.md)
   - During the preseason?
   - Include the app?
 
-### [Scouting App](scouting_app/README.md) <!--haha-->
-  - Part of Data Analysis?
-
-
-
-
-
-
-
-
-
-
-
-
 ## Structure
-
-This handbook is broken up into se
 
 For new students who have never programmed, or have programmed just not in Java, we recommend they start with the `introductory_lessons` folder.
 If you're confident in Java, `robot_programming` is designed for you. It has a curriculum on commands and subsystems, how to use our version control system, and other general stuff idk
@@ -232,18 +213,13 @@ Robot lessons teach programmers who know Java how to program our robots. PID
     b. Set to 0
     c. Set to -1
     d. Set to 0.5
-    Create and print out joystick input.
+    Create and print out Joystick input.
     Set a motors power from Joystick input
     Set multiple motors from Joystick input
     Discuss classes
     Make a Subsystem
     a. Start with Drive Train
     Make a Command
-
-## First meeting
-
-Introduction to programming, then split into two groups to talk about java programming and robot programming
-Everybody from last year sits through robot programming to learn about the new structure
 
 ## Introduction.md
 - What is embedded development about?
@@ -263,14 +239,3 @@ Everybody from last year sits through robot programming to learn about the new s
     - 30% is your robot
     - 70% is your driving team
 - At the end of the match, did you do what you said you were going to do?
-
-
-Send survey
-Assign people to tracks
-Assign mentors to tracks / students
-Figure out which tracks are doing
-Write tracks
-
-
-Randy
-Ted
