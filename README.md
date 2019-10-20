@@ -39,7 +39,7 @@ A goal is to make this eventually accessible on our team website.
   - [ ] [Lesson 3: Method Calls](introductory_programming/java_lessons/3_method_calls.md)
   - [ ] [Lesson 4: The If Statement](introductory_programming/java_lessons/4_if_statement.md)
   - [ ] [Lesson 5: Method Definitions](introductory_programming/java_lessons/5_method_definitions.md)
-  - [ ] [Lesson 6: Classes](introductory_programming/java_lessons/6_classes.md)
+  - [ ] [Lesson 6: Classes](introductory_programming/java_lessons/6_classes_and_objects.md)
     - [ ] not complete
   - [ ] [Lesson 7: Inheritance](introductory_programming/java_lessons/7_inheritance.md)
     - [ ] extra not complete
