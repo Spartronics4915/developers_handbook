@@ -1,6 +1,6 @@
 # Spartronics Developer Handbook
 
-@TODO: Everything past table of contents
+<!--TODO: Everything past table of contents-->
 
 This handbook is compiled by Spartronics 4915, Bainbridge Island WA, USA.
 It is intended as a guide for FRC programming teams specifically using
@@ -14,8 +14,6 @@ This handbook is presented using
 and is written in Github Flavored Markdown. For information on how to
 contribute to this document, read contribute.md which contains the writing
 guide for this book, as well as how to use markdown.
-
-@TODO pull from old codebase wikis
 
 ## Table of Contents
   - [ ] [The Developer Handbook](README.md)

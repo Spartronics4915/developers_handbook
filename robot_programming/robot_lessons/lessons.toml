@@ -1,8 +1,3 @@
 [[Lesson]]
 Name="Lesson 1: Motors"
-Path="./lesson1.java"
-
-[[Lesson]]
-Name="Lesson 3: State machines and Subsystems"
-Path="./lesson3.java"
-AlternateRobotPath="./lesson3/src/main/java/com/spartronics4915/learnyouarobot/robot/Robot.java"
+Path="./lesson1.java" # Note that ./lesson1.java is a symbolic link
