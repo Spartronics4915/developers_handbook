@@ -143,12 +143,7 @@ public class Lesson extends IterativeRobot {
 In this section we're going to ask you to do something without giving you the code.
 
 ### Inverting our motor
-Now that we have this set up, what if you want to reverse the output of
-the motor? You could just change 0.5 to -0.5, but that can rapidly become
-confusing when you need to reverse it again (this may seem unlikely, but
-once things get more complex it can happen). Instead of unary negation,
-there's a method that will do this for us: [`setInverted`](https://www.ctr-electronics.com/downloads/api/java/html/com/ctre/phoenix/motorcontrol/can/BaseMotorController.html#setInverted-boolean-).
-Just call `motor.setInverted`, and you can reverse the motor's output.
+Now that we have this set up, what if you want to reverse the output of the motor? You could just change 0.5 to -0.5, but we're lazy. Luckily, there's a method that will do this for us: [`setInverted`](http://www.ctr-electronics.com/downloads/api/java/html/classcom_1_1ctre_1_1phoenix_1_1motorcontrol_1_1can_1_1_base_motor_controller.html#aaeccf1a74b1b17755417432fba24fb73). Just call `motor.setInverted`, and you can reverse the motor's output.
 
  - Now that you know that, go ahead and invert the motor's output.
 

@@ -20,7 +20,7 @@
   * [Lesson 5: Method Definitions](java_programming/5_method_definitions.md)
   * [Lesson 6: Classes](java_programming/6_classes_and_objects.md)
   * [Lesson 7: Inheritance](java_programming/7_inheritance.md)
-  * [Helpful Programming Resources](java_programming/resources.md)
+
 
 * [An Introduction to Robot Programming](robot_programming/robot_lessons/README.md)
   * [Lesson 1: Motors and Interative Robot](robot_programming/robot_lessons/1_motors.md)
