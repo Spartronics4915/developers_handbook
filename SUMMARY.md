@@ -4,7 +4,7 @@
 
 * [Introduction](README.md)
 
-* [An Introduction to Version Control](git_introduction/README.md)
+* [Version Control and Git](git_introduction/README.md)
   * [Introducing Git and GitHub](git_introduction/git_about.md)
   * [Git Fundamentals](git_introduction/git_fundamentals.md)
   * [Next Level Git](git_introduction/git_advanced.md)
@@ -21,6 +21,12 @@
   * [Lesson 6: Classes](java_programming/6_classes_and_objects.md)
   * [Lesson 7: Inheritance](java_programming/7_inheritance.md)
 
-
-* [An Introduction to Robot Programming](robot_programming/robot_lessons/README.md)
-  * [Lesson 1: Motors and Interative Robot](robot_programming/robot_lessons/1_motors.md)
+* [Programming a Robot](robot_programming/robot_lessons/README.md)
+  * [Pre-Lesson: What is a Robot?](robot_programming/robot_code.md)
+  * [Lesson 1: Motors and the Interative Robot](robot_programming/robot_lessons/1_motors.md)
+  * [Lesson 2: What is a Subsystem?](robot_programming/robot_lessons/2_subsystems.md)
+  * [Lesson 3: What are Commands?](robot_programming/robot_lessons/3_commands.md)
+  <!-- * [Lesson 4: More on Subsystems](robot_programming/robot_lessons/4_more_on_subsystems_and_commands.md)
+  * [Lesson 5: Scheduling Commands](robot_programming/robot_lessons/5_scheduling.md)
+  * [Lesson 6: Sensor Feedback](robot_programming/robot_lessons/6_feedback.md)
+  * [Lesson 7: A Return to the Interactive Robot](robot_programming/robot_lessons/7_actuators.md) -->

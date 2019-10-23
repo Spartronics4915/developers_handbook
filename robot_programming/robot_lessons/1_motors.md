@@ -132,7 +132,7 @@ public class Lesson extends IterativeRobot {
 
 	@Override
 	public void teleopPeriodic() {
-    motor.set(ControlMode.PercentOutput, 0.5); // Run the motor at 50%
+    	motor.set(ControlMode.PercentOutput, 0.5); // Run the motor at 50%
 	}
 }
 
