@@ -41,7 +41,7 @@ _not_ `void`, you must return something of the appropriate data type. E.g. if
 your return type is `double`, this will work: `return 3.1;`, but this will not:
 `return "foo";`.
 
-@TODO: method overloading?
+<!-- TODO: method overloading? -->
 
 ## Conclusion
 Here are your PracticeIt problems:

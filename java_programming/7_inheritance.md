@@ -67,4 +67,5 @@ This concept applies to our robot code. For example, we have a seperate class fo
 ## Using SpartronicsLib
 
 Starting this year (2020), we've moved much of our game-independent codebase into a new GitHub repository, [SpartronicsLib](https://github.com/Spartronics4915/SpartronicsLib).
-@TODO
+
+@TODO Complete

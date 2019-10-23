@@ -1,6 +1,6 @@
 # Classes and Objects
 
-@TODO: unify houses and motors
+<!-- TODO: unify houses and motors -->
 
 <!-- TOC -->
 
@@ -13,7 +13,6 @@
   - [More on Objects](#more-on-objects)
     - [Objects and the Static keyword](#objects-and-the-static-keyword)
     - [Constructor Methods and `new`](#constructor-methods-and-new)
-    - [Concept: Composition](#concept-composition)
   - [Conclusion.](#conclusion)
 
 <!-- /TOC -->
@@ -91,7 +90,7 @@ Scope is also affected by the `static` keyword, but we'll get more into that lat
 
 Take a look at the code below.
 
-@TODO: is this the right code?
+<!-- TODO: is this the right code? -->
 
 ```java
 MotorController motor = new MotorController(3);
@@ -145,8 +144,7 @@ myHouse = new House("1600 Pennsylvania Ave.");
 
 In this case, we're passing `"1600 Pennsylvania Ave."` to the constructor, which takes it and sets the `mAddress` variable to it. This is a good example of when to _not_ use static methods - if we attempted to call `getAddress` without having constructed an object, our `House` class wouldn't have an address to return to us.
 
-### Concept: Composition
-@TODO
+<!-- ### Concept: Composition -->
 
 ## Conclusion.
 That was a lot. Classes and objects take some time to fully understand, so don't be shy to refer back to this when doing the Practice-It problems.
