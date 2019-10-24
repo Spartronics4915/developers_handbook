@@ -13,7 +13,7 @@ Subsystems have a general structure to them.
 A barebones subsystem would look like this:
 
 ```java
-import com.spartronics4915.lib.SpartronicsSubsystem;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class ShooterSubsystem extends SubsystemBase {
 
