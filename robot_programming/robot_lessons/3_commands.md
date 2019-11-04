@@ -13,7 +13,7 @@ In this lesson, you'll be learning what _commands_ are, why we use them, and how
     - [The `isFinished()` method](#the-isfinished-method)
     - [The `end()` method](#the-end-method)
     - [Command Decorators](#command-decorators)
-  - [Extending your Knowledge](#extending-your-knowledge)
+  - [Extending your knowledge](#extending-your-knowledge)
 
 <!-- /TOC -->
 
@@ -22,8 +22,11 @@ In this lesson, you'll be learning what _commands_ are, why we use them, and how
 Commands are simple state machines that perform high-level robot functions using the methods defined by subsystems.
 In plainer English, commands run some combination of _subsystem actions_. In our case, we'll be calling the subsystem actions that you made in the previous lesson. You can think of commands as wrappers for subsystems, where we
 
-But you might be thinking, why use commands at all? Why not just call subsystems directly, like we did in the previous lesson?
+But you might be thinking, why use commands at all? Why not just call subsystems directly? There are two answers to that question. One, commands are safer. Commands let you specify the subsystems that are being used (through `addRequirements()`), and ensures that no two commands are using the same hardware.
 
+Two, using commands allows us to construct functions that are mapped directly to a button. Having subsystem actions mapped to buttons doesn't make very much sense. Say that you had a multi-stage Frisbee launcher, that required wheels in the front to start spinning earlier than the wheels closer to the Frisbee in order to build up momentum. It would be a pain to have a button for each individual stage of wheels. Letting a command handle it all makes the driver experience much easier and more reliable.
+
+**When creating Commands, you should keep in mind that they are associated with buttons.**
 
 An example of a command is shown below.
 
@@ -181,7 +184,7 @@ Within the Command interface, there's the concept of _decorators_. A decorator i
 
 ___
 
-## Extending your Knowledge
+## Extending your knowledge
 
 Now that we've gone over all the aspects of a Command, you're ready to write your own. This time, you'll be using the previous methods you wrote in the Subsystem lesson (LIST THEM HERE) and constructing commands around them.
 

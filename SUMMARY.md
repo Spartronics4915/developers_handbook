@@ -10,7 +10,7 @@
   * [Next Level Git](git_introduction/git_advanced.md)
   * [Git Flow](git_introduction/git_flow.md)
   * [FAQ: git, vi, bash shell](git_introduction/git_faq.md)
-  * [GitHub Projects](git_introduction/git_projects.md)
+  <!-- * [GitHub Projects](git_introduction/git_projects.md) -->
 
 * [An Introduction to Java](java_programming/README.md)
   * [Lesson 1: Introductory Syntax](java_programming/1_syntax.md)
@@ -26,7 +26,7 @@
   * [Lesson 1: Motors and the Interative Robot](robot_programming/robot_lessons/1_motors.md)
   * [Lesson 2: What is a Subsystem?](robot_programming/robot_lessons/2_subsystems.md)
   * [Lesson 3: What are Commands?](robot_programming/robot_lessons/3_commands.md)
-  <!-- * [Lesson 4: More on Subsystems](robot_programming/robot_lessons/4_more_on_subsystems_and_commands.md)
+  * [Lesson 4: What are Command Groups?](robot_programming/robot_lessons/4_command_groups.md)
   * [Lesson 5: Scheduling Commands](robot_programming/robot_lessons/5_scheduling.md)
-  * [Lesson 6: Sensor Feedback](robot_programming/robot_lessons/6_feedback.md)
-  * [Lesson 7: A Return to the Interactive Robot](robot_programming/robot_lessons/7_actuators.md) -->
+  <!-- * [Lesson 6: Sensor Feedback](robot_programming/robot_lessons/6_feedback.md) -->
+  <!-- * [Lesson 7: A Return to the Interactive Robot](robot_programming/robot_lessons/7_actuators.md) -->
