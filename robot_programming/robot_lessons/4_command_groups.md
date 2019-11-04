@@ -51,8 +51,7 @@ A `ParallelDeadlineGroup` also runs a set of commands concurrently. However, the
 
 ## Constructing a Command Group
 
-
-
+@TODO
 
 ## Features of the Command Group
 
@@ -68,7 +67,7 @@ This is called an inline command definition, and is very handy for circumstances
 
 ### Recursive Composition
 
-As mentioned earlier, command groups are recursively composable - since command groups are themselves commands, they may be included as components of other command groups. This is an extremely powerful feature of command groups, and allows users to build very complex robot actions from simple pieces. For example, consider the following code.
+As mentioned earlier, command groups are recursively composable - since command groups are themselves commands, they may be included as components of other command groups. This is an extremely powerful feature of command groups, and allows you to build very complex robot actions from simple pieces. For example, consider the following code.
 
 ```java
 new SequentialCommandGroup(new DriveToGoal(m_drive), new ParallelCommandGroup(new RaiseElevator(m_elevator), new SetWristPosition(m_wrist)), new ScoreTube(m_wrist));
@@ -78,11 +77,11 @@ This creates a sequential command group that contains a parallel command group. 
 
 ![Command Group with Concurrency](commandgroupchart.png)
 
-Notice how the recursive composition allows the embedding of a parallel control structure within a sequential one. Notice also that this entire, more-complex structure, could be again embedded in another structure. Composition is an extremely powerful tool, and one that users should be sure to use extensively.
+Notice how the recursive composition allows the embedding of a parallel control structure within a sequential one. Notice also that this entire, more-complex structure, could be again embedded in another structure. Composition is an extremely powerful tool, and one that you should be sure to use extensively.
 
 ### Subsystem Requirements
 
-As command groups are commands, they also must declare their requirements. However, users are not required to specify requirements manually for command groups - requirements are automatically inferred from the commands included. As a rule, command groups include the union of all of the subsystems required by their component commands.
+As command groups are commands, they also must declare their requirements. However, you are not required to specify requirements manually for command groups - requirements are automatically inferred from the commands included. As a rule, command groups include the union of all of the subsystems required by their component commands.
 
 Additionally, requirements are enforced within all three types of parallel groups - a parallel group may not contain multiple commands that require the same subsystem.
 

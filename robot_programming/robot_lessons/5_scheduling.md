@@ -1,5 +1,24 @@
 # Lesson 5: Scheduling Commands
 
+<!-- TOC -->
+
+- [Lesson 5: Scheduling Commands](#lesson-5-scheduling-commands)
+  - [How do I schedule commands?](#how-do-i-schedule-commands)
+  - [Using the Command Scheduler](#using-the-command-scheduler)
+    - [The schedule() Method](#the-schedule-method)
+    - [The Scheduler Run Sequence](#the-scheduler-run-sequence)
+      - [Step 1: Poll Command Scheduling Buttons](#step-1-poll-command-scheduling-buttons)
+      - [Step 2: Run/Finish Scheduled Commands](#step-2-runfinish-scheduled-commands)
+      - [Step 3: Schedule Default Commands](#step-3-schedule-default-commands)
+    - [Command Event Methods](#command-event-methods)
+      - [onCommandInitialize](#oncommandinitialize)
+      - [onCommandExecute](#oncommandexecute)
+      - [onCommandFinish](#oncommandfinish)
+      - [onCommandInterrupt](#oncommandinterrupt)
+  - [Extending your knowledge](#extending-your-knowledge)
+
+<!-- /TOC -->
+
 ## How do I schedule commands?
 
 The `CommandScheduler` is the class responsible for actually running commands. Each iteration (ordinarily once per 20ms, or 50 times a second), the scheduler polls all registered buttons, schedules commands for execution accordingly, runs the command bodies of all scheduled commands, and ends those commands that have finished or are interrupted.
@@ -11,13 +30,13 @@ Accordingly, in order to access the scheduler, you must call the `CommandSchedul
 
 For the most part, you don't have to call scheduler methods directly - almost all important scheduler methods have convenience wrappers elsewhere (e.g. in the Command and Subsystem interfaces).
 
-However, there is one exception: users must call `CommandScheduler.getInstance().run()` from the `robotPeriodic()` method of their Robot class. If this is not done, the scheduler will never run, and the command framework will not work.
+However, there is one exception: you must call `CommandScheduler.getInstance().run()` from the `robotPeriodic()` method of their Robot class. If this is not done, the scheduler will never run, and the command framework will not work.
 
 ### The schedule() Method
 
 ![Scheduling Commands](schedulingcommands.png)
 
-To schedule a command, users call the `schedule()` method. This method takes a command (and, optionally, a specification as to whether that command is interruptible), and attempts to add it to list of currently-running commands, pending whether it is already running or whether its requirements are available. If it is added, its `initialize()` method is called.
+To schedule a command, you call the `schedule()` method. This method takes a command (and, optionally, a specification as to whether that command is interruptible), and attempts to add it to list of currently-running commands, pending whether it is already running or whether its requirements are available. If it is added, its `initialize()` method is called.
 
 ### The Scheduler Run Sequence
 
