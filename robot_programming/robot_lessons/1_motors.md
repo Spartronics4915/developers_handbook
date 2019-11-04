@@ -1,6 +1,20 @@
 # Lesson 1: Motors
 This lesson will introduce basic motor control, and class instantiation.
 
+<!-- TOC -->
+
+- [Lesson 1: Motors](#lesson-1-motors)
+	- [Class Setup](#class-setup)
+	- [Instantiating motors](#instantiating-motors)
+	- [Moving motors](#moving-motors)
+	- [Putting it into our class](#putting-it-into-our-class)
+	- [Extending knowledge](#extending-knowledge)
+		- [Inverting our motor](#inverting-our-motor)
+		- [Doing it again](#doing-it-again)
+		- [Incorporating driver input](#incorporating-driver-input)
+
+<!-- /TOC -->
+
 ## Class Setup
 First, we need to set up our class so that it gets run by WPILib.
 You can do that like this:

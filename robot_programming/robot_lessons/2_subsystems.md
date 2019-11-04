@@ -1,5 +1,15 @@
 # Lesson 2: Subsystems
 
+<!-- TOC -->
+
+- [Lesson 2: Subsystems](#lesson-2-subsystems)
+  - [What is a Subsystem?](#what-is-a-subsystem)
+    - [Constructing a Subsystem](#constructing-a-subsystem)
+    - [Adding Methods](#adding-methods)
+    - [Outputting Data](#outputting-data)
+
+<!-- /TOC -->
+
 ## What is a Subsystem?
 
 Subsystems are the basic unit of robot organization in the command-based paradigm.
