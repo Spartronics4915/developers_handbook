@@ -65,6 +65,7 @@ _Commands_, which we'll talk about and use in the next lesson, call into these p
 > Subsystems also serve as the backbone of the CommandScheduler’s resource management system. Commands may declare resource requirements by specifying which subsystems they interact with; the scheduler will never concurrently schedule more than one command that requires a given subsystem. An attempt to schedule a command that requires a subsystem that is already-in-use will either interrupt the currently-running command (if the command has been scheduled as interruptible), or else be ignored.
 
 - You should put a couple of public methods into your subsystem that run the motor at a varying velocity and "unjam" the shooter by running the motor backwards. One should be `void shootBall(double dutyCycle)`, and the other should be `void unjam()`.
+- Additionally, create a third method `stop()` - try and guess what to do with this one.
 - Now put code into each method to control the TalonSRX appropriately.
 - Now add some code to make the motor only run forward, regardless of input, in the `shootBall` method.
 

@@ -13,7 +13,7 @@ In this lesson, you'll be learning what _commands_ are, why we use them, and how
     - [The `isFinished()` method](#the-isfinished-method)
     - [The `end()` method](#the-end-method)
     - [Command Decorators](#command-decorators)
-  - [Extending your knowledge](#extending-your-knowledge)
+  - [Expanding your knowledge](#expanding-your-knowledge)
 
 <!-- /TOC -->
 
@@ -32,14 +32,15 @@ An example of a command is shown below.
 
 ```java
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import com.spartronics4915.learnyouarobot.robot.AgitatorSubsystem;
 
-public class Agitator extends CommandBase {
+public class AgitateCommand extends CommandBase {
 
-    private Agitator mAgitator;
+    private AgitatorSubsystem mAgitatorSubsystem;
 
-    public Agitator() {
-        mAgitator = Agitator.getInstance();
-        addRequirements(mAgitator);
+    public AgitateCommand() {
+        mAgitatorSubsystem = AgitatorSubsystem.getInstance();
+        addRequirements(mAgitatorSubsystem);
     }
 
     @Override
@@ -54,7 +55,7 @@ public class Agitator extends CommandBase {
 
     @Override
     public void end(boolean interrupted) {
-        if interrupted {
+        if (interrupted) {
 
         }
         else {
@@ -77,13 +78,13 @@ If a command is running, it has to be doing one of three things: **initializing*
 ### Subsystem Requirements
 
 ```java
-public class Agitator extends CommandBase {
+public class AgitateCommand extends CommandBase {
 
-    private Agitator mAgitator;
+    private AgitatorSubsystem mAgitatorSubsystem;
 
-    public Agitator() {
-        mAgitator = Agitator.getInstance();
-        addRequirements(mAgitator);
+    public AgitateCommand() {
+        mAgitatorSubsystem = AgitatorSubsystem.getInstance();
+        addRequirements(mAgitatorSubsystem);
     }
 ```
 
@@ -95,6 +96,8 @@ This ensures that, for example, we won't end up with two different pieces of cod
 
 If a new command is scheduled that requires a subsystem that is already in use, it will either _interrupt_ the currently-running command that requires that subsystem (if the command is interruptible), or else it will not be scheduled.
 
+- Create a Constructor for a `ShootCommand` class. Use the `ShooterSubsystem` that you made in the previous lesson.
+
 ___
 
 ### The `initialize()` method
@@ -103,13 +106,16 @@ ___
 // An example initialize() method
 @Override
 public void initialize() {
-    Agitator.calibrate();
+    mAgitatorSubsystem.calibrate();
 }
 ```
 
 The `initialize()` function is where we put code to put a subsystem in a known state for execution. It differs from the `execute()` method, as it is _not_ a loop - `initialize()` is run exactly **once** per time the command is called, and is run before `execute()`. It cannot take any parameters, so in order to add variability to the command, variables must be controlled by the constructor. Note that if you ever interrupt a command - we'll get more into what that entails later - this method still runs.
 
 If your command uses pneumatics, they should be controlled here, or with great caution in `execute()`. Unlike motors, you want to (at the risk of robot damage) set pneumatics to a position only _once_.
+
+- For now, we want our motors to be initially _stopped_.
+- Use the methods in our `mShooterSubsystem()` to stop the motors upon initialization.
 
 ___
 
@@ -119,7 +125,7 @@ ___
 // An example execute() method
 @Override
 public void execute() {
-    Agitator.agitate();
+    mAgitatorSubsystem.agitate();
 }
 ```
 
@@ -129,6 +135,9 @@ Anything that needs to run _continuously_ - controlling motors, for example - sh
 For maximum readability of your code, the `execute()` method should only call subsystem methods, and should call as few as possible. It shouldn't call methods of subsystems the command does not require.
 
 Note that it's important to _never_ use any long or unending loops in any of these functions.
+
+- What should your `ShootCommand` run _repeatedly_? Put it in your `execute()` method.
+- (Hint: You want to call a method from `mShooterSubsystem()`)
 
 ___
 
@@ -150,6 +159,8 @@ If you have a command that you want to always run unless it's interrupted (like 
 
 However, `isFinished()` is not checked when a command is _interrupted_.
 
+- Make your `isFinished()` method return true after being run 200 times. (Hint: define a counting variable in the _constructor_)
+
 ___
 
 ### The `end()` method
@@ -158,13 +169,13 @@ ___
 // An example end() method
 @Override
 public void end(boolean interrupted) {
-    if interrupted {
+    if (interrupted) {
         System.out.print("Interrupted");
     }
     else {
         System.out.print("Not interrupted");
     }
-    Agitator.stop()
+    mAgitatorSubsystem.stop()
 }
 ```
 
@@ -176,6 +187,8 @@ The end block should be used to “wrap up” command state in a neat way, such 
 
 Note that the act of calling `end()` by itself does not cancel the command; that power is handled exclusively by the Scheduler. You'll learn much more about how the Scheduler handles Commands in Lesson 5.
 
+- Have your `end()` method stop the motors, regardless of being interrupted or not.
+
 ___
 
 ### Command Decorators
@@ -184,8 +197,7 @@ Within the Command interface, there's the concept of _decorators_. A decorator i
 
 ___
 
-## Extending your knowledge
 
-Now that we've gone over all the aspects of a Command, you're ready to write your own. This time, you'll be using the previous methods you wrote in the Subsystem lesson (LIST THEM HERE) and constructing commands around them.
+## Expanding your knowledge
 
-@TODO: Ideas for Command practice. They'll depend on what robot we're using. And the previous lesson.
+Now that you've created a Command for shooting balls, try creating an `unjam` Command.

@@ -6,3 +6,8 @@ Path="./lesson1.java" # Note that ./lesson1.java is a symbolic link
 Name="Lesson 2: Subsystems"
 Path="./lesson2.java"
 AlternateRobotPath="./lesson2/src/main/java/com/spartronics4915/learnyouarobot/robot/Robot.java"
+
+[[Lesson]]
+Name="Lesson 3: Commands"
+Path="./lesson3.java"
+AlternateRobotPath="./lesson2/src/main/java/com/spartronic4915/learnyouarobot/robot/Robot.java"
