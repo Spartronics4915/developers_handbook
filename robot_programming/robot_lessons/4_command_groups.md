@@ -17,7 +17,6 @@
     - [Inline Command Groups](#inline-command-groups)
     - [Recursive Composition](#recursive-composition)
     - [Subsystem Requirements](#subsystem-requirements)
-  - [Extending your knowledge](#extending-your-knowledge)
 
 <!-- /TOC -->
 
@@ -37,21 +36,40 @@ The command-based library supports four basic types of `CommandGroup`s: `Sequent
 
 A `SequentialCommandGroup` runs a list of commands in sequence - the first command will be executed, then the second, then the third, and so on until the list finishes. The sequential group finishes after the last command in the sequence finishes. It is therefore usually important to ensure that each command in the sequence does actually finish (if a given command does not finish, the next command will never start!).
 
+The `sequence` method allows use of this within a `CommandBase` class.
+
 ### `ParallelCommandGroup`
 
 A `ParallelCommandGroup` runs a set of commands concurrently - all commands will execute at the same time. The parallel group will end when all commands have finished.
+
+The `parallel` method allows use of this within a `CommandBase` class.
 
 ### `ParallelRaceGroup`
 
 A `ParallelRaceGroup` is much like a ParallelCommandgroup, in that it runs a set of commands concurrently. However, the race group ends as soon as any command in the group ends - all other commands are interrupted at that point.
 
+The `race` method allows use of this within a `CommandBase` class.
+
 ### `ParallelDeadlineGroup`
 
 A `ParallelDeadlineGroup` also runs a set of commands concurrently. However, the deadline group ends when a specific command (the “deadline”) ends, interrupting all other commands in the group that are still running at that point.
 
+The `deadline` method allows use of this within a `CommandBase` class.
+
 ## Constructing a Command Group
 
-@TODO
+A typical `CommandGroup` looks like the following.
+
+```java
+public class AgitateThenShootGroup extends CommandBase {
+
+  addCommands(new AgitateCommand(), new ShootCommand());
+}
+```
+
+It's very
+
+- Given the commands `ShootCommand`, `UnjamCommand`, and `StopCommand`, create a `CommandGroup` `UnjamStopGroup` to unjam and _then_ stop the command.
 
 ## Features of the Command Group
 
@@ -85,10 +103,3 @@ As command groups are commands, they also must declare their requirements. Howev
 
 Additionally, requirements are enforced within all three types of parallel groups - a parallel group may not contain multiple commands that require the same subsystem.
 
-## Extending your knowledge
-
-@TODO
-
-- Take the previous commands and group them
-- ex. an Intake group, a Launch group
-- Try running interruptible and not interruptible groups

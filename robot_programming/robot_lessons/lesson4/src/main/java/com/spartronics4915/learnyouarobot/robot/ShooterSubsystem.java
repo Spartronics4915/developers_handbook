@@ -1,4 +1,4 @@
-package com.spartronics4915.learnyouarobot.robot;
+package com.spartronics4915.learnyouarobot;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;

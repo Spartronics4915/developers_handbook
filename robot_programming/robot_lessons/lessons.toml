@@ -10,4 +10,9 @@ AlternateRobotPath="./lesson2/src/main/java/com/spartronics4915/learnyouarobot/r
 [[Lesson]]
 Name="Lesson 3: Commands"
 Path="./lesson3.java"
-AlternateRobotPath="./lesson2/src/main/java/com/spartronic4915/learnyouarobot/robot/Robot.java"
+AlternateRobotPath="./lesson3/src/main/java/com/spartronics4915/learnyouarobot/robot/Robot.java"
+
+[[Lesson]]
+Name="Lesson 4: Command Groups"
+Path="./lesson4.java"
+AlternateRobotPath="./lesson4/src/main/java/com/spartronics4915/learnyouarobot/robot/Robot.java"
