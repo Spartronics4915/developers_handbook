@@ -159,9 +159,11 @@ guide for this book, as well as how to use markdown.
   - https://github.com/Spartronics4915/Vision
   -
 
-### [Embedded Development](embedded_development/README.md)
-  - Compile resources
-  - This is bling
+### [Embedded Development: Bling & Arduino](embedded_development/README.md)
+  - [ ] Development Environment Setup
+  - [ ] Starting with Bling
+  - [ ] Tutorials and Resources
+  - [ ] Micropython and Arduino
 
 ### [Web Development](web_development/README.md)
   - [ ] SmartDashboard & NetworkTables
