@@ -1,30 +1,23 @@
-# Lesson 4: Command Groups
+# Lesson 4: What are Command Groups?
 
-<!-- Note: This is directly lifted from the WPILIB docs -->
-<!-- As I think specifically this article is fantastically structured -->
-
-<!-- TOC -->
-
-- [Lesson 4: Command Groups](#lesson-4-command-groups)
-  - [What are Command Groups?](#what-are-command-groups)
-  - [Types of Command Groups](#types-of-command-groups)
-    - [`SequentialCommandGroup`](#sequentialcommandgroup)
-    - [`ParallelCommandGroup`](#parallelcommandgroup)
-    - [`ParallelRaceGroup`](#parallelracegroup)
-    - [`ParallelDeadlineGroup`](#paralleldeadlinegroup)
-  - [Constructing a Command Group](#constructing-a-command-group)
-  - [Features of the Command Group](#features-of-the-command-group)
-    - [Inline Command Groups](#inline-command-groups)
-    - [Recursive Composition](#recursive-composition)
-    - [Subsystem Requirements](#subsystem-requirements)
-
-<!-- /TOC -->
+* [Lesson 4: Command Groups](4_command_groups.md#lesson-4-command-groups)
+  * [What are Command Groups?](4_command_groups.md#what-are-command-groups)
+  * [Types of Command Groups](4_command_groups.md#types-of-command-groups)
+    * [`SequentialCommandGroup`](4_command_groups.md#sequentialcommandgroup)
+    * [`ParallelCommandGroup`](4_command_groups.md#parallelcommandgroup)
+    * [`ParallelRaceGroup`](4_command_groups.md#parallelracegroup)
+    * [`ParallelDeadlineGroup`](4_command_groups.md#paralleldeadlinegroup)
+  * [Constructing a Command Group](4_command_groups.md#constructing-a-command-group)
+  * [Features of the Command Group](4_command_groups.md#features-of-the-command-group)
+    * [Inline Command Groups](4_command_groups.md#inline-command-groups)
+    * [Recursive Composition](4_command_groups.md#recursive-composition)
+    * [Subsystem Requirements](4_command_groups.md#subsystem-requirements)
 
 ## What are Command Groups?
 
 Individual commands are capable of accomplishing a large variety of robot tasks, but the simple three-state format can quickly become cumbersome when more advanced functionality requiring extended sequences of robot tasks or coordination of multiple robot subsystems is required. In order to accomplish this, we can use the powerful `CommandGroup` functionality included in the Command-based library.
 
-As the name suggests, `CommandGroup`s are combinations of multiple commands. The act of combining multiple objects (such as commands) into a bigger object is known as _composition_. `CommandGroup`s are compositions of multiple commands. This allows code to be kept much cleaner and simpler, as the individual _component commands_ may be written independently of the code that combines them, greatly reducing the amount of complexity at any given step of the process.
+As the name suggests, `CommandGroup`s are combinations of multiple commands. The act of combining multiple objects \(such as commands\) into a bigger object is known as _composition_. `CommandGroup`s are compositions of multiple commands. This allows code to be kept much cleaner and simpler, as the individual _component commands_ may be written independently of the code that combines them, greatly reducing the amount of complexity at any given step of the process.
 
 Most importantly, however, `CommandGroup`s themselves **are** commands - they implement the Command interface. This allows `CommandGroup`s to be recursively composed - that is, a `CommandGroup` may contain other `CommandGroup`s as components.
 
@@ -34,7 +27,7 @@ The command-based library supports four basic types of `CommandGroup`s: `Sequent
 
 ### `SequentialCommandGroup`
 
-A `SequentialCommandGroup` runs a list of commands in sequence - the first command will be executed, then the second, then the third, and so on until the list finishes. The sequential group finishes after the last command in the sequence finishes. It is therefore usually important to ensure that each command in the sequence does actually finish (if a given command does not finish, the next command will never start!).
+A `SequentialCommandGroup` runs a list of commands in sequence - the first command will be executed, then the second, then the third, and so on until the list finishes. The sequential group finishes after the last command in the sequence finishes. It is therefore usually important to ensure that each command in the sequence does actually finish \(if a given command does not finish, the next command will never start!\).
 
 The `sequence` method allows use of this within a `CommandBase` class.
 
@@ -52,7 +45,7 @@ The `race` method allows use of this within a `CommandBase` class.
 
 ### `ParallelDeadlineGroup`
 
-A `ParallelDeadlineGroup` also runs a set of commands concurrently. However, the deadline group ends when a specific command (the “deadline”) ends, interrupting all other commands in the group that are still running at that point.
+A `ParallelDeadlineGroup` also runs a set of commands concurrently. However, the deadline group ends when a specific command \(the “deadline”\) ends, interrupting all other commands in the group that are still running at that point.
 
 The `deadline` method allows use of this within a `CommandBase` class.
 
@@ -69,7 +62,7 @@ public class AgitateThenShootGroup extends CommandBase {
 
 It's very
 
-- Given the commands `ShootCommand`, `UnjamCommand`, and `StopCommand`, create a `CommandGroup` `UnjamStopGroup` to unjam and _then_ stop the command.
+* Given the commands `ShootCommand`, `UnjamCommand`, and `StopCommand`, create a `CommandGroup` `UnjamStopGroup` to unjam and _then_ stop the command.
 
 ## Features of the Command Group
 
@@ -93,7 +86,7 @@ new SequentialCommandGroup(new DriveToGoal(m_drive), new ParallelCommandGroup(ne
 
 This creates a sequential command group that contains a parallel command group. The resulting control flow looks something like this.
 
-![Command Group with Concurrency](commandgroupchart.png)
+![Command Group with Concurrency](../.gitbook/assets/commandgroupchart.png)
 
 Notice how the recursive composition allows the embedding of a parallel control structure within a sequential one. Notice also that this entire, more-complex structure, could be again embedded in another structure. Composition is an extremely powerful tool, and one that you should be sure to use extensively.
 
