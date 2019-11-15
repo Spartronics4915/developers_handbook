@@ -12,7 +12,9 @@ bling.
 
 Important: If this is your first time diving into Arduino, make sure to
 walk through [Ladyada's Learn Arduino
-Tutorials](https://learn.adafruit.com/series/ladyadas-learn-arduino). 
+Tutorials](https://learn.adafruit.com/series/ladyadas-learn-arduino).
+Also, there are many good tutorials on YouTube, such as
+[this one](https://youtu.be/nL34zDTPkcs)
 
 ## Bling Demo
 Introduction to bling development uses Adafruit NeoPixel strip and ring
@@ -24,12 +26,12 @@ For sketch code and hardware requirements see
 [BlingDemoSystem Repo](https://github.com/riyadth/BlingDemoSystem)
 
 * Board: Arduino Uno
+* If you need to install Arduino IDE, see instructions
+  [here](./toolkit.md)
 * [Install Adafruit NeoPixel
   Library](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-installation)
   to Arduino IDE
-* If you need to install Arduino IDE, see instructions
-  [here](./toolkit.md)
-* If you need help w/ cloning BlingDemoSystem Repo, see instructions [here](../git_introduction/git_fundamentals.md#git-clone)
+* Clone BlingDemoSystem Repo. If you need help, see instructions [here](../git_introduction/git_fundamentals.md#git-clone)
 
 ### Learning Path
 Also see [Arduino Tutorial](https://www.tutorialspoint.com/arduino/) for
