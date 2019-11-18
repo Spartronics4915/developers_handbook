@@ -29,4 +29,10 @@
   * [Lesson 4: What are Command Groups?](robot_programming/robot_lessons/4_command_groups.md)
   * [Lesson 5: Scheduling Commands](robot_programming/robot_lessons/5_scheduling.md)
   <!-- * [Lesson 6: Sensor Feedback](robot_programming/robot_lessons/6_feedback.md) -->
-  <!-- * [Lesson 7: A Return to the Interactive Robot](robot_programming/robot_lessons/7_actuators.md) -->
+    <!-- * [Lesson 7: A Return to the Interactive Robot](robot_programming/robot_lessons/7_actuators.md) -->
+
+* [Arduino and Bling Development](arduino_bling/README.md)
+  * [Setup Arduino IDE](arduino_bling/toolkit.md)
+  * [Starting with Bling](arduino_bling/bling.md)
+  * [Spartronics Clock with NeoMatrix](arduino_bling/clock-neomatrix.md)
+  * [Related Tutorials and Resources](arduino_bling/resources.md)
