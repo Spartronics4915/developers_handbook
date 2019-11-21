@@ -1,6 +1,6 @@
 # Starting with Bling
 
-Spartronics has two projects for introducing Ardunio development using
+Spartronics has two projects for introducing Arduino development using
 bling.
 
 * [Intro to Arduino](https://github.com/riyadth/IntroToArduino) is a
