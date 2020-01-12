@@ -34,13 +34,13 @@ However, there is one exception: you must call `CommandScheduler.getInstance().r
 
 ### The schedule() Method
 
-![Scheduling Commands](schedulingcommands.png)
+![Scheduling Commands](images/schedulingcommands.png)
 
 To schedule a command, you call the `schedule()` method. This method takes a command (and, optionally, a specification as to whether that command is interruptible), and attempts to add it to list of currently-running commands, pending whether it is already running or whether its requirements are available. If it is added, its `initialize()` method is called.
 
 ### The Scheduler Run Sequence
 
-![Scheduler Control Flow Diagram](schedulercontrolflow.png)
+![Scheduler Control Flow Diagram](images/schedulercontrolflow.png)
 
 What does a single iteration of the scheduler’s `run()` method actually do? The following section walks through the logic of a scheduler iteration.
 

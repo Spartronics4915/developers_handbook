@@ -93,7 +93,7 @@ new SequentialCommandGroup(new DriveToGoal(m_drive), new ParallelCommandGroup(ne
 
 This creates a sequential command group that contains a parallel command group. The resulting control flow looks something like this.
 
-![Command Group with Concurrency](commandgroupchart.png)
+![Command Group with Concurrency](images/commandgroupchart.png)
 
 Notice how the recursive composition allows the embedding of a parallel control structure within a sequential one. Notice also that this entire, more-complex structure, could be again embedded in another structure. Composition is an extremely powerful tool, and one that you should be sure to use extensively.
 
