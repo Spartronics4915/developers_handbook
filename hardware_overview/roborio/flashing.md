@@ -1,17 +1,13 @@
 # Flashing the roboRIO and radio
 
 1. [Install the FRC Update Suite](http://wpilib.screenstepslive.com/s/4485/m/13810/l/599669-installing-the-frc-2017-update-suite-all-languages)
-    - The license key is in the FIRST-themed manila-sized folder (with the 2017
-        sticker) in the programming bucket in the electronics room.
-        Next to the other ones.
-    - While there, get the USB A->B ("printer") cable from the drawer marked
-        "USB A to B cable" next to the laptop cabinet.
+    - The license key is in the FIRST-themed manila-sized folder (with the 2017 sticker) in the programming bucket in the electronics room. Next to the other ones.
+    - While there, get the USB A->B ("printer") cable from the drawer marked "USB A to B cable" next to the laptop cabinet.
 
 2. [Image the roboRIO](http://wpilib.screenstepslive.com/s/4485/m/13503/l/144984-imaging-your-roborio)
     - Always use the USB cable to image.
     - The IP will be 172.22.11.2
-    - The hostname will be roboRIO-FRC-4915.local (assuming the
-    team number is 4915, as it should be)
+    - The hostname will be roboRIO-FRC-4915.local (assuming the team number is 4915, as it should be)
     - Go to the roboRIO's admin page at its hostname and give it a static IP of 10.49.15.2
 
 3. [Download the radio flashing tool](https://usfirst.collab.net/sf/frs/do/listReleases/projects.wpilib/frs.frc_radio_configuration_utility)
