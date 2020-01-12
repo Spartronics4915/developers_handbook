@@ -21,15 +21,16 @@
   * [Lesson 6: Classes](java_programming/6_classes_and_objects.md)
   * [Lesson 7: Inheritance](java_programming/7_inheritance.md)
 
-* [Programming a Robot](robot_lessons/README.md)
-  * [Pre-Lesson: What is a Robot?](robot_lessons/robot_code.md)
-  * [Lesson 1: Motors and the Interative Robot](robot_lessons/1_motors.md)
-  * [Lesson 2: What is a Subsystem?](robot_lessons/2_subsystems.md)
-  * [Lesson 3: What are Commands?](robot_lessons/3_commands.md)
-  * [Lesson 4: What are Command Groups?](robot_lessons/4_command_groups.md)
-  * [Lesson 5: Scheduling Commands](robot_lessons/5_scheduling.md)
-  <!-- * [Lesson 6: Sensor Feedback](robot_lessons/6_feedback.md) -->
-  <!-- * [Lesson 7: A Return to the Interactive Robot](robot_lessons/7_actuators.md) -->
+* [Programming a Robot](robot_programming/README.md)
+  * [Pre-Lesson: What is a Robot?](robot_programming/robot_code.md)
+  * [Setting up your Development Environment](robot_programming/environment_setup.md)
+  * [Lesson 1: Motors and the Interative Robot](robot_programming/1_motors.md)
+  * [Lesson 2: What is a Subsystem?](robot_programming/2_subsystems.md)
+  * [Lesson 3: What are Commands?](robot_programming/3_commands.md)
+  * [Lesson 4: What are Command Groups?](robot_programming/4_command_groups.md)
+  * [Lesson 5: Scheduling Commands](robot_programming/5_scheduling.md)
+  <!-- * [Lesson 6: Sensor Feedback](robot_programming/6_feedback.md) -->
+  <!-- * [Lesson 7: A Return to the Interactive Robot](robot_programming/7_actuators.md) -->
 
 * [Arduino and Bling Development](arduino_bling/README.md)
   * [Setup Arduino IDE](arduino_bling/toolkit.md)
