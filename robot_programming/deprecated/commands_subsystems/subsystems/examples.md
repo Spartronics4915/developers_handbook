@@ -1,14 +1,10 @@
 # Subsystem Examples
 
-Included in the GitHub hosting of this document are some example Subsystem
-files from past years. Here we will go into detail as to reasoning behind
-the choices made in the code, their ramifications, and finally alternatives.
+Included in the GitHub hosting of this document are some example Subsystem files from past years. Here we will go into detail as to reasoning behind the choices made in the code, their ramifications, and finally alternatives.
 
 ## DriveTrain.java, mecanum edition
 
-For the Recycle Rush competition, Spartronics 4915's robot GAEA used
-a mecanum based drive train, which provides additional control systems
-when it comes to steering.
+For the Recycle Rush competition, Spartronics 4915's robot GAEA used a mecanum based drive train, which provides additional control systems when it comes to steering.
 
 The main autonomous commands we used that year were the following:
 * Move straight a desired distance
@@ -16,22 +12,13 @@ The main autonomous commands we used that year were the following:
 * Rotate 90º in place
 * Stop wheels from moving
 
-These together make up the bulk of our autonomous commands when it came to
-moving on the field. These commands took numbers as input, which we would
-pull from constants to keep the command execution consistent.
+These together make up the bulk of our autonomous commands when it came to moving on the field. These commands took numbers as input, which we would pull from constants to keep the command execution consistent.
 
-During the tele-op period, we only needed one command to take input
-from the driver's joystick and use that to control the drivetrain.
-Because we wouldn't ever want to override this operation, we made that
-command never finish, meaning it would constantly run it's execute method
-(below). And by designing the drivetrain subsystem to work best with
-commands, the resulting command is only two lines long, compared
-to the actual code the command is running.
+During the tele-op period, we only needed one command to take input from the driver's joystick and use that to control the drivetrain. Because we wouldn't ever want to override this operation, we made that command never finish, meaning it would constantly run it's execute method (below). And by designing the drivetrain subsystem to work best with commands, the resulting command is only two lines long, compared to the actual code the command is running.
 
 ```java
 // In MecanumDriveCommand.java
-Joystick joystickDrive; // This object is the driver's joystick which
-                        // controls the driving of the robot.
+Joystick joystickDrive; // This object is the driver's joystick which controls the driving of the robot.
 
 // Called once when this Command runs the first time
 protected void initialize()
@@ -43,44 +30,24 @@ protected void initialize()
 // Called repeatedly when this Command is scheduled to run
 protected void execute()
 {
-    // We pass the joystick directly to our mecanumDrive method, which
-    // extracts the important information about direction and spin
-    // and controls the motors appropriately
+    // We pass the joystick directly to our mecanumDrive method, which extracts
+    // the important information about direction and spin and controls the motors appropriately
     Robot.driveTrain.mecanumDrive(joystickDrive);
 }
 ```
 
-The mecanumDrive method is much more complicated, because of how we
-use the joystick data. We found that using the raw values of the
-joystick axes was not desirable for direct control of
-the drivetrain steering because it would not be easy to control with
-precision, as you would have to control speed and direction with the
-one input device. To improve driving, we scale these values based on
-a slider on the joystick (the throttle).
+The mecanumDrive method is much more complicated, because of how we use the joystick data. We found that using the raw values of the joystick axes was not desirable for direct control of the drivetrain steering because it would not be easy to control with precision, as you would have to control speed and direction with the one input device. To improve driving, we scale these values based on a slider on the joystick (the throttle).
 
-In addition, we found that turning was difficult at times, but did not
-want to have the robot changing orientation during the normal course of
-play. Because of this, we added a twist scale which could be toggled
-based on a button input, which would dampen or raise the rate of
-rotation.
+In addition, we found that turning was difficult at times, but did not want to have the robot changing orientation during the normal course of play. Because of this, we added a twist scale which could be toggled based on a button input, which would dampen or raise the rate of rotation.
 
-Once we calculated all of the parameters (forward, horizontal,
-and rotational motion) we pass these parameters into the
-mecanumDrive_Cartesian
-method inherited from the RobotDrive class (since the drivetrain's
-robotDrive object is an instance of RobotDrive). However, if the FieldMode
-parameter is set, instead it drives using the gyroscope to automatically
-adjust the direction of motion so that forward on the joystick always
-drives in the same direction. Most importantly, if the parameters are
-all below a set threshold, the robot will not move at all, cutting
-down on motor wear.
+Once we calculated all of the parameters (forward, horizontal, and rotational motion) we pass these parameters into the mecanumDrive_Cartesian method inherited from the RobotDrive class (since the drivetrain's robotDrive object is an instance of RobotDrive). However, if the FieldMode parameter is set, instead it drives using the gyroscope to automatically adjust the direction of motion so that forward on the joystick always drives in the same direction. Most importantly, if the parameters are all below a set threshold, the robot will not move at all, cutting down on motor wear.
 
 ```java
 /**
  * Drives a mecanum drivetrain in the direction of the joystick pointed
- * Since the motors are enabled to use their encoders in RobotMap, each
- * motor should go at the speeds that they need to more accurately. Because
- * of this, we do not want to use setMaxOutput, because the value set in
+ * Since the motors are enabled to use their encoders in RobotMap, each motor
+ * should go at the speeds that they need to more accurately.
+ * Because of this, we do not want to use setMaxOutput, because the value set in
  * RobotMap.java is needed to be the same.
  *
  * @param joystick Joystick controlling the robot movement
@@ -107,7 +74,7 @@ public void mecanumDrive(Joystick joystick)
     }
 
     // Here we get the throttle slider's raw value (between -1 and 1) and
-    // shift it's range of values to .2 to 1 - this would be better as
+    // shift its range of values to .2 to 1 - this would be better as
     // a method that utilizes constants.
     double throttle = 0.40 * (-joystick.getThrottle()) + 0.60;
 
@@ -136,8 +103,7 @@ public void mecanumDrive(Joystick joystick)
     double bufferY = DEFAULT_BUFFER;
     double bufferZ = DEFAULT_BUFFER;
 
-    // Increases the deadzone buffer of the other directions if the robot
-    // should strafeOnly or go forwardOnly
+    // Increases the deadzone buffer of the other directions if the robot should strafeOnly or go forwardOnly
     if (strafeOnly)
     {
         bufferY *= DOUBLE;
@@ -171,8 +137,7 @@ public void mecanumDrive(Joystick joystick)
     double throttleY = throttle*joystickY;
     double throttleTwist = throttle*twistScale*joystickTwist;
 
-    // If all of the inputs are within their deadzone's, then the robot
-    // will stop moving.
+    // If all of the inputs are within their deadzone's, then the robot will stop moving.
     if (deadZoneX && deadZoneY && deadZoneTwist)
     {
         robotDrive.stopMotor();
@@ -185,8 +150,7 @@ public void mecanumDrive(Joystick joystick)
     }
     else
     {
-        // Uses the scaled parameters with the default mecanum drive method
-        // in RobotDrive.java
+        // Uses the scaled parameters with the default mecanum drive method in RobotDrive.java
         robotDrive.mecanumDrive_Cartesian(throttleX, throttleY, throttleTwist, 0);
     }
 }

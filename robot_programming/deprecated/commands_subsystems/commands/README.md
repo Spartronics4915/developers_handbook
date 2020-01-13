@@ -9,5 +9,4 @@
     - interrupted
     - Command Groups
 
-Commands are run by the Scheduler using the methods start() and
-cancel().
+Commands are run by the Scheduler using the methods start() and cancel().
