@@ -1,12 +1,8 @@
 # Talon SRX Capabilities
-Please refer to [programmer's manual](http://www.ctr-electronics.com/Talon%20SRX%20Software%20Reference%20Manual.pdf)
-for full description of capabilities and programming examples.
+Please refer to [programmer's manual](http://www.ctr-electronics.com/Talon%20SRX%20Software%20Reference%20Manual.pdf) for full description of capabilities and programming examples.
 
 ## roboRIO Web-based Configuration Tool
-roboRIO web-based configuration tool has options to configure Talons. However,
-as a principle, robot code programmatically configures Talons to ensure proper
-operation. As _garbage in, garbage out_ states, as a programmer you need to know
-how your Talons are configured.
+roboRIO web-based configuration tool has options to configure Talons. However, as a principle, robot code programmatically configures Talons to ensure proper operation. As _garbage in, garbage out_ states, as a programmer you need to know how your Talons are configured.
 
 ### Storing Configuration Settings
 See Talon SRX programming guide: Persistent storage and Reset/Startup behavior
@@ -14,15 +10,12 @@ See Talon SRX programming guide: Persistent storage and Reset/Startup behavior
 > All settings in the Motor Control Profile (MCP) are saved persistently in flash. Additionally there are two complete Motor Control Profiles. Teams that use a constant set of values can simply set them using the roboRIO Web-based Configuration, and they will “stick” until they are changed again.
 
 ## WPILib APIs
-WPI library provides APIs to program Talons for PWM or CAN-mode. For CAN mode,
-use _CANTalon_, for PWM use _TalonSRX_.
+WPI library provides APIs to program Talons for PWM or CAN-mode. For CAN mode, use _CANTalon_, for PWM use _TalonSRX_.
 
 This document refers to CANTalon and WPILib's Java APIs.
 
 ## Talon SRX Update Frequency
-In CAN mode, Talon SRX default update rate control frequency is 10ms. This value
-can be programmatically changed during CANTalon construction. Status signals
-include, which also are pollable from roboRIO web-based tool:
+In CAN mode, Talon SRX default update rate control frequency is 10ms. This value can be programmatically changed during CANTalon construction. Status signals include, which also are pollable from roboRIO web-based tool:
 
 - Quadrature Encoder Position, Velocity, Index Rise Count, Pin States (A, B, Index)
 - Analog-In Position, Analog-In Velocity, 10bit ADC Value,
@@ -37,8 +30,7 @@ include, which also are pollable from roboRIO web-based tool:
     device (robot must select a Feedback device, or rely on default setting of
     Quadrature Encoder).
 
-See [WPILib APIs](http://first.wpi.edu/FRC/roborio/release/docs/java/) to
-retrive various status information.
+See [WPILib APIs](http://first.wpi.edu/FRC/roborio/release/docs/java/) to retrive various status information.
 
 ### How fast can I control just ONE Talon SRX?
 > The fastest control frame rate that can be specified is 1ms. That means that the average period at which the throttle/set point can be updates is 1ms. This will increase bus utilization by approximately 15%, which is acceptable if the number of Talon SRXs is few. Always check the CAN bus performance metrics in the Driver Station when doing this.
@@ -52,18 +44,13 @@ public enum TalonControlMode implements CANSpeedController.ControlMode {
 ```
 
 ### What is a Closed-Loop Control System?
-A closed-loop control system,  also known as a feedback control system, where
-there there is one or more feedback loops between system' output and its input.
-The 'feedback' received is used to adjust and maintain the desired output of the
-system. Example would be a cruise control in a car, where regardless of the
-changes to the landscape, cruise control maintains the set speed.
+A closed-loop control system,  also known as a feedback control system, where there there is one or more feedback loops between system' output and its input. The 'feedback' received is used to adjust and maintain the desired output of the system. Example would be a cruise control in a car, where regardless of the changes to the landscape, cruise control maintains the set speed.
 
 Closed-loop controls require a feedback device, i.e. sensors, and PID settings.
 See PID section for more information @ TODO insert link to PID
 
 ### Talon SRX Closed-Loop Modes
-_CANTalon.TalonControlMode_ lists the supported modes. Supported Talon SRX
-closed-loop modes are:
+_CANTalon.TalonControlMode_ lists the supported modes. Supported Talon SRX closed-loop modes are:
 
 - Position closed-loop
   - Maintains a target position
@@ -108,16 +95,9 @@ _talon.setAllowableClosedLoopErr(409);
 ## Other Supported Modes
 
 ### PercentVBus or PercentVoltage Mode
-Default control mode. Motor output is expressed in output volts, and Talon will
-modulate the output based on battery voltage measurement. PercentVBus is percent
-of the battery voltage requested, i.e. it doesn't translate to a specific speed
-or strength. With _arcadeDrive()_, the joystick values are scaled to PercentVBus
-values; +1.0 is %100 voltage request, which is ~12V for a fully charged battery.
+Default control mode. Motor output is expressed in output volts, and Talon will modulate the output based on battery voltage measurement. PercentVBus is percent of the battery voltage requested, i.e. it doesn't translate to a specific speed or strength. With _arcadeDrive()_, the joystick values are scaled to PercentVBus values; +1.0 is %100 voltage request, which is ~12V for a fully charged battery.
 
-**Important: battery output will vary 20% or more (especially under heavy loads).**
-**Therefore, output of the motors in this mode will vary at least that much.**
-**Don't expect PercentVBus setting over a fixed period of time to produce**
-**reproducable results time and time again.**
+**Important: battery output will vary 20% or more (especially under heavy loads. Therefore, output of the motors in this mode will vary at least that much. Don't expect PercentVBus setting over a fixed period of time to produce reproducable results time and time again.**
 
 >When using CANTalons in Percent VBus control mode, ensure the set value stays between -1 and +1. A value outside of this range will cause a wraparound condition causing the throttle to reverse direction.
 
