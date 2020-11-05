@@ -1,6 +1,7 @@
 # Git Introduction
 
-An introduction to Git. This should teach s
+An introduction to Git. This should teach students the fundamentals of working with version control,
+as well as introduce them to GitHub and our online workflow.
 
 - [Introducing Git and GitHub](./git_about.md)
 - [Git Fundamentals](./git_fundamentals.md)

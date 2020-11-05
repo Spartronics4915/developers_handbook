@@ -45,14 +45,13 @@ There are many git references and tutorials on-line. Here is the link to
     - [.gitignore](#gitignore)
   - [Git Commands](#git-commands)
     - [git help](#git-help)
-    - [git init](#git-init)
+    - [git init](#git-init-1)
     - [git status](#git-status)
     - [git pull vs git fetch && git merge](#git-pull-vs-git-fetch--git-merge)
     - [What is git checkout? And a branch?](#what-is-git-checkout-and-a-branch)
     - [git add and git commit](#git-add-and-git-commit)
-- [push changes to your online repo](#push-changes-to-your-online-repo)
-- [find the desired commit's hash](#find-the-desired-commits-hash)
-- [reset to an example hash](#reset-to-an-example-hash)
+    - [git push](#git-push)
+    - [git reset](#git-reset)
 
 <!-- /TOC -->
 
@@ -69,8 +68,8 @@ changes together into a _commit_. The commit is the basic trackable
 unit of git, and it is identified by a _hash_, a string of hexadecimal
 numbers that uniquely identifies that particular change to the repo.
 
-In order to create the commit, the developer will _add_ the files and
-other changes to a _staging area_, where git keeps track of items that
+In order to create the commit, the developer will _add_ (or _stage_) the files
+and other changes to a _staging area_, where git keeps track of items that
 will be included in the next commit. In this way, changes can be grouped
 together into a batch that is included in a single commit.
 
@@ -163,15 +162,15 @@ On branch master
 
 No commits yet
 
-nothing to commit (create/copy files and use "git add" to track)
+nothing to commit (create/copy files and use `git add` to track)
 ```
 
 ### Adding files
 To add some files to the repository, or to track the changes that are made
-to files that are already in the repo, there is a two-step process: _add_
-and then _commit_. The first step (the _add_) copies the file into a special
-staging area inside the _.git_ directory of the repo. It is possible to
-add multiple files, one at a time, in groups with wildcards, or even an
+to files that are already in the repo, there is a two-step process: _staging_
+and then _committing_. The first step (the _add_) copies the file into a
+special staging area inside the _.git_ directory of the repo. It is possible
+to add multiple files, one at a time, in groups with wildcards, or even an
 entire directory of files all at once. After adding files, you can check
 what has been staged by using the _git status_ command.
 
@@ -326,6 +325,7 @@ can also push those changes to their copy of the repo on GitHub, without
 affecting the main project at all.
 
 Here are example of forks in my GitHub account.
+
 ![Binnur's forks](images/forks.png)
 
 You can _fork_ any of the repositories you wish to copy, simply by clicking

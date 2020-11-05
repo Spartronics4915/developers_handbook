@@ -9,7 +9,7 @@ Anything that relates to git or git related tools such as vi, or unix commands.
   - [Common vi commands](#common-vi-commands)
   - [Common Git commands](#common-git-commands)
     - [How do I revert previous commit?](#how-do-i-revert-previous-commit)
-    - [What is "non-fast-forward"?](#what-is-%22non-fast-forward%22)
+    - [What is "non-fast-forward"?](#what-is-non-fast-forward)
 
 <!-- /TOC -->
 

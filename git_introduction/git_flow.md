@@ -28,7 +28,7 @@ This workflow balances flexibility with productivity for the individual develope
 - [GitHub Gist: GitHub Forking](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 
 ## Workflow Steps
-![Fork & PR Workflow](../git_intro/images/repos.png)
+![Fork & PR Workflow](../git_introduction/images/repos.png)
 
 Basic git commands and process flow is documented [here](./git_fundamentals.md#git-fork).
 If you are new to git, please start with our [Git Intro](./README.md).
@@ -54,7 +54,7 @@ This command is handy to stay in sync with the _upstream_ branch:
         - What things are ready to be committed (shown in green)
         - Whether you have any conflicts (shown in a different color)
         - Whether your code has been pushed to your fork ("Your branch is up-to-date...")
-2. `git add <file1> <file2>`
+2. `git add/stage <file1> <file2>`
     - Adds ("stages") files to the index, which is where `git commit` pulls
         changes from
     - You can just use `git add src` to add every change you've made inside the

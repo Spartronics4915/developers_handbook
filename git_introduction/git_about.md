@@ -43,7 +43,9 @@ and meaning makes learning git easier.
 Workflow refers to a sequence of steps that are required to proceed from
 initiation to completion. At its core, the development workflow involves
 the following three steps:
+
 ![Development Workflow](images/dev_workflow.png)
+
 - _dev_: development work, writing code using your text editor
 - _test_: build and verify that code works to its specification, fix as needed
 - _prod_: deploy to production, in the case of FIRST this would be our robot
@@ -54,10 +56,8 @@ Steps include, but are not limited to:
     - git branching simplifies managing staging vs. production code
 - enforcing code reviews before merging code
     - pull requests ensure code is properly reviewed before merging
-- identifying specific versions in order to track important releases, such as at
-        competitions
-    - tags can be applied to specific commits to mark a point in the timeline of
-        the project
+- identifying specific versions in order to track important releases, such as at competitions
+    - tags can be applied to specific commits to mark a point in the timeline of the project
 
 Git, though confusing at first, gives full empowerment to individuals --
 it is really difficult to break anything in git that cannot be fixed unless you
@@ -80,6 +80,7 @@ has a local copy of the repository, and can examine the changes and add their ow
 When changes are shared, developers publish a copy of their repository back
 to GitHub, the central code hosting system. This is referred to as the remote repo,
 which is accessed by its URL.
+
 ![Relationship between repos](images/repos.png)
 
 ### What is cloning or forking, and upstream?
@@ -112,7 +113,7 @@ file/project. You can think of branches as a set of lists, each starting at
 the beginning of the project and listing each change that contributed to the
 project in its current state.
 
-The developer swtiches from branch to branch using the "checkout" command.
+The developer switches from branch to branch using the "checkout" command.
 This allows them to work on different features, switching back and forth
 as needed. Each branch is given a name to signify what it contains (ie, what
 feature is being developed). The original (mainline) branch is typically
