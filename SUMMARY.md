@@ -10,7 +10,7 @@
   * [Next Level Git](git_introduction/git_advanced.md)
   * [Git Flow](git_introduction/git_flow.md)
   * [FAQ: git, vi, bash shell](git_introduction/git_faq.md)
-  <!-- * [GitHub Projects](git_introduction/git_projects.md) -->
+  * [A Simple Tutorial](git_introduction/tutorial.md)
 
 * [An Introduction to Java](java_programming/README.md)
   * [Lesson 1: Introductory Syntax](java_programming/1_syntax.md)
