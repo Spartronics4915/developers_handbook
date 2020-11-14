@@ -15,7 +15,7 @@ Anything that relates to git or git related tools such as vi, or unix commands.
 
 ## Common bash shell
 
-``` sh
+```sh
 # print working directory
 $ pwd
 
@@ -33,7 +33,7 @@ $ cd <dir>
 # change to directory above
 $ cd ..
 
-# type file to your screen
+# print file to your screen
 $ cat <filename>
 
 # make directory
@@ -45,21 +45,32 @@ $ rm <filename>
 # recursively delete a directory -- BE VERY CAREFUL WITH THIS COMMAND!!
 $ rm -rf <directory-name>
 
+# copy a file from its current directory to another directory location
+$ cp <filename> <directory-location>
+
 # move a file from current directory to another directory location
 $ mv <filename> <directory-location>
 # rename a file in current directory -- applies to filename or directory name
 $ mv <oldname> <newname>
 # move & rename a file from current directory to directory above
 $ mv <filename> ../<new-filename>
+
+# open up an in-terminal text editor (note the shortcuts along the bottom)
+$ nano
+# edit a file
+$ nano <filename>
 ```
 
 ## Common vi commands
-Git's default fallback editor is `vi`, a terminal text editor, similar to nano, but with a higher learning curve and more functionality.
+Git's default fallback editor is `vi`, a terminal text editor, similar to nano,
+but with a higher learning curve and more functionality.
 
 Refer to various reference cards, such as [this one](https://www.ks.uiuc.edu/Training/Tutorials/Reference/virefcard.pdf).
 
-It's important to know that vi has two modes: insertion and command. When you first
-start vi, editor is in command mode. "i" puts the editor in insertation mode, where you can type without triggering commands -- ESC returns the editor into command mode.
+It's important to know that vi has two modes: insertion and command.
+When you first start vi, editor is in command mode. "i" puts the editor in
+insertation mode, where you can type without triggering commands -- ESC
+returns the editor into command mode.
 
 Common commands (in command mode):
 
@@ -114,7 +125,9 @@ git reset --hard upstream/master
 
 Sometimes you mess up, and don't realize it until after committing your changes.
 
-Git makes it easy to _revert_ your changes with use of the `git reset` command. Git reset lets you revert to a previous commit hash, which you have to find first with `git log`.
+Git makes it easy to _revert_ your changes with use of the `git reset` command.
+Git reset lets you revert to a previous commit hash, which you have to find
+first with `git log`.
 
 Read more about git reset in [git fundamentals.](git_fundamentals#git-init)
 
