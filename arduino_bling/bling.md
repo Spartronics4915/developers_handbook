@@ -11,10 +11,8 @@ bling.
   environment for experimentation.
 
 Important: If this is your first time diving into Arduino, make sure to
-walk through [Ladyada's Learn Arduino
-Tutorials](https://learn.adafruit.com/series/ladyadas-learn-arduino).
-Also, there are many good tutorials on YouTube, such as
-[this one](https://youtu.be/nL34zDTPkcs)
+walk through [Ladyada's Learn Arduino Tutorials](https://learn.adafruit.com/series/ladyadas-learn-arduino).
+Also, there are many good tutorials on YouTube, such as [this one](https://youtu.be/nL34zDTPkcs)
 
 ## Bling Demo
 Introduction to bling development uses Adafruit NeoPixel strip and ring
@@ -59,9 +57,8 @@ reference.
   `analogRead()` functions.
 
 ### Exercises and Code Experiments
-- Understand RGB and pixel numbering by changing the `setup()` code on
-  how the strip/ring is initialized. Experiment with online [RGB
-  colors](https://htmlcolorcodes.com) and see how they perform on the NeoPixel.
+- Understand RGB and pixel numbering by changing the `setup()` code on how the strip/ring is initialized.
+  Experiment with online [RGB colors](https://htmlcolorcodes.com) and see how they perform on the NeoPixel.
 - Write new functions for different blink patterns:
     - rainbow
     - use potentiometer to change intensity of the leds without changing
@@ -72,8 +69,7 @@ reference.
   communication tool.
 
 ### Adafruit NeoPixel Documentation
-See [Adafruit NeoPixel
-Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use)
+See [Adafruit NeoPixel Uberguide](https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use)
 for documentation on how to use the library.
 
 Key sections:

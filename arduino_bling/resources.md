@@ -9,5 +9,4 @@
 - [Arduino Language Reference](https://www.arduino.cc/reference/en/)
 
 ## Bling
-- [Adafruit NeoPixel
-  UberGuide](https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels)
+- [Adafruit NeoPixel UberGuide](https://learn.adafruit.com/adafruit-neopixel-uberguide/the-magic-of-neopixels)
