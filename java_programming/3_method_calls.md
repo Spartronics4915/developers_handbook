@@ -23,8 +23,8 @@ public class HelloWorld {
 }
 ```
 
-`System.out.println` is a method call in this example (we're calling a method c
-alled `println`).
+`System.out.println` is a method call in this example (we're calling a method
+called `println`).
 Here, it's taking a `String`, returning nothing (a return of nothing is also
 called `void`)
 
@@ -56,6 +56,7 @@ And you would end up printing out `3^2 is 9`.
 
 ## Conclusion
 Here are the PracticeIt problems for this section:
+
  1. [Method calls without parameters or returns](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/e7%2DMantra)
  2. [Complex method structure](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter1/s23%2DStrange)
  3. [Method parameters](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter3/s2%2DMysteryNums)

@@ -19,7 +19,7 @@
   * [Lesson 4: The If Statement](java_programming/4_if_statement.md)
   * [Lesson 5: Method Definitions](java_programming/5_method_definitions.md)
   * [Lesson 6: Classes](java_programming/6_classes_and_objects.md)
-  * [Lesson 7: Inheritance](java_programming/7_inheritance.md)
+  <!-- * [Lesson 7: Inheritance](java_programming/7_inheritance.md) -->
   * [Helpful Programming Resources](java_programming/resources.md)
 
 * [Programming a Robot](robot_programming/README.md)

@@ -25,6 +25,7 @@ The method's _signature_ is the following:
 
 The signature says what the method takes, and what the method returns, along
 with other information that we'll cover later.
+
  1. `public`: This means that the method can be called outside of the `Math`
     class. We'll cover this more in chapter 6.
  2. `static`: We'll cover this more in chapter 6.
@@ -45,5 +46,6 @@ your return type is `double`, this will work: `return 3.1;`, but this will not:
 
 ## Conclusion
 Here are your PracticeIt problems:
+
  1. [Method call and signature error correction](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter3/s3-Oops3-errors)
  2. [Method call and return value error correction](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter3/s12%2DTemperature%2Derrors)

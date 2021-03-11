@@ -43,8 +43,8 @@ In our Hello World program, `System.out.println("Hello, world!");` was a stateme
 ## Whitespace and comments
 In the above program you can that certain parts are indented.
 In some languages, indentation means something, but in Java it is ignored.
-You should still indent your code (using tabs or spaces), because it
-makes it easier to read.
+You should still indent your code (using tabs or spaces, four spaces when
+working with shared team code), because it makes it easier to read.
 
 Another thing that's ignored are comments. They are usually used to
 explain or *comment* on some code. If a piece of code is confusing, or
@@ -53,6 +53,7 @@ does something surprising or non-obvious, you should use a comment.
 There are two kinds of comments:
  1. Single line comments, which begin with `//` and go until the end of the line.
  2. Multi line comments, which begin with `/*` and go until `*/` is found.
+<!-- Documentation comments -->
 
 An example of both would look like this:
 
@@ -78,7 +79,7 @@ Curly braces (`{` and `}`) can be seen in our above Hello World program.
 There's a couple of things about them to understand:
 
  1. They **enclose** things (they always enclose a _scope_, a concept we'll
-    discuss later)
+   discuss later)
  2. Every opening brace (`{`) has a corresponding closing brace (`}`).
    Mismatched braces are a common source of errors.
 
@@ -125,7 +126,7 @@ Here are operators that you can use on `int`s, and `double`s
 | Operator | Operation Name | Example | Result |
 | -------- | ------------- | ------- | ------ |
 | `+` | Addition |  `4 + 2` | `6` |
-| `-` | Addition |  `4 - 2` | `2` |
+| `-` | Subtraction |  `4 - 2` | `2` |
 | `*` | Multiplication |  `4 * 2` | `8` |
 | `/` | Division |  `4 / 2` |  `2` |
 
