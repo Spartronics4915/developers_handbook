@@ -1,150 +1,191 @@
 # Classes and Objects
 
-<!-- TODO: unify houses and motors -->
-
 <!-- TOC -->
 
 - [Classes and Objects](#classes-and-objects)
-  - [Classes vs. Objects](#classes-vs-objects)
-  - [More on Classes](#more-on-classes)
+  - [What's a Class?](#whats-a-class)
     - [Public vs. Private](#public-vs-private)
     - [Concept: Encapsulation](#concept-encapsulation)
+    - [Concept: Immutable Variables](#concept-immutable-variables)
     - [In the Scope of Things](#in-the-scope-of-things)
-  - [More on Objects](#more-on-objects)
-    - [Objects and the Static keyword](#objects-and-the-static-keyword)
-    - [Constructor Methods and `new`](#constructor-methods-and-new)
-  - [Conclusion.](#conclusion)
+  - [Constructing Objects from Classes](#constructing-objects-from-classes)
+    - [Concept: Static Members](#concept-static-members)
+    - [Concept: Constructor Methods](#concept-constructor-methods)
+  - [Conclusion](#conclusion)
 
 <!-- /TOC -->
 
-## Classes vs. Objects
+## What's a Class?
 
-You may have heard that Java is an _object oriented_ language. For our purposes, this means that Java has **classes** and **objects**.
+You may have heard that Java is an _object oriented_ language, as compared to a more _procedural_ language like C. For our purposes, this means that a lot of the code you'll be using and writing will be based around **classes** and the **objects** they create. Object-oriented programming works very nicely with code that controls physical objects - like the motors and sensors of a robot.
+
+Writing a **class** in Java is a lot like programatically creating a blueprint of a house. While a blueprint by itself doesn't do too much, you can take that blueprint and create an actual house from it later.
 
 ![House Blueprint](images/blueprint.png)
 
-Classes are like the blueprints that objects are made of. It's like I have a blueprint for a house. I have one blueprint, and I can make many houses from it. In this analogy, I have one class from which I can make many objects.
-
-Objects are like the houses made from that blueprint. They're **tangible** - in real life, you could reach out and touch a house. In our programming world, this means that you can _call methods_ on them.
-Additionally, different styles of houses (objects) can be made from the same blueprint (class), depending on what I _pass_ when _constructing_ the object.
-
-## More on Classes
-Classes are composed of _methods_ and _fields_. We've already gone over methods. _Fields_ are just another term for variables within a class.
-
-Let's take a look at this `House` class:
+Let's take a look at an example `House` class:
 
 ```java
-public class House {
-  private String mAddress; // Private field called mAddress
-  public int mFloors; // Public field called mFloors
+class House {
+    private String address; // A private field called address
+    public String color;
+    public final int floors; // A public final field called floors
 
-  // Constructor method that takes the controller's address
-  public House(String address) {
-    mAddress = address;
-    mFloors = 2;
-  }
+    // This is a "constructor" method that takes a color and constructs the class.
+    public House(String shade) {
+        address = "1600 Pennsylvania Avenue";
+        color = shade;
+        floors = 3;
+    }
 
-  // This method just returns the value of mAddress
-  public int getAddress() {
-    return mAddress;
-  }
+    // This "setter" method changes the value of the `address` field.
+    public void setAddress(String changed) {
+        address = changed;
+    }
+
+    // All this "getter" method does is return the value of the `address` field.
+    public String getAddress() {
+        return address;
+    }
+
+    // All this "getter" method does is return the value of the `color` field.
+    public String getColor() {
+        return color;
+    }
 }
 ```
 
-You might have noticed that this `House` class doesn't contain a `main` method. That's because this `House` is not a complete program, rather, it's just a blueprint for a House object. If you want to run your methods, you'll need to call them on an _instance_ within a `main` method.
+Wow, what a strange lump of code. You might have noticed that this `House` class doesn't contain the `main` method you've been wrapping your previous code in. That's because this `House` is not a complete program - rather, it's a series of instructions on how to make a `House` **object**.
 
-```java
-import House.java
-public class HouseRunner {
-  public static void main (String[] args) {
-    myHouse = new House("1600 Pennsylvania Ave.");
-    System.out.print(myHouse.getAddress());
-  }
-}
-```
+A class is composed of _methods_ - like `setAddress()` and `getAddress()` above, and _fields_ - like the variables `address` and `floors`. Fields are a special term for variables within a class. These are also called _member variables_ and _member methods_.
 
 ### Public vs. Private
-All of the variables and methods within the `House` are prefixed with either `public` or `private`. These are known as _access modifiers_, as they control what classes or methods have _access_.
 
-_Public_ allows for a method or variable to be accessed by _anything_ with access to the class. It's the least protective modifier, and should be used only when you don't care what uses your methods or variables.
+All of the `House` class's **fields** and **methods** are prefixed with either `public` or `private`. These are called _access modifiers_, and they control whether other parts of your program are allowed to see and modify those fields and methods.
 
-_Private_ doesn't allow modification, or even access, to anything outside of the class or method. If you have a sensitive variable (such as the speed of a motor) that you don't want external classes changing, `private` is the modifier for the job.
+The `public` _access modifier_ allows a field or method to be accessed by anything that has access to the overall class. It's the least protective modifier and should be used when you don't care what accesses your fields and methods.
 
-`public` and `private` can be used on classes to much the same effect.
+The `private` _access modifier_, on the other hand, doesn't allow modification or even access to anything outside of the class or method. If you have a sensitive variable (such as the address of a house) that you don't want external classes changing, `private` is the modifier for the job.
+
+`public` and `private` can also be used on classes themselves to much the same effect. This is useful alongside inheritance, which you'll take a look at in the next lesson.
 
 ### Concept: Encapsulation
-At this point, you might be thinking that the `getAddress` method seems kind of unnessary. Wouldn't it be easier to just make mAddress public? The issue in doing that lies in the concept of _encapsulation_.
 
-Encapsulation is kind of like creating a protective shield (or capsule) around our variables. If we decided to make `mAddress` public, _anyone_ with access to an instance of a `House` could modify them. But by making a `private` variable and then allowing access through a method, it's available to everyone, but only the `House` class can modify it.
+At this point, you might be thinking that that `getAddress` method seems kind of silly. Wouldn't it be easier to just make the `address` variable public?
 
-Something similar to encapsulation is the `final` modifier. The `final` modifier prevents the modification of a variable, and is sometimes used with `public` in Constants files. However, the difference between `public final` and encapsulation is that `public final` prevents _all_ modification of the variable, even in its own class. For this reason, we use encapsulation much more often.
+```java
+public String getAddress() {
+    return address;
+}
+```
+
+This _encapsulation_ method is like creating a protective shield (or capsule) around our variables. If we decided to make `address` public, anyone with access to a `House` could modify them. But by making a `private` variable and then allowing access through a method, it's available to everyone, but only the `House` class can modify it.
+
+
+### Concept: Immutable Variables
+
+Something similar to encapsulation is the `final` access modifier. A variable that's marked with `final` can only be assigned a value **once**. Trying to change a `final` variable will throw an access error. This is super helpful for physical constants - you don't want to be changing the number of floors in a house willy-nilly!
+
+```java
+public final int floors;
+...
+    floors = 3;
+```
+
+The big difference between having a `public final` field and encapsulation is that while they both restrict access, `final` variables are _completely immutable_ - even within its own class. For this reason, you'll see the use of encapsulation much more often.
 
 ### In the Scope of Things
-We've talked about how `public` and `private` can change how a variable or method is accessible, but _where_ they're defined affects the accessibility. This "accessibility" is called _scope_.
 
-If I create a variable inside of a method, I can't access it from outside of that method. This is called _method scope_.
+So we've talked about how access modifiers like `public` and `private` can change how a field or method is accessible, but _where_ they're written or defined also affects the accessibility. (from here on out, we're going to talk about accessibility as **scope**)
 
-Scope is also affected by the `static` keyword, but we'll get more into that later.
+```java
+public void foo() {
+    String scoped = "This String stays within the scope of foo.";
+}
 
-## More on Objects
+System.out.println(scoped); // Throws an error!
+
+```
+
+One example of scope that you might already be familiar with is _method scope_. If a variable is created within a method, it can't be accessed from outside that method. The fields of classes follow much the same principle. Scope is also affected by the `static` keyword, but we'll get more into that later. <!-- TODO: elaborate, examples -->
+
+## Constructing Objects from Classes
+
+Let's hop back to the lack of a `main` method in our class.
+
+> This `House` is not a complete program - rather, it's a series of instructions on how to make a `House` **object**.
+
+So, what is an object, and how do we make one from a class?
+
+What if I told you you'd been using objects this whole time without even knowing it?
 
 Take a look at the code below.
 
-<!-- TODO: is this the right code? -->
-
 ```java
-MotorController motor = new MotorController(3);
+House myHouse = new House("white"); // This is how you construct an object.
 ```
 
-As you can see, we define all of this as a class called MotorController. However, if I called `MotorController.getAddress()`, that would be an error. That is because I am calling that method on the class, but I really need to call it on an _object_ (instance) of the class. To do that, I need to use the `new` keyword, and make a new `MotorController` object. I would do that like this:
+Immediately, you should see some similarities to something else you've been doing a lot of - creating `String` variables. This is because `String` is actually a class - and all of the `String myString = "This is my String!";` variables you've created are objects. In turn, the methods you've been calling on `String`s - like `myString.length()` - are actually _member methods of the String class_. (`int` and so forth are primitives, and not exactly objects, but we went over that earlier).
+
+Here is an alternative way of defining a `String` variable:
 
 ```java
-MotorController mArmMotor = new MotorController(3);
-System.out.println(mArmMotor.getAddress());
+String classicString = "This is my String!"; // These are pretty much the same thing.
+String constructedString = new String("This is also my String!");
+// I say "pretty much" because they're slightly different at a deep level.
+// If you're interested, read this: https://stackoverflow.com/a/3299217
 ```
 
-### Objects and the Static keyword
+Put more concretely, _an object is an **instance** of a class_. They're like the houses made from that `House` blueprint we talked about earlier. They're also **tangible** - in real life, you could reach out in touch one.
 
-However, Java has an exception to this. If I wanted to make a method that is allowed to be called on the class itself, I would use the `static` keyword:
+In our programming world, this means that you can _call methods_ on them. All of your `House` member methods must be called on an instance of the `House` class (a `House` object). Calling `House.getAddress()` would result in an error, just like how calling `String.length()` isn't useful.
+
+### Concept: Static Members
+
+However, Java has an exception to this. If we wanted to make a method that is allowed to be called on the class itself, we would use the `static` keyword:
 
 ```java
-public static int getAddress() {
-  return 3;
+public static String getAddress() {
+    return "1600 Pennsylvania Avenue"; // `address` is out of scope!
 }
 ```
 
-It is important to note that if tried to access `mAddress` in this static method, it would result in an error, because there's no way to access member variables from static methods. However, you _can_ access static member variables.
+If we know that `getAddress()` is always going to return `"1600 Pennsylvania Avenue"`, then why should we have to construct a full object?
+
+It's important to note that if we tried to access `address` in this static method it would result in an error, because there's no way to access member variables (fields) from static methods. However, you _can_ access static member variables:
 
 ```java
 public class House {
-  private String mAddress = "1600 Pennsylvania Ave.";
-  private static int mFloors = 2;
+    private String address = "1600 Pennsylvania Avenue";
+    private static int floors = 2; // Note the `static` keyword
 
-  public static int getFloors() { // This will return 2.
-    return mFloors;
-  }
-  public static String getAddress() { // !!! This **doesn't work!**
-    return mAddress;
-  }
+    public static int getFloors() { // This will return 2.
+        return floors;
+    }
+
+    public static String getAddress() { // !!! This doesn't work!
+        return address;
+    }
 }
 ```
 
-The key concept here is that I can only access variables and methods on an object, unless they were defined with the `static` keyword.
+The key takeaway here is that we can only access variables and methods on an object, unless they are `static`.
 
-### Constructor Methods and `new`
+### Concept: Constructor Methods
 
-A keen reader might have noticed that `public MotorController(int address)` does not specify a return type. This is not, however, a syntax error. This is a special type of method called the constructor. It is called whenever we make an instance (a new object) of this class.
+A keen reader might have noticed that `public House(String shade)` does not specify a return type. This is not a syntax error - it's a special type of member method, called a **constructor**. It is called whenever we make an instance (a new object) of this class. Each object must be instantiated using the `new` keyword before the constructor.
 
-Each object must be constructed (instantiated) using the `new` keyword.
-
-To make a `new` `House`:
 ```java
-myHouse = new House("1600 Pennsylvania Ave.");
+House myHouse;
+myHouse = new House("white"); // To make a new "white" house.
 ```
 
-In this case, we're passing `"1600 Pennsylvania Ave."` to the constructor, which takes it and sets the `mAddress` variable to it. This is a good example of when to _not_ use static methods - if we attempted to call `getAddress` without having constructed an object, our `House` class wouldn't have an address to return to us.
+In this case, we're passing `"white"` to the constructor, which takes it and sets the `color` variable to it. This is a good example of when to _not_ use static methods - if we attempted to call `getColor` without having constructed an object, our `House` class wouldn't have a color to return to us.
 
-<!-- ### Concept: Composition -->
+![House Blueprint](images/blueprint.png)
 
-## Conclusion.
-That was a lot. Classes and objects take some time to fully understand, so don't be shy to refer back to this when doing the Practice-It problems.
+The constructor's power comes from letting us create different objects from the same class. In the blueprint metaphor, this is like being able to create multiple different colored houses from the same blueprint.
+
+## Conclusion
+
+That was a lot. Classes and objects take some time and practice to fully understand, so don't be shy to refer back to this lesson.

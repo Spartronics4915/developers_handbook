@@ -160,7 +160,7 @@ if (foo.equals(fooTwo)) {
 ```
 
 ## Conclusion
-Go ahead and do the  following PracticeIt problems:
+Go ahead and do the following PracticeIt problems:
 
  1. [If statement syntax](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter4/s3%2DifStatementSyntax)
  2. [If statements and method parameters](https://practiceit.cs.washington.edu/problem/view/bjp4/chapter4/s6%2DifElseMystery2)

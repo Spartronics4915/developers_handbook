@@ -12,7 +12,7 @@
 ## Learning Java
   - [Our Java Lessons](/java_lessons/README.md)
   - [Oracle's Java Tutorials](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
-  - [Practice-It](https://practiceit.cs.washington.edu/)
+  - [Example Problems on Practice-It](https://practiceit.cs.washington.edu/)
 
 ## An Intro to PID Controllers
   - [Simple Examples of PID Control](https://youtu.be/XfAt6hNV8XM)
